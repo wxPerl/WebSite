@@ -319,7 +319,7 @@ who created and donated it!
     <content>
 Marcus Friedlaender and Jouke Visser set up two new sources of information
 about wxPerl, the <xhtml:a href="http://scripts.wordit.com/cgi-bin/wxperl/logbook.pl?file=1">wxPerl CookBook</xhtml:a> and the
-<xhtml:a href="http://wxperl.pvoice.org/cgi-wxperl/view.pl/FrontPage">
+<xhtml:a href="http://wxperl.pvoice.org/kwiki/">
   wxPerl Wiki</xhtml:a>.
     </content>
   </item>
@@ -688,7 +688,7 @@ are also available in <xhtml:tt>.tar.gz</xhtml:tt>,
     <links>
       <link>
         <text>wxPerl Wiki</text>
-        <url>http://wxperl.pvoice.org/cgi-wxperl/view.pl/FrontPage</url>
+        <url>http://wxperl.pvoice.org/kwiki/</url>
         <external />
       </link>
 <!--
