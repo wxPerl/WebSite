@@ -71,3 +71,7 @@ DIV.screenshots DIV {
   padding: 20pt;
   text-align: center;
 }
+
+DIV.application-list {
+  padding-left: 20pt;
+}
