@@ -47,6 +47,11 @@ h1, h2, h3 {
   font-family: "trebuchet ms", tahoma, sans-serif;
 }
 
+hr {
+  border-style: solid;
+  border-width: 1px;
+}
+
 h1 {
   font-weight: bold;
   font-size: 150%;
