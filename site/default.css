@@ -1,10 +1,37 @@
+/* ###### Browser-specific Styles ###### */
+
+/* For IE & Mozilla-based browsers: */
+
+.LHS {
+  margin-left: 2.5mm;
+  float: left;
+  clear: left;
+}
+
+.RHS {
+  margin-right: 2.5mm;
+  float: right;
+  clear: right;
+}
+
+/* For Mozilla-based (CSS2-fully complaint) browsers only: */
+
+[class~="LHS"] {
+  margin-left: 5mm;
+}
+
+[class~="RHS"] {
+  margin-right: 5mm;
+}
+
 /*
  * default values
  */
 
 BODY {
   background-color: white;
-  font-size: medium;
+  font-family: verdana, tahoma, helvetica, arial, sans-serif;
+  font-size: 90%;
   color: black;
 
   /* this is necessary for the header and navigation
@@ -18,8 +45,17 @@ BODY {
  * Common formatting for all pages
  */
 
+H1 H2 H3 {
+  font-family: "trebuchet ms", tahoma, sans-serif;
+}
+
+H2 H3 {
+    font-size: 95%;
+}
+
 BODY H1 {
-  font-size: large;
+  font-weight: bold;
+  font-size: 150%;
 }
 
 BODY H2 {
