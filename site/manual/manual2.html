@@ -1,0 +1,55 @@
+<!doctype html public "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../default.css" type="text/css">
+</head>
+
+<body>
+<h1>Constants</h1>
+
+<a href="manual1.html">Prev</a> <a href="manual3.html">Next</a>
+<hr>
+
+<p>
+  wxWindows uses several constants (like wxWHITE or wxSUNKEN_BORDER), 
+  both to specify option values and to provide some useful constants.
+  In wxPerl, before you use a constant, you must import it in your namespace.
+  This is done (as usual) with the 'use' statement.
+</p>
+
+<pre>
+    use Wx qw(wxWHITE);
+    use Wx qw(wxSUNKEN_BORDER wxBLUE wxSTANDARD_CURSOR);
+</pre>
+
+<p>
+  When you write a real program, however, importing 'by hand' all constants 
+  you need one by one will be annoying, so there is a shorthand method: instead
+  of enumerating the constants, you may use a colon followed by a tag specifying
+  the constants you want.
+</p>
+
+<pre>
+    use Wx qw(:window :textctrl);
+    use Wx qw(:pen);
+    use Wx qw(:image wxSTANDARD_CURSOR);
+    use Wx qw(:everything);     # really quick and dirty
+</pre>
+
+<p>
+  Currently defined tags are: everything, cursor, button, notebook, 
+  misc ( wxDefault(Size|Position|Validator) ), joystick, imagelist, colour,
+  combobox, listbox, statictext, layout (alias for constraints), toolbar
+  scrolledwindow, radiobutton, staticline, region, id ( wxID_* ),
+  scrollbar, menu, font, panel, window, dialog, icon, spinbutton, image,
+  gauge, textctrl slider, radiobox, color ( alias for colour ), 
+  splitterwindow, brush, dc, pen, bitmap, spinctrl, frame, sizer.
+</p>
+
+<hr>
+<a href="manual1.html">Prev</a> <a href="manual3.html">Next</a>
+
+</body>
+
+</html>

@@ -1,0 +1,232 @@
+<!doctype html public "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../default.css" type="text/css">
+</head>
+
+<body>
+<h1>Events</h1>
+
+<a href="tutorial1.html">Prev</a> <a href="tutorial3.html">Next</a>
+<hr>
+
+<h2>Description</h2>
+<p>
+  This is a slightly more complicated example: it creates a frame with
+  two menus and does useful things when the user clicks on them. In addition
+  we'll create our own frame class (derived from Wx::Frame, of course).
+</p>
+
+<h2>Events</h2>
+<p>
+  Applications with a Graphical User Interface (GUI) are usually event driven:
+  this means that when, say, the user clicks on the 'xyz' button, the system sends
+  to the application an 'event' informing that the button 'xyz' has been clicked.
+  On the other hand, the application sleeps until it receives an event, then
+  processes the event, after that it sleeps again.
+</p>
+
+<p>
+  In the following sample we shall see the way wxPerl let you handle events.
+</p>
+
+<h2>Program</h2>
+<pre>
+    use Wx;
+
+    # this is our own Frame class    
+    package MyFrame;
+    
+    use strict;
+    use vars qw(@ISA);
+    
+    @ISA=qw(Wx::Frame);
+</pre>
+
+<p>
+  Before we can use the event macros, we most import them,
+  this is done with the 'use' statement. Some event macros (in particular for
+  menu and control events) require the 'id' of the menu (or control), so we
+  also define 2 ids.
+</p>
+
+<pre>
+    use Wx::Event qw(EVT_MENU EVT_CLOSE);
+
+    my( $ID_ABOUT, $ID_EXIT ) = ( 1, 2 );
+</pre>
+
+<p>
+  Now we define the constructor. First we must create the object.
+</p>
+
+<pre>
+    # Parameters: title, position, size
+    sub new {
+      my( $class ) = shift;
+      # now we are calling the base class constructor
+      my( $this ) = $class->SUPER::new( undef, -1, $_[0], $_[1], $_[2] );
+</pre>
+
+<p>
+  If this were a real program, we will store some useful
+  data inside the object.
+</p>
+
+<pre>
+      # now that you have an object you can store some data inside of it
+      $this->{mydata} = 'This is some data';
+      $this->{myotherdata} = 123;
+</pre>
+
+<p>
+  Now we create two menus, put them on a menubar, and associate
+  the menubar to our frame (you may consult the wxWindows manual for a more
+  detailed description). 
+</p>
+
+<pre>
+      # create 2 menus
+      my( $mfile ) = Wx::Menu->new();
+      my( $mhelp ) = Wx::Menu->new();
+
+      # add entries to menus
+      $mhelp->Append( $ID_ABOUT, "&About...\tCtrl-A", "Show about dialog" );
+      $mfile->Append( $ID_EXIT, "E&xit\tAlt-X", "Quit this program" );
+    
+      # create a menu bar
+      my( $mbar ) = Wx::MenuBar->new();
+    
+      # append the menus to the menu bar
+      $mbar->Append( $mfile, "&File" );
+      $mbar->Append( $mhelp, "&Help" );
+    
+      # and assign the menubar to the frame
+      $this->SetMenuBar( $mbar );
+
+      # create a status bar with two fields
+      $this->CreateStatusBar( 2 );
+      # and show a friendly message
+      $this->SetStatusText( "Welcome to wxPerl!", 1 );
+</pre>
+
+<p>
+  Now comes the important part: event handling. There is an important difference
+  between wxWindows and wxPerl: in wxWindows the event macros are enclosed
+  between <code>BEGIN_EVENT_TABLE()..... END_EVENT_TABLE()</code>, while in wxPerl
+  they usually appear in the constructor; in addition wxPerl event macros
+  take an <emphasis>additional</emphasis> first parameter: the object that must
+  handle the event.
+</p>
+
+<p>
+  In the code below, we declare that menu events coming from the item(s)
+  with an id equal to $ID_ABOUT will be handled by our frame ($this) using
+  the OnAbout method, amd that the close event is handled by our frame using
+  the OnClose method.
+</p>
+  
+<pre>
+      # declare that events coming from menu items with the given
+      # id will be handled by the frame ($this) using the listed methods
+
+      # in wxWindows you will have used EVT_MENU( id, method )
+      # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
+      EVT_MENU( $this, $ID_EXIT, \&OnQuit );
+      EVT_MENU( $this, $ID_ABOUT, \&OnAbout );
+      EVT_CLOSE( $this, \&OnClose );
+
+      return $this;
+    }
+</pre>
+
+<p>
+  Now let's see event handlers: these are methods taking an event objet
+  as parameter. The exact type of the object depends upon the event handled by
+  the method: OnAbout and OnQuit (handling menu events) will receive
+  Wx::CommandEvent object, while OnClose will receive a Wx::CloseEvent object.
+</p>
+
+<pre>
+    # these are some constants used by Wx::MessageBox
+    use Wx qw(wxOK wxICON_INFORMATION wxVERSION_STRING);
+    
+    # called when the user selects the 'Exit' menu item
+    sub OnQuit {
+      my( $this, $event ) = @_;
+    
+      Wx::MessageBox( 'OnQuit: Exiting', 'Message', wxOK, $this );
+
+      # closes the frame
+      $this->Close( 1 );
+    }
+    
+    # called when the user selects the 'About' menu item
+    sub OnAbout {
+      my( $this, $event ) = @_;
+    
+      # display a simple about box
+      Wx::MessageBox( "This is the about dialog of minimal sample.\n" .
+    		  "Welcome to wxPerl " . $Wx::VERSION . "\n" .
+    		  wxVERSION_STRING,
+    		  "About minimal", wxOK | wxICON_INFORMATION,
+    		  $this );
+    }
+    
+    sub OnClose {
+      my( $this, $event ) = @_;
+
+      Wx::MessageBox( 'OnClose: Closing', 'OnClose', wxOK, $this );
+
+      $event->Skip();
+    }   
+</pre>
+
+<p>
+  This part is almost identical to the previous example.
+</p>
+
+<pre>
+    package MyApp;
+    
+    use strict;
+    use vars qw(@ISA);
+    
+    @ISA=qw(Wx::App);
+    
+    use Wx qw(wxDefaultPosition);
+
+    sub OnInit {
+      my( $this ) = shift;
+    
+      my( $frame ) = MyFrame->new( "Minimal wxPerl app",
+                                   wxDefaultPosition,
+    			           [450, 350]
+                                  );
+    
+      $this->SetTopWindow( $frame );
+
+      $frame->Show( 1 );
+    }
+    
+    package main;
+    
+    # create an instance of the Wx::App-derived class
+    my( $app ) = MyApp->new();
+    # start processing events
+    $app->MainLoop();
+</pre>
+
+<p>
+  <a href="second.pl.txt">Here</a> you can see the program at a glance
+  (it is suffixed .pl.txt so your browser will not try to download it, 
+   but from Perl's point of view this makes no difference).
+</p>
+
+<hr>
+<a href="tutorial1.html">Prev</a> <a href="tutorial3.html">Next</a>
+
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!doctype html public "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../default.css" type="text/css">
+</head>
+
+<body>
+<h1>Event handling</h1>
+
+<a href="manual3.html">Prev</a> <a href="manual5.html">Next</a>
+<hr>
+
+<h2>Event 'macros'</h2>
+<p>
+  wxPerl can't use static event tables for event handling, but the contructs
+  it uses are similar to wxWindows ones; in particular wxPerl uses the same
+  names for 'event macros'; the key differences are: 
+  <ul>
+    <li>in wxPerl these are regular subroutines exported by the 
+        Wx::Event module</li>
+    <li>they take one additional first parameter: the Wx::EvtHandler
+        object that must handle the event</li>
+  </ul>
+
+  so in a program you may use:
+</p>
+
+<pre>
+    package MyClass;
+
+    # ....
+
+    use Wx::Event qw(EVT_CLOSE EVT_BUTTON);
+
+    sub new {
+    
+    # ......
+        # pay attention to the additional parameter
+        EVT_CLOSE( $this, \&OnClose );
+        EVT_BUTTON( $this, $ID_MYBUTTON, \&OnClick );
+    # .....
+</pre>
+
+<p>
+  In wxPerl, if you do not need to know the id of a control (you will need
+  it for FindWindow and similar functions) you may pass -1 to the constructor,
+  and pass the object itself as the id (wxPerl will automatically do a
+  GetId() on the object).
+</p>
+
+<hr>
+<a href="manual3.html">Prev</a> <a href="manual5.html">Next</a>
+
+</body>
+
+</html>

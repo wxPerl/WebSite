@@ -1,0 +1,218 @@
+<!doctype html public "-//W3C//DTD HTML 4.0//EN">
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="../default.css" type="text/css">
+</head>
+
+<body>
+<h1>Splitting a program</h1>
+
+<a href="tutorial2.html">Prev</a> <a href="tutorial4.html">Next</a>
+<hr>
+
+<h2>Description</h2>
+<p>
+  When you have a long program, you usually want to split it across several
+  files. Now we'll see how to arrange our previous program in a more
+  modular way.
+</p>
+
+<h2>Modules and files</h2>
+<p>
+  When you put in a program
+</p>
+
+<pre>
+    use Foo;
+</pre>  
+
+<p>
+  this tells to Perl: &quot;search for a file named 'Foo.pm', read it, and 
+  evalutate his contents as Perl code&quot; thh file itself is not forced
+  in any way to export a 'Foo' namespace/class: it may export a 'Bar', or
+  'Bar::Foo' namespace, or no namespace at all; however this isn't a generally
+  a good practice (though it may be useful in some cases).
+</p>
+
+<p>
+  For more detailed informations you may consult the perlmod page in your
+  perl distribution.
+</p>
+
+<h2>Program</h2>
+<p>
+  Following the above statement, we will create three files: main.pl ( the main
+  program), MyApp.pm and MyFrame.pm.
+</p>
+
+<p>
+  In Perl a module <b>MUST</b> return a true value upon successful inclusion,
+  so the last statement of all Perl modules is
+</p>
+
+<pre>
+    1;
+</pre>
+
+<p>
+  main.pl is our main program file. In general you will not need more than 10
+  lines, since all initialization stuff is in the application class.
+</p>
+
+<pre>
+    # main.pl
+
+    use strict;    
+    use Wx;
+    use MyApp;
+    use MyFrame;
+
+    # create an instance of the Wx::App-derived class
+    my( $app ) = MyApp->new();
+    # start processing events
+    $app->MainLoop();
+</pre>
+
+<p>
+  MyFrame.pm is our first module. You'll notice it is almost equal to our
+  previous example (the only difference is the final statement).
+</p>
+
+<pre>
+    package MyFrame;
+        
+    use strict;
+    use vars qw(@ISA);
+        
+    @ISA=qw(Wx::Frame);
+    
+    use Wx::Event qw(EVT_MENU EVT_CLOSE);
+    
+    my( $ID_ABOUT, $ID_EXIT ) = ( 1, 2 );
+    
+    # Parameters: title, position, size
+    sub new {
+      my( $class ) = shift;
+      # now we are calling the base class constructor
+      my( $this ) = $class->SUPER::new( undef, -1, $_[0], $_[1], $_[2] );
+    
+      # now that you have an object you can store some data inside of it
+      $this->{mydata} = 'This is some data';
+      $this->{myotherdata} = 123;
+    
+      # create 2 menus
+      my( $mfile ) = Wx::Menu->new();
+      my( $mhelp ) = Wx::Menu->new();
+    
+      # add entries to menus
+      $mhelp->Append( $ID_ABOUT, "&About...\tCtrl-A", "Show about dialog" );
+      $mfile->Append( $ID_EXIT, "E&xit\tAlt-X", "Quit this program" );
+        
+      # create a menu bar
+      my( $mbar ) = Wx::MenuBar->new();
+        
+      # append the menus to the menu bar
+      $mbar->Append( $mfile, "&File" );
+      $mbar->Append( $mhelp, "&Help" );
+        
+      # and assign the menubar to the frame
+      $this->SetMenuBar( $mbar );
+    
+      # create a status bar with two fields
+      $this->CreateStatusBar( 2 );
+      # and show a friendly message
+      $this->SetStatusText( "Welcome to wxPerl!", 1 );
+    
+      # declare that events coming from menu items with the given
+      # id will be handled by the frame ($this) using the listed methods
+    
+      # in wxWindows you will have used EVT_MENU( id, method )
+      # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
+      EVT_MENU( $this, $ID_EXIT, \&OnQuit );
+      EVT_MENU( $this, $ID_ABOUT, \&OnAbout );
+      EVT_CLOSE( $this, \&OnClose );
+    
+      return $this;
+    }
+    
+    # these are some constants used by Wx::MessageBox
+    use Wx qw(wxOK wxICON_INFORMATION wxVERSION_STRING);
+    
+    # called when the user selects the 'Exit' menu item
+    sub OnQuit {
+      my( $this, $event ) = @_;
+    
+      Wx::MessageBox( 'OnQuit: Exiting', 'Message', wxOK, $this );
+    
+      # closes the frame
+      $this->Close( 1 );
+    }
+    
+    # called when the user selects the 'About' menu item
+    sub OnAbout {
+      my( $this, $event ) = @_;
+    
+      # display a simple about box
+      Wx::MessageBox( "This is the about dialog of minimal sample.\n" .
+                      "Welcome to wxPerl " . $Wx::VERSION . "\n" .
+                      wxVERSION_STRING,
+                      "About minimal", wxOK | wxICON_INFORMATION,
+                      $this );
+    }
+    
+    sub OnClose {
+      my( $this, $event ) = @_;
+    
+      Wx::MessageBox( 'OnClose: Closing', 'OnClose', wxOK, $this );
+    
+      $event->Skip();
+    }
+
+    1;
+</pre>
+
+<p>
+  MyApp.pm defines the application class.
+</p>
+
+<pre>
+    package MyApp;
+        
+    use strict;
+    use vars qw(@ISA);
+        
+    @ISA=qw(Wx::App);
+        
+    use Wx qw(wxDefaultPosition);
+    
+    sub OnInit {
+      my( $this ) = shift;
+        
+      my( $frame ) = MyFrame->new( "Minimal wxPerl app",
+                                   wxDefaultPosition,
+                                   [450, 350]
+                                 );
+        
+      $this->SetTopWindow( $frame );
+    
+      $frame->Show( 1 );
+    }
+
+    1;
+</pre>
+
+<p>
+  Here you can see <a href="third/main.pl.txt">main.pl</a>,
+  <a href="third/MyApp.pm.txt">MyApp.pm</a>, 
+  <a href="third/MyFrame.pm.txt">MyFrame.pm</a>. They're suffixed .txt so
+  your browser will not try to execute them (under Win32). If you want to run
+  the sample, you <b>MUST</b> rename the files to .pl and .pm .
+</p>
+
+<hr>
+<a href="tutorial2.html">Prev</a> <a href="tutorial4.html">Next</a>
+
+</body>
+
+</html>
