@@ -1,174 +1,81 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. Splitting a program</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="tutorial.html" title="wxPerl tutorial"><link rel="up" href="tutorial.html" title="wxPerl tutorial"><link rel="previous" href="tutorial3.html" title="Chapter 3. Events"><link rel="next" href="tutorial5.html" title="Chapter 5. To be continued"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. Splitting a program</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tutorial3.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="tutorial5.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id430406"></a>Chapter 4. Splitting a program</h2></div></div><div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><a href="tutorial4.html#id430430">Modules and files</a></dt><dt><a href="tutorial4.html#id430695">Program</a></dt></dl></div><div class="abstract"><p class="title"><b>Abstract</b></p>
-  When you have a long program, you usually want to split it across several
-  files. Now we'll see how to arrange our previous program in a more
-  modular way.
-</div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id430430"></a>Modules and files</h2></div></div><div></div></div><p>
-  When you put in a program
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. Events</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="tutorial.html" title="wxPerl tutorial"><link rel="up" href="tutorial.html" title="wxPerl tutorial"><link rel="previous" href="tutorial3.html" title="Chapter 3. More controls"><link rel="next" href="tutorial5.html" title="Chapter 5. To be continued"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. Events</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tutorial3.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="tutorial5.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id4687972"></a>Chapter 4. Events</h2></div></div><div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687981"></a>Introduction</h2></div></div><div></div></div><p>
+  In this example we will add simple event handling. In wxPerl this
+  is done through the use of event connectors. This is just a
+  bunch of functions (one for each event type) that define object
+  methods to be called in response to certain events.
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687995"></a>Program</h2></div></div><div></div></div><p>
+  The first thing to do in order to use events is importing the event
+  connectors. All these functions are exported by the
+  <tt class="classname">Wx::Event</tt> module.
 </p><pre class="programlisting">
-    use Foo;
+package MyFrame;
+
+use base 'Wx::Frame';
+# import the event registration function
+use Wx::Event qw(EVT_BUTTON);
 </pre><p>
-  this tells to Perl: &quot;search for a file named 'Foo.pm', read it, and 
-  evalutate his contents as Perl code&quot; thh file itself is not forced
-  in any way to export a 'Foo' namespace/class: it may export a 'Bar', or
-  'Bar::Foo' namespace, or no namespace at all; however this isn't a generally
-  a good practice (though it may be useful in some cases).
+  The second step for using events is connecting an object method
+  with an event; this way when some window fires an event the
+  method will be called.
+</p><pre class="programlisting">
+    my $button = Wx::Button-&gt;new( $panel,         # parent window
+                                  -1,             # ID
+                                  'Click me!',    # label
+                                  [30, 20],       # position
+                                  [-1, -1],       # default size
+                                  );
+
+    # register the OnClick method as an handler for the
+    # 'button clicked' event. The first argument is a Wx::EvtHandler
+    # that receives the event
+    EVT_BUTTON( $self, $button, \&amp;OnClick );
+
+    return $self;
+}
+</pre><p>
+  The <tt class="function">EVT_BUTTON</tt> call above means that,
+  when a "button clicked" event is fired by
+  <tt class="varname">$button</tt>, the method
+  <tt class="methodname">$self-&gt;OnClick</tt> is called.
 </p><p>
-  For more detailed informations you may consult the perlmod page in your
-  perl distribution.
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id430695"></a>Program</h2></div></div><div></div></div><p>
-  Following the above statement, we will create three files:
-  <tt class="filename">main.pl</tt> (the main program),
-  <tt class="filename">MyApp.pm</tt> and <tt class="filename">MyFrame.pm</tt>.
+  All event handlers always have two arguments: the first is the
+  receiver for the event (the first parameter for the event
+  connector), the second is an event object specific for the
+  received event type. For button clicks (and various other
+  events) it is a <tt class="classname">Wx::CommandEvent</tt>.
+</p><pre class="programlisting">
+sub OnClick {
+    my( $self, $event ) = @_;
+
+    $self-&gt;SetTitle( 'Clicked' );
+}
+</pre><p>
+  <a href="third.pl.txt" target="_top">Here</a> you can see the program at a glance
+  (it is suffixed .pl.txt so your browser will not try to execute it, 
+   but from Perl's point of view this makes no difference).
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4688116"></a>About event connectors</h2></div></div><div></div></div><p>
+  All event connectors always take a <tt class="classname">Wx::EvtHandler</tt>
+  as their first argument; most of the time this is just a
+  <tt class="classname">Wx::Window</tt> subclass. This event is the
+  object that will be passed as the first parameter to the event
+  handler. Some events (like mouse motion events) can only be caught
+  by the window generating them. Most kind of events however
+  (like button click events) travel
+  up the window hierarchy and can be caught by any ancestor of the
+  control generating them. This means that wxPerl needs a way to
+  distinguish which control generated a specific event. The answer
+  lies in the second argument in the call to
+  <tt class="function">EVT_BUTTON</tt>, which is the button itself. 
 </p><p>
-  In Perl a module <span class="bold"><b>MUST</b></span> return a true
-  value upon successful inclusion, so the last statement of all Perl
-  modules is
-</p><pre class="programlisting">
-    1;
-</pre><p>
-  <tt class="filename">main.pl</tt> is our main program file. In general
-  you will not need more than 10 lines, since all initialization stuff
-  is in the application class.
-</p><pre class="programlisting">
-    # main.pl
-
-    use strict;    
-    use Wx;
-    use MyApp;
-    use MyFrame;
-
-    # create an instance of the Wx::App-derived class
-    my( $app ) = MyApp-&gt;new();
-    # start processing events
-    $app-&gt;MainLoop();
-</pre><p>
-  <tt class="filename">MyFrame.pm</tt> is our first module. You'll notice
-  it is almost equal to our previous example (the only difference is
-  the final statement).
-</p><pre class="programlisting">
-
-    package MyFrame;
-        
-    use strict;
-    use vars qw(@ISA);
-        
-    @ISA=qw(Wx::Frame);
-    
-    use Wx::Event qw(EVT_MENU EVT_CLOSE);
-    
-    my( $ID_ABOUT, $ID_EXIT ) = ( 1, 2 );
-    
-    # Parameters: title, position, size
-    sub new {
-      my( $class ) = shift;
-      # now we are calling the base class constructor
-      my( $this ) = $class-&gt;SUPER::new( undef, -1, $_[0], $_[1], $_[2] );
-    
-      # now that you have an object you can store some data inside of it
-      $this-&gt;{mydata} = 'This is some data';
-      $this-&gt;{myotherdata} = 123;
-    
-      # create 2 menus
-      my( $mfile ) = Wx::Menu-&gt;new();
-      my( $mhelp ) = Wx::Menu-&gt;new();
-    
-      # add entries to menus
-      $mhelp-&gt;Append( $ID_ABOUT, &quot;&amp;About...\tCtrl-A&quot;, &quot;Show about dialog&quot; );
-      $mfile-&gt;Append( $ID_EXIT, &quot;E&amp;xit\tAlt-X&quot;, &quot;Quit this program&quot; );
-        
-      # create a menu bar
-      my( $mbar ) = Wx::MenuBar-&gt;new();
-        
-      # append the menus to the menu bar
-      $mbar-&gt;Append( $mfile, &quot;&amp;File&quot; );
-      $mbar-&gt;Append( $mhelp, &quot;&amp;Help&quot; );
-        
-      # and assign the menubar to the frame
-      $this-&gt;SetMenuBar( $mbar );
-    
-      # create a status bar with two fields
-      $this-&gt;CreateStatusBar( 2 );
-      # and show a friendly message
-      $this-&gt;SetStatusText( &quot;Welcome to wxPerl!&quot;, 1 );
-    
-      # declare that events coming from menu items with the given
-      # id will be handled by the frame ($this) using the listed methods
-    
-      # in wxWidgets you will have used EVT_MENU( id, method )
-      # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
-      EVT_MENU( $this, $ID_EXIT, \&amp;OnQuit );
-      EVT_MENU( $this, $ID_ABOUT, \&amp;OnAbout );
-      EVT_CLOSE( $this, \&amp;OnClose );
-    
-      return $this;
-    }
-    
-    # these are some constants used by Wx::MessageBox
-    use Wx qw(wxOK wxICON_INFORMATION wxVERSION_STRING);
-    
-    # called when the user selects the 'Exit' menu item
-    sub OnQuit {
-      my( $this, $event ) = @_;
-    
-      Wx::MessageBox( 'OnQuit: Exiting', 'Message', wxOK, $this );
-    
-      # closes the frame
-      $this-&gt;Close( 1 );
-    }
-    
-    # called when the user selects the 'About' menu item
-    sub OnAbout {
-      my( $this, $event ) = @_;
-    
-      # display a simple about box
-      Wx::MessageBox( &quot;This is the about dialog of minimal sample.\n&quot; .
-                      &quot;Welcome to wxPerl &quot; . $Wx::VERSION . &quot;\n&quot; .
-                      wxVERSION_STRING,
-                      &quot;About minimal&quot;, wxOK | wxICON_INFORMATION,
-                      $this );
-    }
-    
-    sub OnClose {
-      my( $this, $event ) = @_;
-    
-      Wx::MessageBox( 'OnClose: Closing', 'OnClose', wxOK, $this );
-    
-      $event-&gt;Skip();
-    }
-
-    1;
-
-</pre><p>
-  <tt class="filename">MyApp.pm</tt> defines the application class.
-</p><pre class="programlisting">
-    package MyApp;
-        
-    use strict;
-    use vars qw(@ISA);
-        
-    @ISA=qw(Wx::App);
-        
-    use Wx qw(wxDefaultPosition);
-    
-    sub OnInit {
-      my( $this ) = shift;
-        
-      my( $frame ) = MyFrame-&gt;new( &quot;Minimal wxPerl app&quot;,
-                                   wxDefaultPosition,
-                                   [450, 350]
-                                 );
-        
-      $this-&gt;SetTopWindow( $frame );
-    
-      $frame-&gt;Show( 1 );
-    }
-
-    1;
-</pre><p>
-  Here you can see <a href="third/main.pl.txt" target="_top">main.pl</a>,
-  <a href="third/MyApp.pm.txt" target="_top">MyApp.pm</a>, 
-  <a href="third/MyFrame.pm.txt" target="_top">MyFrame.pm</a>. They're
-  suffixed .txt so your browser will not try to execute them (under
-  Win32). If you want to run the sample, you <span class="bold"><b>MUST</b></span> rename the files to .pl and .pm .
-</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="tutorial3.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="tutorial.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="tutorial5.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. Events </td><td width="20%" align="center"><a accesskey="h" href="tutorial.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 5. To be continued</td></tr></table></div><div class="bottom-images"><a target="_blank" href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=15655" width="88" height="31" border="0" alt="SourceForge Logo"></a><a target="_blank" href="http://validator.w3.org/check/referer"><img border="0" height="31" width="88" alt="Valid HTML 4.0!" src="../valid-html40.png"></a></div></body></html>
+  Every <tt class="classname">Wx::Window</tt> has an ID (the second
+  argument to the constructor, always -1 in the examples so far)
+  which identifies it inside the program. wxWidgets uses window
+  IDs to distinguish the originators of events. This means that
+  the program above could have passed a specific ID to
+  <tt class="methodname">Wx::Button::new</tt> and as the
+  second argument to <tt class="function">EVT_BUTTON</tt>. However
+  keeping track of used IDs tends to be awkward and most of the time
+  it is much simpler
+  to let wxPerl sort things out (as in the example).
+</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="tutorial3.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="tutorial.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="tutorial5.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. More controls </td><td width="20%" align="center"><a accesskey="h" href="tutorial.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 5. To be continued</td></tr></table></div><div class="bottom-images"><a target="_blank" href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=15655" width="88" height="31" border="0" alt="SourceForge Logo"></a><a target="_blank" href="http://validator.w3.org/check/referer"><img border="0" height="31" width="88" alt="Valid HTML 4.0!" src="../valid-html40.png"></a></div></body></html>

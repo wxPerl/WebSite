@@ -163,6 +163,13 @@ DIV.navheader, DIV.navfooter, DIV.chapter, DIV.book {
   margin: 15pt;
 }
 
-PRE.programlisting {
+.programlisting {
   background-color: #e0e0e0;
+  margin-left: 15mm;
+  margin-right: 15mm;
+  padding: 5mm;
+}
+
+.methodname, .classname, .function, .varname {
+  color: #3322aa;
 }

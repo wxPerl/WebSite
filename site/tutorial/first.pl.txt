@@ -1,35 +1,35 @@
-# this forces you to predeclare every variable, it isn't necessary,
-# but avoids some common mistakes (especially typos)
+#!/usr/bin/perl -w
+
 use strict;
 
-# import the Wx module
+# load wxPerl main module
 use Wx;
 
 # every application must create an application object
 package MyApp;
 
-# this tells Perl that your class (MyApp in this case) is derived from Wx::App
 use base 'Wx::App';
 
-# this method is called automatically when an application object is first
-# constructed, all application-level initialization is done here
+# this method is called automatically when an application object is
+# first constructed, all application-level initialization is done here
 sub OnInit {
-  # retrieve the 'this' object
-  my( $this ) = shift;
 
-  # create a new frame (a frame is a top level window)
-  my( $frame ) = Wx::Frame->new( undef, -1, 'wxPerl rules',
-                                 [100, 100], [200, 150]
+    # create a new frame (a frame is a top level window)
+    my $frame = Wx::Frame->new( undef,           # parent window
+                                -1,              # ID -1 means any
+                                'wxPerl rules',  # title
+                                [-1, -1],         # default position
+                                [250, 150],       # size
                                );
 
-  # show the frame
-  $frame->Show( 1 );
+    # show the frame
+    $frame->Show( 1 );
 }
 
 package main;
 
-# create the application object
-my( $app ) = MyApp->new();
-# this function will not return until
-# the last frame is closed
-$app->MainLoop();
+# create the application object, this will call OnInit
+my $app = MyApp->new;
+# process GUI events from the application this function will not
+# return until the last frame is closed
+$app->MainLoop;
