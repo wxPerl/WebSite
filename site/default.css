@@ -26,13 +26,13 @@ BODY.navigation-bar * {
 }
 
 .what-is-wxperl {
-  background: aqua;
+  background: aqua;#
   padding: 5pt;
   border: 1pt dotted black;
 }
 
 .wxperl-news {
-  background: #ffff80;
+  background: #ffff80;#
   padding: 5pt;
   margin-top: 5pt;
   border: 1pt dotted black;
@@ -42,12 +42,12 @@ BODY.navigation-bar * {
   border: 1pt dotted black;
   padding: 5pt;
   margin: 5pt;
-  background-color: #f0a0ff;
+  background-color: #f0a0ff;#
 }
 
 .download-binary-releases {
   border: 1pt dotted black;
   padding: 5pt;
   margin: 5pt;
-  background-color: #00f0ff;
+  background-color: #00f0ff;#
 }
