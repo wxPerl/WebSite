@@ -1,25 +1,25 @@
 BODY { 
   background-color: white;
   color: black;
-  margin:  0px;
-  padding: 0px;
-  border:  0px;
+  margin:  0pt;
+  padding: 0pt;
+  border:  0pt;
 }
 
 BODY * {
-  xfont-size: 10pt
+  font-size: medium;
 }
 
 BODY H1 {
-  font-size: 14pt;
+  font-size: large;
 }
 
 BODY H2 {
-  font-size: 12pt;
+  font-size: medium;
 }
 
 DIV.body {
-  margin: 15px;
+  margin: 15pt;
 }
 
 DIV.navigation {
@@ -74,4 +74,10 @@ DIV.screenshots DIV {
 
 DIV.application-list {
   padding-left: 20pt;
+}
+
+DIV.organisation {
+  padding-top: 10pt;
+  paddig-bottom: 10pt;
+  font-size: medium;
 }
