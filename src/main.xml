@@ -26,6 +26,20 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Jan 04, 2005</date>
+    <content>
+<xhtml:b>wxPerl 0.22 is out!</xhtml:b>: this is a source-only
+bugfix release for 0.21. Binary packages for Mac OS X are available
+from the <xhtml:a href="download.html">Download page</xhtml:a>.
+  <xhtml:pre>
+	- Alpha channel support for Wx::Image (2.5).
+	- Wrapped wxChoicebook (2.5).
+	- Various new APIs for wxWidgets 2.5.x.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Dec 20, 2004</date>
     <content>
 <xhtml:b>wxPerl 0.21 is out!</xhtml:b>: go to the 
@@ -511,11 +525,13 @@ A binary package is available
 
 <xhtml:h3>Mac OS X 10.3 (Panther)</xhtml:h3>
 <xhtml:div>
-A DMG image for
+DMG images are available for
 <xhtml:a target="_blank"
-href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.21.dmg">Mac
-OS X 10.3 (Panther)</xhtml:a> is available.  Please note that unlike all
-other binaries it is compiled against wxWidgets 2.5.1.
+href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.22.dmg">Mac
+OS X 10.3 (Panther)</xhtml:a> and <xhtml:a target="_blank"
+href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.22-u.dmg">Mac
+OS X 10.3 (Panther) Unicode</xhtml:a>.  Please note that
+unlike all other binaries it is compiled against wxWidgets 2.5.3.
 </xhtml:div>
     </content>
   </item>
