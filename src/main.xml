@@ -26,6 +26,16 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Jan 22, 2005</date>
+    <content>
+An <xhtml:a href='http://www.barbon.org/wxperl/p5-Wx.tar.gz'>experimental
+ports file for FreeBSD 5.3</xhtml:a> is available. I tested it with wxWidgets 2.4.2
+on a stock FreeBSD 5.3 installation. It will likely work under FreeBSD 4.10
+with little adaptation.
+    </content>
+  </item>
+
+  <item>
     <date>Jan 04, 2005</date>
     <content>
 <xhtml:b>wxPerl 0.22 is out!</xhtml:b>: this is a source-only
