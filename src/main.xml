@@ -587,6 +587,8 @@ Source code for wxPerl is available in various formats:
 <xhtml:ul>
   <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.21.tar.gz">Standard CPAN package (available on CPAN as well)</xhtml:a></xhtml:li>
   <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.21-1.src.rpm">RPM source package</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href='http://www.barbon.org/wxperl/libwx-perl_0.22-1.deb.src.tar.gz'>Debian Sarge (testing)</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href='http://www.barbon.org/wxperl/p5-Wx.tar.gz'>FreeBSD 5.3 Ports package</xhtml:a></xhtml:li>
 <!--  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl_0.11-1.deb.src.tar.gz">Debian source bundled in a single .tar.gz file</a></li> -->
 </xhtml:ul>
     </content>
