@@ -5,7 +5,7 @@
     <title>Mailing lists</title>
     <anchor>ml</anchor>
     <content>
-<xhtml:h2>wxPerl-users</xhtml:h2>
+<xhtml:h3>wxPerl-users</xhtml:h3>
 
 This list is for wxPerl users, you can visit the
 <xhtml:a target="_blank" href="http://sourceforge.net/mailarchive/forum.php?forum=wxperl-users">archives</xhtml:a> and <xhtml:a target="_blank" href="http://lists.sourceforge.net/mailman/listinfo/wxperl-users">(un)subscribe</xhtml:a>.
