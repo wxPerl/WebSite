@@ -1,33 +1,51 @@
-<!doctype html public "-//W3C//DTD HTML 4.0//EN">
-<html lang="en">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 5. Event handling</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="manual.html" title="wxPerl manual"><link rel="up" href="manual.html" title="wxPerl manual"><link rel="previous" href="manual4.html" title="Chapter 4. Interface strategy"><link rel="next" href="manual6.html" title="Chapter 6. API differences (WARNING: this list is incomplete)"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 5. Event handling</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="manual4.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="manual6.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id4687144"></a>Chapter 5. Event handling</h2></div></div><div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><a href="manual5.html#id4687154">Event 'macros'</a></dt><dt><a href="manual5.html#id4687200">Event handlers and exceptions</a></dt></dl></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687154"></a>Event 'macros'</h2></div></div><div></div></div><p>
+  wxPerl can't use static event tables for event handling, but the contructs
+  it uses are similar to wxWindows ones; in particular wxPerl uses the same
+  names for 'event macros'; the key differences are: 
+  </p><div class="itemizedlist"><ul type="disc"><li>in wxPerl these are regular subroutines exported by the 
+        Wx::Event module</li><li>they take one additional first parameter: the Wx::EvtHandler
+        object that must handle the event</li></ul></div><p>
 
-<head>
-  <link rel="stylesheet" href="../default.css" type="text/css">
-</head>
+  so in a program you may use:
+</p><pre class="programlisting">
+    package MyClass;
 
-<body>
-<h1>API differences (WARNING: this list is incomplete)</h1>
+    # ....
 
-<a href="manual4.html">Prev</a> <!-- <a href="manual6.html">Next</a> -->
-<hr>
+    use Wx::Event qw(EVT_CLOSE EVT_BUTTON);
 
-<h2>all classes</h2>
-<p>
-  Everywere you can pass a Wx::Point or Wx::Size object as a parameter,
-  you can pass a reference to a 2 element array ( like [2, 3] ): this
-  saves some typing (and is also a bit faster).
-</p>
+    sub new {
+    
+    # ......
+        # pay attention to the additional parameter
+        EVT_CLOSE( $this, \&amp;OnClose );
+        EVT_BUTTON( $this, $ID_MYBUTTON, \&amp;OnClick );
+    # .....
+</pre><p>
+  In wxPerl, if you do not need to know the id of a control (you will need
+  it for FindWindow and similar functions) you may pass -1 to the constructor,
+  and pass the object itself as the id (wxPerl will automatically do a
+  GetId() on the object).
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687200"></a>Event handlers and exceptions</h2></div></div><div></div></div><p>
+  Please note that event handlers are not exception safe. This means that
+  if you <tt class="literal">die()</tt> (or <tt class="literal">croak()</tt> or
+  <tt class="literal">confess()</tt> or even <tt class="literal">exit()</tt>) from
+  an event handler, your program will most likely crash. Solution:
+  don't do that, or if you are using exceptions, handle them in the handler:
 
-<p>
-  There is no two step construction ( default constructor + Create )
-</p>
+</p><pre class="programlisting">
+  sub OnFoo {
+      eval {
+          # code that might die()
+      };
 
-<p>
-  You may pass a scalar as client data.
-</p>
+      # log error (or handle it differently)
+      Wx::LogError( $@ ) if $@;
+  }
+</pre><p>
 
-<hr>
-<a href="manual4.html">Prev</a> <!-- <a href="manual6.html">next</a> -->
-</body>
+  You might use the <tt class="literal">Error</tt> module for a more structured
+  exception handling.
 
-</html>
+</p></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="manual4.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="manual.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="manual6.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 4. Interface strategy </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 6. API differences (WARNING: this list is incomplete)</td></tr></table></div><div class="bottom-images"><a target="_blank" href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=15655" width="88" height="31" border="0" alt="SourceForge Logo"></a><a target="_blank" href="http://validator.w3.org/check/referer"><img border="0" height="31" width="88" alt="Valid HTML 4.0!" src="../valid-html40.png"></a></div></body></html>

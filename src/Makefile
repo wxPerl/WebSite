@@ -5,13 +5,15 @@ HTML=$(OUTDIR)/index.html $(OUTDIR)/download.html $(OUTDIR)/about.html \
      $(OUTDIR)/documentation.html $(OUTDIR)/support.html $(OUTDIR)/news.html \
      $(OUTDIR)/sshot01.html $(OUTDIR)/sshot02.html $(OUTDIR)/sshot03.html \
      $(OUTDIR)/users.html
-XSLT=xsltproc --catalogs
+XSLT=xsltproc
 XMLCHECKDTD=xmllint --catalogs --loaddtd --valid --noout
 XMLCHECK=xmllint --catalogs --noout
 
 all: $(HTML)
 
 tutorial: $(OUTDIR)/tutorial/tutorial.html
+
+manual: $(OUTDIR)/manual/manual.html
 
 crlf2lf:
 	find $(OUTDIR) -name "*.html" | xargs flip -b -u
@@ -22,8 +24,17 @@ crlf2lf:
 
 $(OUTDIR)/tutorial/tutorial.html: tutorial/tutorial.xml tutorial/tutorial.xsl \
     wxperl.xsl
-	$(XSLT) --output $(OUTDIR)/tutorial/ --path c:/Programmi/Varie/DocBook/docbook-xsl-1.61.2/html tutorial/tutorial.xsl \
+	$(XSLT) --output $(OUTDIR)/tutorial/ tutorial/tutorial.xsl \
             tutorial/tutorial.xml
+
+###############################################################################
+# Manual
+###############################################################################
+
+$(OUTDIR)/manual/manual.html: manual/manual.xml manual/manual.xsl \
+    wxperl.xsl
+	$(XSLT) --output $(OUTDIR)/manual/ manual/manual.xsl \
+            manual/manual.xml
 
 ###############################################################################
 # Site files

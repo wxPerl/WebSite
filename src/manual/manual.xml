@@ -1,0 +1,439 @@
+<?xml version="1.0" ?>
+
+<!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
+                      "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+
+<book>
+<bookinfo>
+  <title>wxPerl manual</title>
+  <author><firstname>Mattia</firstname><surname>Barbon</surname></author>
+  <copyright><year>2003</year><holder>Mattia Barbon</holder></copyright>
+</bookinfo>
+
+<?dbhtml filename="manual.html"?>
+
+<chapter>
+  <?dbhtml filename="manual1.html"?>
+
+  <title>About this manual</title>
+
+<para>
+  This manual does not attempt to cover any topic related to wxPerl: 
+  it just highlights the key differences between
+  wxPerl and wxWindows. The main reference for the wxWindows/wxPerl
+  API is the wxWindows manual; it is available from
+  <ulink url="http://sourceforge.net/project/showfiles.php?group_id=15655">
+   the wxPerl download page</ulink>.
+</para>
+
+<para>
+  If you think this manual could be improved,
+  contact <ulink url="mailto:mbarbon@users.sourceforge.net">
+  me</ulink> an I will correct it.
+</para>
+
+</chapter>
+
+<chapter>
+  <?dbhtml filename="manual2.html"?>
+  <title>Implemented classes</title>
+
+<para>
+  wxPerl aims to be a complete wrapper to wxWindows GUI classes
+  (and some other interesting non-GUI classes). Here is a list
+  of classes that are actually implemented, some with a (nearly) full
+  interface,
+  while some are less complete, or have some rough edges in the interface.
+  The classes marked with (*) are currently untested, classes marked with
+  (+) are available only with wxWindows 2.3 (developement version).
+</para>
+
+<itemizedlist>
+  <listitem>wxAcceleratorEntry</listitem>
+  <listitem>wxAcceleratorTable</listitem>
+  <listitem>wxActivateEvent</listitem>
+  <listitem>wxApp</listitem>
+  <listitem>wxBMPhandler *</listitem>
+  <listitem>wxBitmap *</listitem>
+  <listitem>wxBitmapButton</listitem>
+  <listitem>wxBoxSizer</listitem>
+  <listitem>wxBrush *</listitem>
+  <listitem>wxButton</listitem>
+  <listitem>wxCaret</listitem>
+  <listitem>wxCheckBox</listitem>
+  <listitem>wxCheckListBox *</listitem>
+  <listitem>wxChoice</listitem>
+  <listitem>wxClassInfo</listitem>
+  <listitem>wxClientDC</listitem>
+  <listitem>wxCloseEvent</listitem>
+  <listitem>wxColour</listitem>
+  <listitem>wxColourDialog</listitem>
+  <listitem>wxComboBox</listitem>
+  <listitem>wxCommandEvent *</listitem>
+  <listitem>wxControl</listitem>
+  <listitem>wxCursor</listitem>
+  <listitem>wxDC</listitem>
+  <listitem>wxDialog</listitem>
+  <listitem>wxDirDialog</listitem>
+  <listitem>wxEraseEvent</listitem>
+  <listitem>wxEvent</listitem>
+  <listitem>wxEvtHandler</listitem>
+  <listitem>wxFileDialog</listitem>
+  <listitem>wxFlexGridSizer *</listitem>
+  <listitem>wxFocusEvent</listitem>
+  <listitem>wxFont</listitem>
+  <listitem>wxFrame</listitem>
+  <listitem>wxGIFHandler *</listitem>
+  <listitem>wxGauge</listitem>
+  <listitem>wxGDIObject</listitem>
+  <listitem>wxGridSizer</listitem>
+  <listitem>wxHelpEvent *+</listitem>
+  <listitem>wxIdleEvent</listitem>
+  <listitem>wxIcon</listitem>
+  <listitem>wxImage *</listitem>
+  <listitem>wxImageHandler *</listitem>
+  <listitem>wxImageList</listitem>
+  <listitem>wxIndividualLayoutConstraints</listitem>
+  <listitem>wxInitDialogEvent</listitem>
+  <listitem>wxJPEGHandler *</listitem>
+  <listitem>wxJoystickEvent</listitem>
+  <listitem>wxKeyEvent</listitem>
+  <listitem>wxLayoutConstraints</listitem>
+  <listitem>wxListBox</listitem>
+  <listitem>wxListCtrl</listitem>
+  <listitem>wxListEvent</listitem>
+  <listitem>wxListItem</listitem>
+  <listitem>wxLocale</listitem>
+  <listitem>wxLog</listitem>
+  <listitem>wxLogTextCtrl</listitem>
+  <listitem>wxMask</listitem>
+  <listitem>wxMemoryDC</listitem>
+  <listitem>wxMenu</listitem>
+  <listitem>wxMenuBar</listitem>
+  <listitem>wxMenuEvent</listitem>
+  <listitem>wxMenuItem</listitem>
+  <listitem>wxMessageDialog</listitem>
+  <listitem>wxMiniFrame *</listitem>
+  <listitem>wxMouseEvent</listitem>
+  <listitem>wxMoveEvent</listitem>
+  <listitem>wxMultiChoiceDialog +</listitem>
+  <listitem>wxNotebook</listitem>
+  <listitem>wxNotebookSizer</listitem>
+  <listitem>wxNotebookEvent</listitem>
+  <listitem>wxNotifyEvent</listitem>
+  <listitem>wxPCXHandler *</listitem>
+  <listitem>wxPNGHandler *</listitem>
+  <listitem>wxPNMHandler *</listitem>
+  <listitem>wxPaintDC</listitem>
+  <listitem>wxPaintEvent</listitem>
+  <listitem>wxPalette *</listitem>
+  <listitem>wxPanel</listitem>
+  <listitem>wxPen</listitem>
+  <listitem>wxPoint</listitem>
+  <listitem>wxProgressDialog</listitem>
+  <listitem>wxRadioBox</listitem>
+  <listitem>wxRadioButton</listitem>
+  <listitem>wxRect</listitem>
+  <listitem>wxRegion *</listitem>
+  <listitem>wxSashEvent</listitem>
+  <listitem>wxSashWindow *</listitem>
+  <listitem>wxScreenDC *</listitem>
+  <listitem>wxScrollBar *</listitem>
+  <listitem>wxScrollEvent</listitem>
+  <listitem>wxScrolledWindow</listitem>
+  <listitem>wxSingleChoiceDialog</listitem>
+  <listitem>wxSize</listitem>
+  <listitem>wxSizeEvent</listitem>
+  <listitem>wxSizer</listitem>
+  <listitem>wxSlider</listitem>
+  <listitem>wxSpinButton</listitem>
+  <listitem>wxSpinCtrl</listitem>
+  <listitem>wxSpinEvent</listitem>
+  <listitem>wxSplitterEvent</listitem>
+  <listitem>wxSplitterWindow</listitem>
+  <listitem>wxStaticBitmap</listitem>
+  <listitem>wxStaticBox</listitem>
+  <listitem>wxStaticBoxSizer</listitem>
+  <listitem>wxStaticLine</listitem>
+  <listitem>wxStaticText</listitem>
+  <listitem>wxStatusBar</listitem>
+  <listitem>wxSysColourChangedEvent *</listitem>
+  <listitem>wxTIFFHandler *</listitem>
+  <listitem>wxTextCtrl</listitem>
+  <listitem>wxTextEntryDialog</listitem>
+  <listitem>wxToolBar</listitem>
+  <listitem>wxToolTip</listitem>
+  <listitem>wxUpdateUIEvent</listitem>
+  <listitem>wxValidator</listitem>
+  <listitem>wxWindow</listitem>
+  <listitem>wxWindowDC</listitem>
+</itemizedlist>
+
+</chapter>
+
+<chapter>
+  <?dbhtml filename="manual3.html"?>
+  <title>Constants</title>
+
+<para>
+  wxWindows uses several constants (like wxWHITE or wxSUNKEN_BORDER), 
+  both to specify option values and to provide some useful constants.
+  In wxPerl, before you use a constant, you must import it in your namespace.
+  This is done (as usual) with the 'use' statement.
+</para>
+
+<programlisting>
+    use Wx qw(wxWHITE);
+    use Wx qw(wxSUNKEN_BORDER wxBLUE wxSTANDARD_CURSOR);
+</programlisting>
+
+<para>
+  When you write a real program, however, importing 'by hand' all constants 
+  you need one by one will be annoying, so there is a shorthand method: instead
+  of enumerating the constants, you may use a colon followed by a tag specifying
+  the constants you want.
+</para>
+
+<programlisting>
+    use Wx qw(:window :textctrl);
+    use Wx qw(:pen);
+    use Wx qw(:image wxSTANDARD_CURSOR);
+    use Wx qw(:everything);     # really quick and dirty
+</programlisting>
+
+<para>
+  Currently defined tags are: everything, cursor, button, notebook, 
+  misc (wxDefault(Size|Position|Validator)), joystick, imagelist, colour,
+  combobox, listbox, statictext, layout (alias for constraints), toolbar
+  scrolledwindow, radiobutton, staticline, region, id (wxID_*),
+  scrollbar, menu, font, panel, window, dialog, icon, spinbutton, image,
+  gauge, textctrl slider, radiobox, color (alias for colour), 
+  splitterwindow, brush, dc, pen, bitmap, spinctrl, frame, sizer.
+</para>
+
+</chapter>
+
+<chapter>
+  <?dbhtml filename="manual4.html"?>
+  <title>Interface strategy</title>
+
+<section>
+  <title>Classes, static methods and global functions</title>
+
+<para>
+  In wxPerl all classes are named Wx::Something, so wxFrame is really Wx::Frame.
+  Static methods are called Wx::ClassName::Method(). Global function named
+  wxFunction() are accessible as Wx::Function().
+</para>
+
+</section>
+
+<section>
+  <title>Polymorphysm</title>
+
+<para>
+  In wxWindows some methods (like FindWindow) return a pointer to a base class,
+  and the programmer is obliged to explicitly cast the object to the right
+  type. wxPerl does this for you, so you do not need to worry for that.
+</para>
+
+<section>Overloaded methods</section>
+<para>
+  Where is applicable, wxPerl uses overloaded method names just like wxWindows,
+  when this is not feasible, the difference is documented in the following pages
+  (and will be documented in wxWindows manual, in the future).
+</para>
+
+</section>
+
+<section>
+  <title>Functions modifying their parameters</title>
+
+<para>
+  Some wxWindows functions modify their parameters; though in Perl this is 
+  possible, wxPerl avoids this practice, and such methods are always 
+  modified to take less parameters and return a Perl array.
+</para>
+
+</section>
+
+<section>
+  <title>Object destruction</title>
+
+<para>
+  In Perl memory management is a matter for the perl interpreter; however,
+  since we are interacting with an external C++ library, there are some
+  problems.
+</para>
+
+<para>
+  In wxPerl there are three kinds of objects
+  <orderedlist>
+    <listitem>objects destroyed 'by hand' by the program (using the
+        <methodname>Destroy</methodname> method)</listitem>
+    <listitem>objects destroyed automatically by wxWindows in some
+        situations, sometimes they too need to be destroyed
+        by hand</listitem>
+    <listitem>objects destroyed when no more referenced (as Perl does
+        usually)</listitem>
+    <listitem>other objects you do not need to worry about</listitem>
+  </orderedlist>
+</para>
+
+<section>
+  <title>First category</title>
+
+<para>
+  <itemizedlist>
+    <listitem>Wx::Log and derived classes</listitem>
+    <listitem>Wx::Mask</listitem>
+  </itemizedlist>
+</para>
+
+</section>
+
+<section>
+  <title>Second category</title>
+
+<para>
+  <itemizedlist>
+    <listitem>all Wx::Window/Wx::Sizer/Wx::LayoutConstraints/Wx::Menu* 
+        and derived objects: 
+        when they are childs of
+        some other window/sizer, are destroyed automatically when the
+        paent itself is destroyed. When they have no parent they need to
+        be destroyed explicitily.</listitem>
+    <listitem>all Wx::ImageHandler/Wx::BitmapHandler-derived objects: if you
+        have added them to the handlers (using
+        <methodname>AddHandler</methodname>,
+        they are automatically destroyed, otherwise you need to destroy
+        them explicitly</listitem>
+  </itemizedlist>
+</para>
+
+</section>
+
+<section>
+  <title>Third category</title>
+
+<para>
+  Wx::*Event, Wx::App, Wx::Bitmap, Wx::Brush, Wx::*DC, Wx::Colour,
+  Wx::Cursor, Wx::EvtHandler (user objects derived directly from
+  Wx::EvtHandler), Wx::Font, Wx::Icon, Wx::Image, Wx::ImageList,
+  Wx::Locale, Wx::Pen, Wx::Point, Wx::Rect, Wx::Region, Wx::Size,
+  Wx::ToolTip
+</para>
+
+</section>
+
+<section>
+  <title>Fourth category</title>
+
+<para>
+  Wx::ClassInfo, Wx::IndividualLayoutConstraints
+</para>
+
+</section>
+
+</section>
+
+</chapter>
+
+<chapter>
+  <?dbhtml filename="manual5.html"?>
+  <title>Event handling</title>
+
+<section>
+  <title>Event 'macros'</title>
+
+<para>
+  wxPerl can't use static event tables for event handling, but the contructs
+  it uses are similar to wxWindows ones; in particular wxPerl uses the same
+  names for 'event macros'; the key differences are: 
+  <itemizedlist>
+    <listitem>in wxPerl these are regular subroutines exported by the 
+        Wx::Event module</listitem>
+    <listitem>they take one additional first parameter: the Wx::EvtHandler
+        object that must handle the event</listitem>
+  </itemizedlist>
+
+  so in a program you may use:
+</para>
+
+<programlisting>
+    package MyClass;
+
+    # ....
+
+    use Wx::Event qw(EVT_CLOSE EVT_BUTTON);
+
+    sub new {
+    
+    # ......
+        # pay attention to the additional parameter
+        EVT_CLOSE( $this, \&amp;OnClose );
+        EVT_BUTTON( $this, $ID_MYBUTTON, \&amp;OnClick );
+    # .....
+</programlisting>
+
+<para>
+  In wxPerl, if you do not need to know the id of a control (you will need
+  it for FindWindow and similar functions) you may pass -1 to the constructor,
+  and pass the object itself as the id (wxPerl will automatically do a
+  GetId() on the object).
+</para>
+
+</section>
+
+<section>
+  <title>Event handlers and exceptions</title>
+
+<para>
+  Please note that event handlers are not exception safe. This means that
+  if you <literal>die()</literal> (or <literal>croak()</literal> or
+  <literal>confess()</literal> or even <literal>exit()</literal>) from
+  an event handler, your program will most likely crash. Solution:
+  don't do that, or if you are using exceptions, handle them in the handler:
+
+<programlisting>
+  sub OnFoo {
+      eval {
+          # code that might die()
+      };
+
+      # log error (or handle it differently)
+      Wx::LogError( $@ ) if $@;
+  }
+</programlisting>
+
+  You might use the <literal>Error</literal> module for a more structured
+  exception handling.
+
+</para>
+
+</section>
+
+</chapter>
+
+<chapter>
+  <?dbhtml filename="manual6.html"?>
+  <title>API differences (WARNING: this list is incomplete)</title>
+
+<section>
+  <title>all classes</title>
+
+<para>
+  Everywere you can pass a Wx::Point or Wx::Size object as a parameter,
+  you can pass a reference to a 2 element array (like [2, 3]): this
+  saves some typing (and is also a bit faster).
+</para>
+
+<para>
+  You may pass a scalar as client data.
+</para>
+
+</section>
+
+</chapter>
+
+</book>

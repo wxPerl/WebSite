@@ -1,57 +1,50 @@
-<!doctype html public "-//W3C//DTD HTML 4.0//EN">
-<html lang="en">
-
-<head>
-  <link rel="stylesheet" href="../default.css" type="text/css">
-</head>
-
-<body>
-<h1>Event handling</h1>
-
-<a href="manual3.html">Prev</a> <a href="manual5.html">Next</a>
-<hr>
-
-<h2>Event 'macros'</h2>
-<p>
-  wxPerl can't use static event tables for event handling, but the contructs
-  it uses are similar to wxWindows ones; in particular wxPerl uses the same
-  names for 'event macros'; the key differences are: 
-  <ul>
-    <li>in wxPerl these are regular subroutines exported by the 
-        Wx::Event module</li>
-    <li>they take one additional first parameter: the Wx::EvtHandler
-        object that must handle the event</li>
-  </ul>
-
-  so in a program you may use:
-</p>
-
-<pre>
-    package MyClass;
-
-    # ....
-
-    use Wx::Event qw(EVT_CLOSE EVT_BUTTON);
-
-    sub new {
-    
-    # ......
-        # pay attention to the additional parameter
-        EVT_CLOSE( $this, \&OnClose );
-        EVT_BUTTON( $this, $ID_MYBUTTON, \&OnClick );
-    # .....
-</pre>
-
-<p>
-  In wxPerl, if you do not need to know the id of a control (you will need
-  it for FindWindow and similar functions) you may pass -1 to the constructor,
-  and pass the object itself as the id (wxPerl will automatically do a
-  GetId() on the object).
-</p>
-
-<hr>
-<a href="manual3.html">Prev</a> <a href="manual5.html">Next</a>
-
-</body>
-
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. Interface strategy</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="manual.html" title="wxPerl manual"><link rel="up" href="manual.html" title="wxPerl manual"><link rel="previous" href="manual3.html" title="Chapter 3. Constants"><link rel="next" href="manual5.html" title="Chapter 5. Event handling"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. Interface strategy</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="manual3.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="manual5.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id4688095"></a>Chapter 4. Interface strategy</h2></div></div><div></div></div><div class="toc"><p><b>Table of Contents</b></p><dl><dt><a href="manual4.html#id4686968">Classes, static methods and global functions</a></dt><dt><a href="manual4.html#id4686982">Polymorphysm</a></dt><dd><dl><dt><a href="manual4.html#id4686995"></a></dt></dl></dd><dt><a href="manual4.html#id4687006">Functions modifying their parameters</a></dt><dt><a href="manual4.html#id4687020">Object destruction</a></dt><dd><dl><dt><a href="manual4.html#id4687065">First category</a></dt><dt><a href="manual4.html#id4687085">Second category</a></dt><dt><a href="manual4.html#id4687117">Third category</a></dt><dt><a href="manual4.html#id4687132">Fourth category</a></dt></dl></dd></dl></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4686968"></a>Classes, static methods and global functions</h2></div></div><div></div></div><p>
+  In wxPerl all classes are named Wx::Something, so wxFrame is really Wx::Frame.
+  Static methods are called Wx::ClassName::Method(). Global function named
+  wxFunction() are accessible as Wx::Function().
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4686982"></a>Polymorphysm</h2></div></div><div></div></div><p>
+  In wxWindows some methods (like FindWindow) return a pointer to a base class,
+  and the programmer is obliged to explicitly cast the object to the right
+  type. wxPerl does this for you, so you do not need to worry for that.
+</p><div class="section" lang="en"><div class="titlepage"><div></div><div></div></div>Overloaded methods</div><p>
+  Where is applicable, wxPerl uses overloaded method names just like wxWindows,
+  when this is not feasible, the difference is documented in the following pages
+  (and will be documented in wxWindows manual, in the future).
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687006"></a>Functions modifying their parameters</h2></div></div><div></div></div><p>
+  Some wxWindows functions modify their parameters; though in Perl this is 
+  possible, wxPerl avoids this practice, and such methods are always 
+  modified to take less parameters and return a Perl array.
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687020"></a>Object destruction</h2></div></div><div></div></div><p>
+  In Perl memory management is a matter for the perl interpreter; however,
+  since we are interacting with an external C++ library, there are some
+  problems.
+</p><p>
+  In wxPerl there are three kinds of objects
+  </p><div class="orderedlist"><ol type="1"><li>objects destroyed 'by hand' by the program (using the
+        <tt class="methodname">Destroy</tt> method)</li><li>objects destroyed automatically by wxWindows in some
+        situations, sometimes they too need to be destroyed
+        by hand</li><li>objects destroyed when no more referenced (as Perl does
+        usually)</li><li>other objects you do not need to worry about</li></ol></div><p>
+</p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687065"></a>First category</h3></div></div><div></div></div><p>
+  </p><div class="itemizedlist"><ul type="disc"><li>Wx::Log and derived classes</li><li>Wx::Mask</li></ul></div><p>
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687085"></a>Second category</h3></div></div><div></div></div><p>
+  </p><div class="itemizedlist"><ul type="disc"><li>all Wx::Window/Wx::Sizer/Wx::LayoutConstraints/Wx::Menu* 
+        and derived objects: 
+        when they are childs of
+        some other window/sizer, are destroyed automatically when the
+        paent itself is destroyed. When they have no parent they need to
+        be destroyed explicitily.</li><li>all Wx::ImageHandler/Wx::BitmapHandler-derived objects: if you
+        have added them to the handlers (using
+        <tt class="methodname">AddHandler</tt>,
+        they are automatically destroyed, otherwise you need to destroy
+        them explicitly</li></ul></div><p>
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687117"></a>Third category</h3></div></div><div></div></div><p>
+  Wx::*Event, Wx::App, Wx::Bitmap, Wx::Brush, Wx::*DC, Wx::Colour,
+  Wx::Cursor, Wx::EvtHandler (user objects derived directly from
+  Wx::EvtHandler), Wx::Font, Wx::Icon, Wx::Image, Wx::ImageList,
+  Wx::Locale, Wx::Pen, Wx::Point, Wx::Rect, Wx::Region, Wx::Size,
+  Wx::ToolTip
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687132"></a>Fourth category</h3></div></div><div></div></div><p>
+  Wx::ClassInfo, Wx::IndividualLayoutConstraints
+</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="manual3.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="manual.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="manual5.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. Constants </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 5. Event handling</td></tr></table></div><div class="bottom-images"><a target="_blank" href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=15655" width="88" height="31" border="0" alt="SourceForge Logo"></a><a target="_blank" href="http://validator.w3.org/check/referer"><img border="0" height="31" width="88" alt="Valid HTML 4.0!" src="../valid-html40.png"></a></div></body></html>

@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 
 <!DOCTYPE book PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
-                      "http://dummy/docbook.dtd">
+                      "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
 
 <book>
 <bookinfo>
@@ -35,7 +35,7 @@ know is that, if a wxPerl class is called, say,
   <title>First steps with wxPerl</title>
 
 <abstract>
-This program opens a window (more precisely a frame) and does nothing else.
+This program opens a window (more precisely a frame).
 </abstract>
 
 <section>
