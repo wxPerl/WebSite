@@ -19,14 +19,14 @@
 
 This tutorial is meant to be a basic guide; it tries to assume only a
 little knowledge of Perl, and no knowledge of 
-<ulink url="http://www.wxwindows.org/">wxWindows</ulink>; for
-a detailed API description you need to refer to the wxWindows/wxPerl
+<ulink url="http://www.wxwidgets.org/">wxWidgets</ulink>; for
+a detailed API description you need to refer to the wxWidgets/wxPerl
 manual (<ulink
 url="http://wxperl.sourceforge.net/download.html#Documentation">download
-the wxWindows/wxPerl manual now!</ulink>); the only thing you need to
+the wxWidgets/wxPerl manual now!</ulink>); the only thing you need to
 know is that, if a wxPerl class is called, say,
 <classname>Wx::Frame</classname>, you should search for
-<classname>wxFrame</classname> in wxWindows documentation.
+<classname>wxFrame</classname> in wxWidgets documentation.
 
 </chapter>
 
@@ -83,7 +83,7 @@ This program opens a window (more precisely a frame) and does nothing else.
   frame has no parent, the second is the window identifier (-1 is a
   default id, since usually we don't care for frame ids), the third is
   the frame title.  The last two are the frame position and size; if
-  you look at wxWindows documentation you will see that the position
+  you look at wxWidgets documentation you will see that the position
   is a wxPoint, and the size a wxSize; however if you had to write
   <literal>Wx::Point->new( 100, 100 )</literal> and/or
   <literal>Wx::Size->new( 200, 150 )</literal> everytime you need to
@@ -158,7 +158,7 @@ we'll create our own frame class (derived from Wx::Frame, of course).
     package MyFrame;
     
     use strict;
-    uase base 'Wx::Frame';
+    use base 'Wx::Frame';
 </programlisting>
 
 <para>
@@ -199,7 +199,7 @@ we'll create our own frame class (derived from Wx::Frame, of course).
 
 <para>
   Now we create two menus, put them on a menubar, and associate
-  the menubar to our frame (you may consult the wxWindows manual for a more
+  the menubar to our frame (you may consult the wxWidgets manual for a more
   detailed description). 
 </para>
 
@@ -232,7 +232,7 @@ we'll create our own frame class (derived from Wx::Frame, of course).
 
 <para>
   Now comes the important part: event handling. There is an important
-  difference between wxWindows and wxPerl: in wxWindows the event
+  difference between wxWidgets and wxPerl: in wxWidgets the event
   macros are enclosed between
   <literal>BEGIN_EVENT_TABLE()..... END_EVENT_TABLE()</literal>
   statements, while in wxPerl they usually appear in the constructor;
@@ -254,7 +254,7 @@ we'll create our own frame class (derived from Wx::Frame, of course).
       # declare that events coming from menu items with the given
       # id will be handled by the frame ($this) using the listed methods
 
-      # in wxWindows you will have used EVT_MENU( id, method )
+      # in wxWidgets you will have used EVT_MENU( id, method )
       # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
       EVT_MENU( $this, $ID_EXIT, \&OnQuit );
       EVT_MENU( $this, $ID_ABOUT, \&OnAbout );
@@ -485,7 +485,7 @@ we'll create our own frame class (derived from Wx::Frame, of course).
       # declare that events coming from menu items with the given
       # id will be handled by the frame ($this) using the listed methods
     
-      # in wxWindows you will have used EVT_MENU( id, method )
+      # in wxWidgets you will have used EVT_MENU( id, method )
       # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
       EVT_MENU( $this, $ID_EXIT, \&OnQuit );
       EVT_MENU( $this, $ID_ABOUT, \&OnAbout );

@@ -92,11 +92,11 @@
 <xsl:param name="path" select="'.'" />
 
 <div class="bottom-images">
-  <!-- built with wxWindows -->
+  <!-- built with wxWidgets -->
 <!--
-  <a target="_blank" href="http://www.wxwindows.org/">
+  <a target="_blank" href="http://www.wxwidgets.org/">
     <img src="builtwithwx.gif" 
-         width="116" heightt="49" border="0" alt="Built with wxWindows" />
+         width="116" heightt="49" border="0" alt="Built with wxWidgets" />
   </a>
 -->
 

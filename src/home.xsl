@@ -14,7 +14,7 @@ wxPerl is an extension module allowing the creation of GUI
   (Graphical User Interface) from 
 <a target="_blank" href="http://www.perl.com/">Perl</a>; 
 it is built as a wrapper for the
-awesome <a target="_blank" href="http://www.wxwindows.org/">wxWindows</a>
+awesome <a target="_blank" href="http://www.wxwidgets.org/">wxWidgets</a>
 C++ GUI toolkit.
 
 You can look at some <a href="sshot01.html">screenshots</a> or

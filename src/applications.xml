@@ -197,6 +197,41 @@ Online department all use PCs.
     </applications>
   </organisation>
 
+  <organisation>
+    <name>VisualWx team</name>
+    <site>http://visualwx.altervista.org/</site>
+    <country>Italy</country>
+    <contact>
+      <name>Antonio</name>
+      <email>visualwx@katamail.com</email>
+    </contact>
+    <wxperl>
+      <rating>4</rating>
+      <comments>
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>VisualWx</name>
+        <site>http://visualwx.altervista.org/</site>
+        <license-type><freeware /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>Any</wxperl-version>
+        <domain></domain>
+        <short-description>
+Rad &amp; Gui Editor for wxPerl
+        </short-description>
+        <long-description>
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
@@ -217,7 +252,7 @@ Online department all use PCs.
       <application>
         <name></name>
         <site></site>
-        <license-type><commercial /><open-source /></license-type>
+        <license-type><commercial /><open-source /><freeware /></license-type>
         <platforms>
           <windows />
           <linux />
