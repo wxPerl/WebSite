@@ -232,6 +232,64 @@ Rad &amp; Gui Editor for wxPerl
     </applications>
   </organisation>
 
+  <organisation>
+    <name>Peter van der Landen</name>
+    <contact>
+      <name>Peter van der Landen</name>
+      <email>xenna@users.sourceforge.net</email>
+    </contact>
+    <wxperl>
+      <rating>4</rating>
+      <comments>
+Videobox is my first GUI application. wxPerl was a good way to leverage my
+Perl knowledge to writing GUI apps. I did have a hard time finding appropriate
+documentation and samples sometimes. 
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>Videobox</name>
+        <site>http://videobox.sourceforge.net</site>
+        <license-type><open-source /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>0.17</wxperl-version>
+        <domain>Multimedia</domain>
+        <short-description>
+Play video's on your TV controlled by your Squeezebox RC. A remote
+controlled Windows Media Player. Especially suited for control by the
+wonderful Squeezebox or SliMP3 MP3 player devices, but a GUI RC
+application is bundled.
+        </short-description>
+        <long-description>
+Videobox is a remote controlled Windows Media Player. It can be
+controlled with the bundled Windows remote control application over
+TCP/IP but its main purpose in life is to be controlled from a
+Squeezebox or <a href="http://www.slimdevices.com">SliMP3</a> device
+through a
+<a href="http://www.slimdevices.com/su_downloads.html">Slimserver</a>
+plugin.
+
+Just add a way to get your PC's Video &amp; Audio signals to your living room 
+TV set to transform your Squeezebox into a Video Player. There are many wired
+and wireless methods to achieve that. See below for some links.
+
+Videobox Player can play AVI &amp; MPG files as well as live Windows Media
+video streams, this gives you access to a number of channels that you
+couldn't have watched otherwise.  These video streams usually look a
+lot better on your TV than they would on your PC.
+
+With a TV modulator and multiple Squeezeboxes you can watch and control your
+Videobox Player from anywhere in the house.
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
