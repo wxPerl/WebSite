@@ -130,6 +130,7 @@
   <title>wxPerl</title>
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
   <link rel="stylesheet" href="default.css" type="text/css" />
+  <link rel="shortcut icon" href="favicon.ico" type="text/css" />
 </head>
 
 <body>

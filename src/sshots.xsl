@@ -14,8 +14,7 @@
       <td align="left">
         <xsl:if test="$page &gt; 1">
           <xsl:element name="a">
-            <xsl:attribute name="href">
-              sshot<xsl:number value="$page - 1" format="01"/>.html</xsl:attribute>
+            <xsl:attribute name="href">sshot<xsl:number value="$page - 1" format="01"/>.html</xsl:attribute>
             Previous
           </xsl:element>
         </xsl:if>
@@ -23,9 +22,7 @@
       <td align="right">
         <xsl:if test="$page &lt; count(../page)">
           <xsl:element name="a">
-            <xsl:attribute name="href">
-              sshot<xsl:number value="$page + 1" format="01"/>.html
-            </xsl:attribute>
+            <xsl:attribute name="href">sshot<xsl:number value="$page + 1" format="01"/>.html</xsl:attribute>
             Next
           </xsl:element>
         </xsl:if>
