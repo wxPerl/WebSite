@@ -2,91 +2,48 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" href="../default.css" type="text/css">
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
-  <title>Compiling Perl modules for ActivePerl using MinGW</title>
+  <title>Compile Perl modules for ActivePerl using MinGW</title>
+  <style>
+h1, h2, h3 {
+  font-family: "trebuchet ms", tahoma, sans-serif;
+}
+
+body {
+  font-family: verdana, tahoma, helvetica, arial, sans-serif;
+  font-size: 95%;
+  padding: 3ex;
+}
+  </style>
 </head>
 
 <body>
-<h1>ActivePerl + MinGW</h1>
+<h1>Compile Perl modules for ActivePerl using MinGW</h1>
 
 <p>
   This page documents a procedure to build Perl modules for ActivePerl
-  using MinGW ( gcc for Win32 ).
+  using MinGW (gcc for Windows/Win32).
 </p>
 
-<h4>Last update: May 8 2001</h4>
+<h4>Last update: Aug 03 2004</h4>
 
-<p><a href="ExtUtils-FakeConfig-0.03.zip">Download (size 10k)</a></p>
-<p>
-  This zip contains ExtUtils::FakeConfig 0.03, the installation instructions,
-  and a small script to automate import library creation.
-</p>
-
-<p><a href="INSTALL.txt">Read the procedure</a></p>
-
-<p><a href="mailto:mbarbon@dsi.unive.it">Contact the author</a></p>
+<p>I can be reached at <tt>&lt;USERID&gt@cpan.org</tt> where <tt>USERID</tt>
+is <tt>mbarbon</tt></p>
 
 <h2>Requirements</h2>
 
 <ul>
-  <li>MinGW GCC 2.95.2-1</li>
-  <li>ActivePerl ( tested builds 616, 620; might work with
-      earlier 6xx builds)</li>
+  <li>MinGW GCC 2.95.2-1 or newer (the MinGW-x.y bundles are fine)</li>
+  <li>ActivePerl (tested builds 6xx and 8xx, will not work with 5xx)</li>
   <li>dmake</li>
 </ul>
 
-
-<h2>Tested modules</h2>
-
-<table>
-  <tr>
-    <th>Module</th>
-    <th>Version</th>
-    <th>OS</th>
-  </tr>
-
-  <tr>
-    <td>DBD::CSV</td>
-    <td>0.1022</td>
-    <td>Win2k</td>
-  </tr>
-
-  <tr>
-    <td>DBD::ODBC</td>
-    <td>0.28</td>
-    <td>Win2k</td>
-  </tr>
-
-  <tr>
-    <td>DBI</td>
-    <td>1.14</td>
-    <td>Win2k</td>
-  </tr>
-
-  <tr>
-    <td>SQL::Statement</td>
-    <td>0.1016</td>
-    <td>Win2k</td>
-  </tr>
-
-  <tr>
-    <td>Text::CSV_XS</td>
-    <td>0.20</td>
-    <td>Win2k</td>
-  </tr>
-
-  <tr>
-    <td>Wx (wxPerl)</td>
-    <td>0.06</td>
-    <td>Win2k</td>
-  </tr>
-</table>
-
 <p>
-  If you succeed in building these modules under other OS 
-  ( expecially 95/98/ME ), or other modules not listed there, please
-  contact me so I can update the list.
+  Simply download
+  <a href="http://search.cpan.org/~mbarbon/ExtUtils-FakeConfig/">
+  ExtUtils::FakeConfig</a>, read the associated <tt>README.txt</tt>,
+  install it and start compiling modules (you can use it with CPAN.pm
+  and CPANPLUS, too).
 </p>
 
 </body>
