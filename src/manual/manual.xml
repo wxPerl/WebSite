@@ -436,4 +436,98 @@
 
 </chapter>
 
+<chapter>
+  <?dbhtml filename="manual7.html"?>
+  <title>Embedding</title>
+
+<para>
+  Please notice that using wxPerl inside an embedded program
+  did not work until after version 0.20.
+</para>
+
+<section>
+  <title>Using wxPerl inside a wxWidgets program</title>
+
+<para>
+  Running wxPerl code inside a wxWidgets program has some caveats.
+  There are two senarios:
+
+  <orderedlist>
+    <listitem>a single long-running Perl interpreter</listitem>
+    <listitem>multiple short-lived Perl interpreters</listitem>
+    <listitem>multiple simultaneous Perl interpreters</listitem>
+  </orderedlist>
+</para>
+
+</section>
+
+<section>
+  <title>Single long-running Perl interpreter</title>
+
+<para>
+  This section applies when the lifespan of the interpreter is the same
+  as the application lifetime. There is no (known) caveat for this
+  situation.
+</para>
+
+</section>
+
+<section>
+  <title>Multiple short-lived Perl interpreters</title>
+
+<para>
+  In this case a perl interpreter is continually constructed,
+  used to run some code and then destroyed. The typuical structure of
+  Perl code should be: 
+</para>
+
+<programlisting>
+package MyFrame;
+
+# ...
+
+package MyApp;
+
+# ...
+
+package main;
+
+my $app = MyApp->new;
+$app->MainLoop;
+
+</programlisting>
+
+<para>
+  This code can't rely on the usual rule that the main loop exits
+  when no more windows are open, because the main application window
+  will always be open! The code must manually keep track of when to exit.
+</para>
+
+<para>
+  For a single-window application this could be implemented as:
+  <programlisting>
+EVT_CLOSE( $frame,
+           sub {
+               my( $self, $event ) = @_;
+
+               $Wx::wxTheApp->ExitMainLoop;
+               $event->Skip;
+           }
+          );
+  </programlisting>.
+</para>
+
+</section>
+
+<section>
+  <title>Multiple simultaneous Perl interpreters</title>
+
+<para>
+  This is not supported, sorry.
+</para>
+
+</section>
+
+</chapter>
+
 </book>
