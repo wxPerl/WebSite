@@ -92,7 +92,7 @@ DIV.screenshots DIV {
 }
 
 /*
- * User's page
+ * Users' page
  */
 DIV.application-list {
   padding-left: 20pt;
@@ -102,6 +102,20 @@ DIV.organisation {
   padding-top: 10pt;
   paddig-bottom: 10pt;
   font-size: medium;
+}
+
+/*
+ * Resources' page
+ */
+DIV.module {
+  padding-top: 10pt;
+  paddig-bottom: 10pt;
+}
+
+DIV.module-description {
+  padding-top: 0pt;
+  padding-bottom: 0pt;
+  padding-left: 20pt;
 }
 
 /*
