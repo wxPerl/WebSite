@@ -1,50 +1,251 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. Interface strategy</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="manual.html" title="wxPerl manual"><link rel="up" href="manual.html" title="wxPerl manual"><link rel="previous" href="manual3.html" title="Chapter 3. Constants"><link rel="next" href="manual5.html" title="Chapter 5. Event handling"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. Interface strategy</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="manual3.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="manual5.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id4688114"></a>Chapter 4. Interface strategy</h2></div></div><div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4686986"></a>Classes, static methods and global functions</h2></div></div><div></div></div><p>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>ChapterÂ 4.Â Interface strategy</title>
+    <link rel="stylesheet" href="../docbook.css" type="text/css" />
+    <meta name="generator" content="DocBook XSL Stylesheets V1.61.2" />
+    <link rel="home" href="manual.html" title="wxPerl manual" />
+    <link rel="up" href="manual.html" title="wxPerl manual" />
+    <link rel="previous" href="manual3.html" title="ChapterÂ 3.Â Constants" />
+    <link rel="next" href="manual5.html" title="ChapterÂ 5.Â Event handling" />
+  </head>
+  <body>
+    <div id="top"></div>
+    <div id="header">
+      <div style="padding: 8pt">
+        <img height="70" alt="wxPerl logo" src="../wxperl.gif" />
+      </div>
+      <div class="menuBar"><a href="../index.html">Home</a>|
+      <a href="../about.html">About</a>|
+      <a href="../download.html">Download</a>|
+      <a href="../documentation.html">Documentation</a>|
+      <a href="../support.html">Support/Resources</a></div>
+    </div>
+    <div class="navheader">
+      <table width="100%" summary="Navigation header">
+        <tr>
+          <th colspan="3" align="center">ChapterÂ 4.Â Interface strategy</th>
+        </tr>
+        <tr>
+          <td width="20%" align="left"><a accesskey="p" href="manual3.html">Prev</a>Â </td>
+          <th width="60%" align="center">Â </th>
+          <td width="20%" align="right">Â <a accesskey="n" href="manual5.html">Next</a></td>
+        </tr>
+      </table>
+      <hr />
+    </div>
+    <div class="chapter" lang="en" xml:lang="en">
+      <div class="titlepage">
+        <div>
+          <div>
+            <h2 class="title"><a id="id4689707"></a>ChapterÂ 4.Â Interface strategy</h2>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="section" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id4688579"></a>Classes, static methods and global functions</h2>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <p>
   In wxPerl all classes are named Wx::Something, so wxFrame is really Wx::Frame.
   Static methods are called Wx::ClassName::Method(). Global function named
   wxFunction() are accessible as Wx::Function().
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687001"></a>Polymorphysm</h2></div></div><div></div></div><p>
+</p>
+      </div>
+      <div class="section" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id4688593"></a>Polymorphysm</h2>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <p>
   In wxWindows some methods (like FindWindow) return a pointer to a base class,
   and the programmer is obliged to explicitly cast the object to the right
   type. wxPerl does this for you, so you do not need to worry for that.
-</p><div class="section" lang="en"><div class="titlepage"><div></div><div></div></div>Overloaded methods</div><p>
+</p>
+        <div class="section" lang="en" xml:lang="en"><div class="titlepage"><div></div><div></div></div>Overloaded methods</div>
+        <p>
   Where is applicable, wxPerl uses overloaded method names just like wxWindows,
   when this is not feasible, the difference is documented in the following pages
   (and will be documented in wxWindows manual, in the future).
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687025"></a>Functions modifying their parameters</h2></div></div><div></div></div><p>
+</p>
+      </div>
+      <div class="section" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id4688618"></a>Functions modifying their parameters</h2>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <p>
   Some wxWindows functions modify their parameters; though in Perl this is 
   possible, wxPerl avoids this practice, and such methods are always 
   modified to take less parameters and return a Perl array.
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687039"></a>Object destruction</h2></div></div><div></div></div><p>
+</p>
+      </div>
+      <div class="section" lang="en" xml:lang="en">
+        <div class="titlepage">
+          <div>
+            <div>
+              <h2 class="title" style="clear: both"><a id="id4688632"></a>Object destruction</h2>
+            </div>
+          </div>
+          <div></div>
+        </div>
+        <p>
   In Perl memory management is a matter for the perl interpreter; however,
   since we are interacting with an external C++ library, there are some
   problems.
-</p><p>
+</p>
+        <p>
   In wxPerl there are three kinds of objects
-  </p><div class="orderedlist"><ol type="1"><li>objects destroyed 'by hand' by the program (using the
-        <tt class="methodname">Destroy</tt> method)</li><li>objects destroyed automatically by wxWindows in some
+  </p>
+        <div class="orderedlist">
+          <ol type="1">
+            <li>objects destroyed 'by hand' by the program (using the
+        <tt class="methodname">Destroy</tt> method)</li>
+            <li>objects destroyed automatically by wxWindows in some
         situations, sometimes they too need to be destroyed
-        by hand</li><li>objects destroyed when no more referenced (as Perl does
-        usually)</li><li>other objects you do not need to worry about</li></ol></div><p>
-</p><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687084"></a>First category</h3></div></div><div></div></div><p>
-  </p><div class="itemizedlist"><ul type="disc"><li>Wx::Log and derived classes</li><li>Wx::Mask</li></ul></div><p>
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687104"></a>Second category</h3></div></div><div></div></div><p>
-  </p><div class="itemizedlist"><ul type="disc"><li>all Wx::Window/Wx::Sizer/Wx::LayoutConstraints/Wx::Menu* 
+        by hand</li>
+            <li>objects destroyed when no more referenced (as Perl does
+        usually)</li>
+            <li>other objects you do not need to worry about</li>
+          </ol>
+        </div>
+        <p>
+</p>
+        <div class="section" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a id="id4688677"></a>First category</h3>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <p>
+  </p>
+          <div class="itemizedlist">
+            <ul type="disc">
+              <li>Wx::Log and derived classes</li>
+              <li>Wx::Mask</li>
+            </ul>
+          </div>
+          <p>
+</p>
+        </div>
+        <div class="section" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a id="id4688697"></a>Second category</h3>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <p>
+  </p>
+          <div class="itemizedlist">
+            <ul type="disc">
+              <li>all Wx::Window/Wx::Sizer/Wx::LayoutConstraints/Wx::Menu* 
         and derived objects: 
         when they are childs of
         some other window/sizer, are destroyed automatically when the
         paent itself is destroyed. When they have no parent they need to
-        be destroyed explicitily.</li><li>all Wx::ImageHandler/Wx::BitmapHandler-derived objects: if you
+        be destroyed explicitily.</li>
+              <li>all Wx::ImageHandler/Wx::BitmapHandler-derived objects: if you
         have added them to the handlers (using
         <tt class="methodname">AddHandler</tt>,
         they are automatically destroyed, otherwise you need to destroy
-        them explicitly</li></ul></div><p>
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687136"></a>Third category</h3></div></div><div></div></div><p>
+        them explicitly</li>
+            </ul>
+          </div>
+          <p>
+</p>
+        </div>
+        <div class="section" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a id="id4688729"></a>Third category</h3>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <p>
   Wx::*Event, Wx::App, Wx::Bitmap, Wx::Brush, Wx::*DC, Wx::Colour,
   Wx::Cursor, Wx::EvtHandler (user objects derived directly from
   Wx::EvtHandler), Wx::Font, Wx::Icon, Wx::Image, Wx::ImageList,
   Wx::Locale, Wx::Pen, Wx::Point, Wx::Rect, Wx::Region, Wx::Size,
   Wx::ToolTip
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h3 class="title"><a name="id4687151"></a>Fourth category</h3></div></div><div></div></div><p>
+</p>
+        </div>
+        <div class="section" lang="en" xml:lang="en">
+          <div class="titlepage">
+            <div>
+              <div>
+                <h3 class="title"><a id="id4688744"></a>Fourth category</h3>
+              </div>
+            </div>
+            <div></div>
+          </div>
+          <p>
   Wx::ClassInfo, Wx::IndividualLayoutConstraints
-</p></div></div></div><div class="navfooter"><hr><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="manual3.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="manual.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="manual5.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 3. Constants </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Home</a></td><td width="40%" align="right" valign="top"> Chapter 5. Event handling</td></tr></table></div><div class="bottom-images"><a target="_blank" href="http://sourceforge.net/"><img src="http://sourceforge.net/sflogo.php?group_id=15655" width="88" height="31" border="0" alt="SourceForge Logo"></a><a target="_blank" href="http://validator.w3.org/check/referer"><img border="0" height="31" width="88" alt="Valid HTML 4.0!" src="../valid-html40.png"></a></div></body></html>
+</p>
+        </div>
+      </div>
+    </div>
+    <div class="navfooter">
+      <hr />
+      <table width="100%" summary="Navigation footer">
+        <tr>
+          <td width="40%" align="left"><a accesskey="p" href="manual3.html">Prev</a>Â </td>
+          <td width="20%" align="center">
+            <a accesskey="u" href="manual.html">Up</a>
+          </td>
+          <td width="40%" align="right">Â <a accesskey="n" href="manual5.html">Next</a></td>
+        </tr>
+        <tr>
+          <td width="40%" align="left" valign="top">ChapterÂ 3.Â ConstantsÂ </td>
+          <td width="20%" align="center">
+            <a accesskey="h" href="manual.html">Home</a>
+          </td>
+          <td width="40%" align="right" valign="top">Â ChapterÂ 5.Â Event handling</td>
+        </tr>
+      </table>
+    </div>
+    <div id="footer">
+      <div class="footerLHS">
+        <a href="http://sourceforge.net/" onclick="window.open(this.href); return false;">
+          <img src="http://sourceforge.net/sflogo.php?group_id=15655" width="88" height="31" alt="SourceForge Logo" />
+        </a>
+        <a href="http://validator.w3.org/check?uri=referer" onclick="window.open(this.href); return false;">
+          <img height="31" width="88" alt="Valid XHTML 1.0!" src="../valid-xhtml10.png" />
+        </a>
+        <a href="http://jigsaw.w3.org/css-validator/check/referer" onclick="window.open(this.href); return false;">
+          <img height="31" width="88" alt="Valid CSS 2" src="../vcss.png" />
+        </a>
+      </div>
+      <div>
+        Based upon <a onclick="window.open(this.href); return false;" href="http://www.oswd.org/design/1112/bluehaze/index.html">
+              Blue Haze</a></div>
+      <div>
+       by <a onclick="window.open(this.href); return false;" href="http://www.oswd.org/email.phtml?user=haran" title="Author">
+          haran</a></div>
+    </div>
+    <p></p>
+  </body>
+</html>

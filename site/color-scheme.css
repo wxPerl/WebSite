@@ -1,0 +1,54 @@
+/*******************************************************************
+ * TITLE: Color Scheme Stylesheet for Blue Haze                    *
+ * URI  : http://www.oswd.org/design/xxx/bluehaze/color-scheme.css *
+ * MODIF: 2003-01-05 1608 +0800                                    *
+ *******************************************************************/
+
+
+/* ------------------------------------------------------------------------
+   Four basic colors are used to render Blue Haze. These are:
+     1. Text Color
+     2. Border Color
+     3. Background Color (darker)
+     4. Background Color (lighter)
+   
+   To change the above colors, just edit their respective values below.
+------------------------------------------------------------------------ */
+
+
+/* ###### General Color Scheme ###### */
+
+h1, h2, h3, q, #footer *, .headerTitle, .sideBox div, .topOfPage
+{ /* Text Color: */  color: #4080ff; }
+
+#header div, #header div *
+{ /* Text Color: */  color: #e8f0ff; }
+
+h1, q,  #header, .sideBox, .sideBox div, hr
+{ /* Border Color: */  border-color: #0080ff; }
+
+#header, .sideBox .thisPage
+{ /* Background Color (darker) */  background-color: #167ab2; }
+
+.sideBox div, .sideBox a:hover
+{ /* Background Color (darker) */  background-color: #e8f0ff; }
+
+q, .sideBox a, .sideBox span
+{ /* Background Color (lighter): */  background-color: #fafcff; }
+
+
+/* ###### Special Colors ###### */
+
+acronym {
+  color: blue;
+  border-bottom-color: blue;
+}
+
+#bodyText a, .chapter a, .book a, .navheader a, .navfooter a {
+  color: #4080ff;
+  border-bottom-color: #4080ff;
+}
+
+#footer {
+  background-color: #f2f6ff;
+}
