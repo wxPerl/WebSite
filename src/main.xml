@@ -36,7 +36,7 @@ Jeff Buchbinder created a wxPerl Debian package that should work with the
 Christian Renz created
 <xhtml:a href="http://www.web42.com/software/perlwrapper"
          target="_blank">PerlWrapper</xhtml:a>
- an Xcode project that enabled budling Perl (and wxPerl)
+ an Xcode project enabling budling Perl (and wxPerl)
 applications inside a Mac OS X bundle 
 <xhtml:br />
 
