@@ -37,7 +37,7 @@ below in your mail client, and send it to
 
 <xhtml:hr />
 
-  <xhtml:a name="applications" />.
+  <xhtml:a name="applications" />
   <xhtml:dl>
   <xsl:for-each select="organisation">
     <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
