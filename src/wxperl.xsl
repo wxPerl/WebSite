@@ -123,7 +123,7 @@
 
       <!-- sourceforge logo -->
       <a href="http://sourceforge.net/" xsl:use-attribute-sets="a-target">
-        <img src="http://sourceforge.net/sflogo.php?group_id=15655" 
+        <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=15655" 
              width="88" height="31" alt="SourceForge Logo" />
       </a>
 
