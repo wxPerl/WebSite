@@ -7,7 +7,7 @@
     <date>Jun 01, 2004</date>
     <content>
 New wxPerl modules on CPAN!
-Simon Flack has released version of
+Simon Flack has released
 <a href="http://search.cpan.org/dist/Wx-Perl-Throbber/"
    target="_blank">Wx::Perl::Throbber</a>, a control displaying
 an animated throbber/spinner like the one found in most browsers.

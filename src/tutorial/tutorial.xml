@@ -7,7 +7,7 @@
 <bookinfo>
   <title>wxPerl tutorial</title>
   <author><firstname>Mattia</firstname><surname>Barbon</surname></author>
-  <copyright><year>2003</year><holder>Mattia Barbon</holder></copyright>
+  <copyright><year>2000-2004</year><holder>Mattia Barbon</holder></copyright>
 </bookinfo>
 
 <?dbhtml filename="tutorial.html"?>
@@ -17,16 +17,25 @@
 
   <title>About this tutorial</title>
 
+<para>
 This tutorial is meant to be a basic guide; it tries to assume only a
-little knowledge of Perl, and no knowledge of 
-<ulink url="http://www.wxwidgets.org/">wxWidgets</ulink>; for
-a detailed API description you need to refer to the wxWidgets/wxPerl
-manual (<ulink
-url="http://wxperl.sourceforge.net/download.html#Documentation">download
-the wxWidgets/wxPerl manual now!</ulink>); the only thing you need to
-know is that, if a wxPerl class is called, say,
-<classname>Wx::Frame</classname>, you should search for
+no prior knowledge of <ulink
+url="http://www.wxwidgets.org/">wxWidgets</ulink> API; for a detailed
+API description you need to refer to <ulink
+url="http://www.wxwidgets.org/manuals/2.4.2/wx.htm"> the
+wxWidgets/wxPerl manual</ulink> (<ulink
+url="http://wxperl.sourceforge.net/download.html#Documentation"
+>downloadable copy</ulink>). The key thing you need to keep in mind
+while browsing wxWidgets documentation is that, if a wxPerl class is
+called, say, <classname>Wx::Frame</classname>, you should search for
 <classname>wxFrame</classname> in wxWidgets documentation.
+</para>
+
+<para>
+A reasonably good Perl knowledge is required. You need to understand
+basic Perl syntax, the creation and use of modules, and how objects
+work in Perl.
+</para>
 
 </chapter>
 
@@ -34,21 +43,23 @@ know is that, if a wxPerl class is called, say,
   <?dbhtml filename="tutorial2.html"?>
   <title>First steps with wxPerl</title>
 
-<abstract>
-This program opens a window (more precisely a frame).
-</abstract>
+<section>
+  <title>Introduction</title>
+
+This chapter will introduce the basic structure all wxPerl programs
+share. Since this is the first step in wxPerl land, it will be very
+simple: it just opens a window.
+</section>
 
 <section>
   <title>Program</title>
 
+<!-- replace first #1 -->
 <programlisting>
-    # this forces you to predeclare every variable, it isn't necessary,
-    # but avoids some common mistakes (especially typos)
-    use strict;            
-
-    # import the Wx module
-    use Wx;
+# load wxPerl main module
+use Wx;
 </programlisting>
+<!-- end -->
 
 <para>
   Every wxPerl program must create an application object:
@@ -56,59 +67,83 @@ This program opens a window (more precisely a frame).
   and processes events (we shall see this later).
 </para>
 
+<!-- replace first #2 -->
 <programlisting>
-    # every application must create an application object
-    package MyApp;         
+# every application must create an application object
+package MyApp;
 
-    # this tells Perl that your class (MyApp in this case) is derived from Wx::App
-    use base 'Wx::App';
+use base 'Wx::App';
 </programlisting>
+<!-- end -->
 
 <para>
-  When an application object is created, wxPerl calls the OnInit method,
+  When an application object is created, wxPerl calls the
+  <methodname>OnInit</methodname> method,
   which is used to initialize global application data and ususally creates one
-  (or more) frames.
+  or more frames.
 </para>
 
+<!-- replace first #3 -->
 <programlisting>
-    # this method is called automatically when an application object is first
-    # constructed, all application-level initialization is done here
-    sub OnInit {
-      # retrieve the 'this' object
-      my( $this ) = shift;
+# this method is called automatically when an application object is
+# first constructed, all application-level initialization is done here
+sub OnInit {
 </programlisting>
+<!-- end -->
 
 <para>
-  Finally we create the frame. The first parameter specifies that the
-  frame has no parent, the second is the window identifier (-1 is a
-  default id, since usually we don't care for frame ids), the third is
-  the frame title.  The last two are the frame position and size; if
-  you look at wxWidgets documentation you will see that the position
-  is a wxPoint, and the size a wxSize; however if you had to write
-  <literal>Wx::Point->new( 100, 100 )</literal> and/or
-  <literal>Wx::Size->new( 200, 150 )</literal> everytime you need to
-  specify a position or a size, you will soon get tired, hence you may
-  use <literal>[100, 100]</literal> or <literal>[200, 150]</literal>
-  everywere a position/size is needed.
+  The thing ALL <methodname>OnInit</methodname> methods do is
+  creating one or more top level windows. The only thing to be noted
+  is that wxWidgets requires every window to have an ID which is
+  an integer numver assigned at window creation. In wxPerl most of
+  the time you don't care about the value of the ID, so you should
+  pass -1 to the window constructor to let wxWidgets generate an unique ID
+  for you.
 </para>
 
+<!-- replace first #4 -->
 <programlisting>
-      # create a new frame (a frame is a top level window)
-      my( $frame ) = Wx::Frame->new( undef, -1, 'wxPerl rules', 
-                                     [100, 100], [200, 150] 
-                                    );
-    
-      # show the frame
-      $frame->Show( 1 );
-    } 
-    
-    package main;
-    
-    # create the application object
-    my( $app ) = MyApp->new();
-    $app->MainLoop(); # this function will not return until
-                      # the last frame is closed
+    # create a new frame (a frame is a top level window)
+    my $frame = Wx::Frame->new( undef,           # parent window
+                                -1,              # ID -1 means any
+                                'wxPerl rules',  # title
+                               );
 </programlisting>
+<!-- end -->
+
+<para>
+  Top level windows are not automatically shown by wxWidgets,
+  hence you need to do it yourself.
+</para>
+
+<!-- replace first #5 -->
+<programlisting>
+    # show the frame
+    $frame->Show( 1 );
+}
+</programlisting>
+<!-- end -->
+
+<para>
+  This usually is all the code you ever need in your
+  <classname>main</classname> package. It creates a new
+  application instance thus calling <methodname>OnInit</methodname>,
+  and starts the main application loop, which is responsible for
+  dispatching GUI events to windows. The loop will not terminate
+  until there are top level windows.
+</para>
+
+<!-- replace first #6 -->
+<programlisting>
+package main;
+
+# create the application object, this will call OnInit
+my $app = MyApp->new;
+# process GUI events from the application this function will not
+# return until the last frame is closed
+$app->MainLoop;
+</programlisting>
+<!-- end -->
 
 <para>
   <ulink url="first.pl.txt">Here</ulink> you can see the program at a glance

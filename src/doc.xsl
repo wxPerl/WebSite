@@ -4,8 +4,28 @@
   version="1.0"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-<xsl:import href="../wxperl.xsl" /> <!-- order matters! -->
+<xsl:import href="wxperl.xsl" /> <!-- order matters! -->
 <xsl:import href="http://docbook.sourceforge.net/release/xsl/current/html/chunk.xsl" />
+
+<xsl:param name="generate.toc">
+appendix  toc,title
+article/appendix  nop
+article   toc,title
+book      toc,title,figure,table,example,equation
+chapter   nop
+part      toc,title
+preface   toc,title
+qandadiv  toc
+qandaset  toc
+reference toc,title
+sect1     toc
+sect2     toc
+sect3     toc
+sect4     toc
+sect5     toc
+section   toc
+set       toc,title
+</xsl:param>
 
 <xsl:param name="html.stylesheet" select="'../default.css'"></xsl:param>
 <xsl:param name="chunker.output.doctype-public"

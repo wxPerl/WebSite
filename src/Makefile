@@ -11,7 +11,7 @@ XMLCHECK=xmllint --catalogs --noout
 
 all: $(HTML)
 
-tutorial: $(OUTDIR)/tutorial/tutorial.html
+tutorial: $(OUTDIR)/tutorial/tutorial.html $(OUTDIR)/tutorial/*.pl.txt
 
 manual: $(OUTDIR)/manual/manual.html
 
@@ -22,18 +22,28 @@ crlf2lf:
 # Tutorial
 ###############################################################################
 
-$(OUTDIR)/tutorial/tutorial.html: tutorial/tutorial.xml tutorial/tutorial.xsl \
+$(OUTDIR)/tutorial/tutorial.html: tutorial/tutorial.xml doc.xsl \
     wxperl.xsl
-	$(XSLT) --output $(OUTDIR)/tutorial/ tutorial/tutorial.xsl \
+	$(XSLT) --output $(OUTDIR)/tutorial/ doc.xsl \
             tutorial/tutorial.xml
+
+tutorial/tutorial.xml: tutorial/*.pl
+	cp $@ $@.ok
+	for i in tutorial/*.pl; do                \
+	    cp $@ $@.orig;                        \
+	    perl source.pl $$i $@.orig up > $@;   \
+	done
+
+$(OUTDIR)/tutorial/%.pl.txt: tutorial/%.pl
+	perl source.pl $< tutorial.xml pl > $@
 
 ###############################################################################
 # Manual
 ###############################################################################
 
-$(OUTDIR)/manual/manual.html: manual/manual.xml manual/manual.xsl \
+$(OUTDIR)/manual/manual.html: manual/manual.xml doc.xsl \
     wxperl.xsl
-	$(XSLT) --output $(OUTDIR)/manual/ manual/manual.xsl \
+	$(XSLT) --output $(OUTDIR)/manual/ doc.xsl \
             manual/manual.xml
 
 ###############################################################################
