@@ -30,9 +30,10 @@
 <!ELEMENT open-source EMPTY>
 
 <!-- application platforms -->
-<!ELEMENT platforms (windows | linux)>
+<!ELEMENT platforms (windows | linux | mac)>
 <!ELEMENT windows EMPTY>
 <!ELEMENT linux EMPTY>
+<!ELEMENT mac EMPTY>
 
 <!-- ********************************************************************** -->
 <!-- Screenshots                                                            -->

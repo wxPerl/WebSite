@@ -13,6 +13,12 @@
   <xhtml:a href="#form">&#8250; Form</xhtml:a>
 </xsl:template>
 
+<xsl:template match="windows">Windows<xsl:if test="not(position()=last())">, </xsl:if></xsl:template>
+<xsl:template match="linux">Linux<xsl:if test="not(position()=last())">, </xsl:if></xsl:template>
+<xsl:template match="mac">Mac OS X<xsl:if test="not(position()=last())">, </xsl:if></xsl:template>
+
+<xsl:template match="platforms"> (<xsl:apply-templates />) </xsl:template>
+
 <xsl:template name="name-with-link">
   <xsl:choose>
     <xsl:when test="site">
@@ -30,6 +36,40 @@
   </xsl:choose>
 </xsl:template>
 
+<xsl:template match="contact">
+  Contact: 
+  <xsl:choose>
+    <xsl:when test="email">
+      <a>
+        <xsl:attribute name="href">mailto:<xsl:value-of select="email" /></xsl:attribute>
+        <xsl:value-of select="name" />
+      </a>
+    </xsl:when>
+    <xsl:otherwise>
+      <xsl:value-of select="name" />
+    </xsl:otherwise>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="application">
+  <xhtml:b><xsl:call-template name="name-with-link" /></xhtml:b>
+  <xsl:apply-templates select="platforms" />
+  <xsl:copy-of select="short-description/child::node()" /><xhtml:br />
+</xsl:template>
+
+<xsl:template match="organisation">
+  <xhtml:dt>
+  <xsl:call-template name="name-with-link" />
+  <xsl:if test="country">, <xsl:value-of select="country" /></xsl:if></xhtml:dt>
+  <xhtml:dd>
+  <xsl:apply-templates select="applications/application">
+    <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
+                                     'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
+  </xsl:apply-templates>
+  <xsl:apply-templates select="contact"/>
+  </xhtml:dd>
+</xsl:template>
+
 <xsl:template match="organisations">
 To be added to this page, simply paste the <xhtml:a href="#form">form</xhtml:a>
 below in your mail client, and send it to
@@ -39,30 +79,10 @@ below in your mail client, and send it to
 
   <xhtml:a name="applications" />
   <xhtml:dl>
-  <xsl:for-each select="organisation">
+  <xsl:apply-templates>
     <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
                                      'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-
-    <xhtml:dt>
-    <xsl:call-template name="name-with-link" />
-    <xsl:if test="country">, <xsl:value-of select="country" /></xsl:if></xhtml:dt>
-    <xhtml:dd>
-    <xsl:for-each select="applications/application">
-      <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
-                                       'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-
-      <xhtml:b><xsl:call-template name="name-with-link" /></xhtml:b>
-      <xsl:copy-of select="short-description/child::node()" /><xhtml:br />
-    </xsl:for-each>
-    <xsl:if test="contact">
-      Contact: <xsl:element name="a">
-        <xsl:attribute name="href">mailto:<xsl:value-of select="contact/email" />
-        </xsl:attribute>
-        <xsl:value-of select="contact/name" />
-      </xsl:element>
-    </xsl:if>
-    </xhtml:dd>
-  </xsl:for-each>
+  </xsl:apply-templates>
   </xhtml:dl>
 <xhtml:hr />
 <xhtml:h4><xhtml:a name="form">wxPerl application description</xhtml:a></xhtml:h4>

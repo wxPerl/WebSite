@@ -24,9 +24,7 @@ wxPerl superior in feature-set and code structure.
         <name>Prima</name>
         <site>http://www.wordit.com/prima/</site>
         <license-type><commercial /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>0.12</wxperl-version>
         <domain>Information managers</domain>
         <short-description>
@@ -52,9 +50,7 @@ and for organizing any kind of information.
         <name>UploadAway</name>
         <site>http://www.uploadaway.com/</site>
         <license-type><commercial /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>0.13</wxperl-version>
         <domain>FTP/Website Management</domain>
         <short-description>
@@ -98,9 +94,7 @@ conversion of filenames with upper-case characters to all lower-case.
         <name>pVoice</name>
         <site>http://www.pvoice.org/pvoice.html</site>
         <license-type><open-source /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>0.12</wxperl-version>
         <domain>Augmentive and Assistive Communications</domain>
         <short-description>
@@ -113,9 +107,7 @@ it to speak by selecting symbols and/or photos.
         <name>pType</name>
         <site>http://www.pvoice.org/ptype.html</site>
         <license-type><open-source /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>0.12</wxperl-version>
         <domain>Augmentive and Assistive Communications</domain>
         <short-description>
@@ -163,9 +155,7 @@ and this comes from using Win32 and Tk.
       <application>
         <name>Online Production Tool</name>
         <license-type><commercial /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>0.15</wxperl-version>
         <domain>Online News Site Production</domain>
         <short-description>
@@ -217,9 +207,7 @@ Online department all use PCs.
         <name>VisualWx</name>
         <site>http://visualwx.altervista.org/</site>
         <license-type><freeware /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>Any</wxperl-version>
         <domain></domain>
         <short-description>
@@ -253,9 +241,7 @@ documentation and samples sometimes.
         <name>Videobox</name>
         <site>http://videobox.sourceforge.net</site>
         <license-type><open-source /></license-type>
-        <platforms>
-          <windows />
-        </platforms>
+        <platforms><windows /></platforms>
         <wxperl-version>0.17</wxperl-version>
         <domain>Multimedia</domain>
         <short-description>
@@ -290,6 +276,41 @@ Videobox Player from anywhere in the house.
     </applications>
   </organisation>
 
+  <organisation>
+    <name>Centri Fri&#251;l Lenghe 2000</name>
+    <!-- site>http://www.cfl2000.org</site -->
+    <country>Italy</country>
+    <contact>
+      <name>Luca Peresson</name>
+      <!-- email>info@clf2000.org</email -->
+    </contact>
+    <wxperl>
+      <rating></rating>
+      <comments>
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>Grant Dizionari Bileng&#226;l Talian-Furlan</name>
+        <license-type><open-source /></license-type>
+        <platforms><windows /><mac /><linux /></platforms>
+        <wxperl-version>0.22</wxperl-version>
+        <domain>Linguistics</domain>
+        <short-description>
+Dictionary for the Friulian (Furlan) language. The application permits
+searching for Italian and Friulan words and viewing their meaning and
+translation. Another functionality allows looking up the declination
+of nouns and adjectives and the conjugation of verbs.
+        </short-description>
+        <long-description>
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
@@ -311,10 +332,7 @@ Videobox Player from anywhere in the house.
         <name></name>
         <site></site>
         <license-type><commercial /><open-source /><freeware /></license-type>
-        <platforms>
-          <windows />
-          <linux />
-        </platforms>
+        <platforms><windows /><linux /></platforms>
         <wxperl-version></wxperl-version>
         <domain></domain>
         <short-description>
