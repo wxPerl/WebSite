@@ -28,6 +28,11 @@ a window with a status bar and a menu bar.
       <text>Minimal sample (Linux, Motif)</text>
       <file>screenshots/minimal_motif.png</file>
     </image>
+
+    <image>
+      <text>Minimal sample (Windows XP); courtesy of Herbert Breunung</text>
+      <file>screenshots/minimal_wxp.png</file>
+    </image>
   </page>
 
   <page>
@@ -48,7 +53,7 @@ the controls available in wxPerl.
     </image>
 
     <image>
-      <text>Controls sample (Linux, Motif); Wx::Choice</text>
+      <text>Controls sample (Linux, Motif); Wx::Choice page</text>
       <file>screenshots/controls_motif.png</file>
     </image>
   </page>
