@@ -1,10 +1,13 @@
 BODY { 
   background-color: white;
   color: black;
+  margin:  0px;
+  padding: 0px;
+  border:  0px;
 }
 
 BODY * {
-  font-size: 10pt
+  xfont-size: 10pt
 }
 
 BODY H1 {
@@ -15,20 +18,39 @@ BODY H2 {
   font-size: 12pt;
 }
 
-BODY.navigation-bar * {
-  font-size: 8pt
+DIV.body {
+  margin: 15px;
 }
 
-.navigation-bar H3 {
-  font-size: 10pt;
-  font-weight: bold;
-  margin: 3pt;
+DIV.navigation {
+  background-color: #b0b0f0;
+  padding: 5pt;
+}
+
+DIV.navigation A {
+  padding: 5pt;
+}
+
+DIV.bottom-images {
+  padding: 5pt;
+}
+
+DIV.bottom-images A {
+  padding: 5pt;
+}
+
+DIV.header { 
+  background-color: #167ab2;
+  padding-top: 10pt;
+  padding-bottom: 5pt;
+  padding-left: 5pt;
 }
 
 .what-is-wxperl {
-  background: aqua;
   padding: 5pt;
+  margin-top: 5pt;
   border: 1pt dotted black;
+  background-color: #a0e0ff;
 }
 
 .wxperl-news {
@@ -37,16 +59,10 @@ BODY.navigation-bar * {
   border: 1pt dotted black;
 }
 
-.download-source-releases {
-  border: 1pt dotted black;
-  padding: 5pt;
-  margin: 5pt;
-  background-color: #f0a0ff;
+DIV.page-head-links {
+  text-align: center;
 }
 
-.download-binary-releases {
-  border: 1pt dotted black;
+DIV.page-head-links A {
   padding: 5pt;
-  margin: 5pt;
-  background-color: #00f0ff;
 }
