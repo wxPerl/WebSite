@@ -2,3 +2,7 @@ BODY {
   background-color: white;
   color: black;
 }
+
+BODY.navigation-bar {
+  font-size: 8pt
+}
