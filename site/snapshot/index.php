@@ -36,8 +36,8 @@ sources vithout using CVS.
       }
 ?>
   <tr>
-    <td><a href="$file"><?php echo $file?></a>
-    <td align="right"><?php echo "$size $suffix"?></td>
+    <td><a href="<?php echo "$file" ?>"><?php echo "$file" ?></a>
+    <td align="right"><?php echo "$size $suffix" ?></td>
   </tr>
 <?php }
   }
