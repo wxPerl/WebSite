@@ -4,6 +4,17 @@
 
 <news>
   <item>
+    <date>Jun 12, 2004</date>
+    <content>
+The <a href="tutorial/tutorial.html">wxPerl tutorial</a>
+has (finally!) been rewritten. It contains roughly the same
+contents as it did before, but (I hope) better organized and with
+simpler and clearer examples. I plan to write other chapters relatively
+soon but, obviously, corrections and contributions are most welcome!
+    </content>
+  </item>
+
+  <item>
     <date>Jun 01, 2004</date>
     <content>
 New wxPerl modules on CPAN!
