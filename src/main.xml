@@ -405,7 +405,7 @@ Daily <a target="_blank" href="snapshot/">CVS snapshots</a> are also available.
     wxWidgets GUI toolkit. If you don't know anything about Perl or
     wxWidgets, you may find a short explanation below. If you want to
     learn more, go to
-    <a href="http://www.wxwindows.org/" target="_blank">
+    <a href="http://www.wxwidgets.org/" target="_blank">
       wxWidgets</a> and
     <a href="http://www.perl.com/" target="_blank">
       Perl</a> sites. In short
@@ -473,7 +473,7 @@ Daily <a target="_blank" href="snapshot/">CVS snapshots</a> are also available.
     <links>
       <link>
         <text>online wxWidgets documentation</text>
-        <url>http://www.wxwindows.org/manuals/2.4.2/wx.htm</url>
+        <url>http://www.wxwidgets.org/manuals/2.4.2/wx.htm</url>
         <external />
       </link>
 
