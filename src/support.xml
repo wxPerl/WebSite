@@ -85,10 +85,10 @@ a <tt>Wx::FileSystemHandler</tt> subclass, replacement for
       <description>
 a wrapper for wxWidgets' <tt>wxGLCanvas</tt>, used to display OpenGL
 graphics. To use it you will need the OpenGL module.
-<a href="http://prdownloads.sourceforge.net/wxperl/OpenGL-win32-5.6.1.zip">OpenGL for ActivePerl 5.6.1</a>,
-<a href="http://prdownloads.sourceforge.net/wxperl/OpenGL-win32-5.8.0.zip">OpenGL for ActivePerl 5.8.0</a>.
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/OpenGL-win32-5.8.0.zip">OpenGL for ActivePerl 8xx</a>.
       </description>
       <download>
+<!--
         <item>
           <label>Perl 5.6.1</label>
           <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-5.6.1.zip</url>
@@ -97,13 +97,14 @@ graphics. To use it you will need the OpenGL module.
           <label>Perl 5.6.1/Unicode</label>
           <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-u-5.6.1.zip</url>
         </item>
+-->
         <item>
-          <label>Perl 5.8.0</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-5.8.0.zip</url>
+          <label>Perl 5.8.x</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.19-wxmsw2.4.2--5.8.3.zip</url>
         </item>
         <item>
-          <label>Perl 5.8.0/Unicode</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-u-5.8.0.zip</url>
+          <label>Perl 5.8.x/Unicode</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.19-wxmsw2.4.2-u-5.8.3.zip</url>
         </item>
       </download>
     </module>
@@ -122,6 +123,7 @@ interfaces for Acrobat Reader, Internet Explorer, Flash and Windows Media
 Player.
       </description>
       <download>
+<!--
         <item>
           <label>Perl 5.6.1</label>
           <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-5.6.1.zip</url>
@@ -130,14 +132,17 @@ Player.
           <label>Perl 5.6.1/Unicode</label>
           <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-u-5.6.1.zip</url>
         </item>
+-->
         <item>
-          <label>Perl 5.8.0</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-5.8.0.zip</url>
+          <label>Perl 5.8.x</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-wxperl0.19-wxmsw2.4.2--5.8.3.zip</url>
         </item>
+<!--
         <item>
-          <label>Perl 5.8.0/Unicode</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-u-5.8.0.zip</url>
+          <label>Perl 5.8.x/Unicode</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-wxperl0.19-wxmsw2.4.2-u-5.8.3.zip</url>
         </item>
+-->
       </download>
     </module>
   </item>
