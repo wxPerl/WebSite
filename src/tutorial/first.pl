@@ -1,3 +1,5 @@
+#!/usr/bin/perl -w
+
 use strict;
 
 #<!-- replace #1 -->
@@ -23,6 +25,8 @@ sub OnInit {
     my $frame = Wx::Frame->new( undef,           # parent window
                                 -1,              # ID -1 means any
                                 'wxPerl rules',  # title
+                                [-1, -1],         # default position
+                                [250, 150],       # size
                                );
 #<!-- end -->
 

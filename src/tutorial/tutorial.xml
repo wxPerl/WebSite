@@ -78,8 +78,8 @@ use base 'Wx::App';
 
 <para>
   When an application object is created, wxPerl calls the
-  <methodname>OnInit</methodname> method,
-  which is used to initialize global application data and ususally creates one
+  <methodname>OnInit</methodname> method
+  which is used to initialize global application data and usually creates one
   or more frames.
 </para>
 
@@ -95,7 +95,7 @@ sub OnInit {
   The thing ALL <methodname>OnInit</methodname> methods do is
   creating one or more top level windows. The only thing to be noted
   is that wxWidgets requires every window to have an ID which is
-  an integer numver assigned at window creation. In wxPerl most of
+  an integer number assigned at window creation time. In wxPerl most of
   the time you don't care about the value of the ID, so you should
   pass -1 to the window constructor to let wxWidgets generate an unique ID
   for you.
@@ -107,6 +107,8 @@ sub OnInit {
     my $frame = Wx::Frame->new( undef,           # parent window
                                 -1,              # ID -1 means any
                                 'wxPerl rules',  # title
+                                [-1, -1],         # default position
+                                [250, 150],       # size
                                );
 </programlisting>
 <!-- end -->
@@ -157,28 +159,30 @@ $app->MainLoop;
 
 <chapter>
   <?dbhtml filename="tutorial3.html"?>
-  <title>Events</title>
-
-<abstract>
-This is a slightly more complicated example: it creates a frame with
-two menus and does useful things when the user clicks on them. In addition
-we'll create our own frame class (derived from Wx::Frame, of course).
-</abstract>
+  <title>More controls</title>
 
 <section>
-  <title>About events</title>
+  <title>Introduction</title>
 
 <para>
-  Applications with a Graphical User Interface (GUI) are usually event
-  driven: this means that when, say, the user clicks on the 'xyz'
-  button, the system sends to the application an event informing
-  that the button 'xyz' has been clicked.  On the other hand, the
-  application sleeps until it receives an event, then processes the
-  event, after that it sleeps again.
+The second example will be slightly more complicated. First,
+we will create a class derived from <classname>Wx::Frame</classname>,
+second we will create some (well, just a button) controls inside
+the frame. The button will do not do anything useful yet.
 </para>
 
+</section>
+
+<section>
+  <title>About subcontrols</title>
+
 <para>
-  In the following sample we shall see the way wxPerl lets you handle events.
+  Top level windows include frames and dialogs. While controls are
+  usually placed directly inside a dialog, they should not be placed directly
+  inside a frame. The reason is that, unlike a dialog, a frame does not
+  provide support for control navigation. If you need to place controls
+  on a frame, you should instead create them inside a panel and put
+  this panel inside the frame.
 </para>
 
 </section>
@@ -186,199 +190,79 @@ we'll create our own frame class (derived from Wx::Frame, of course).
 <section>
   <title>Program</title>
 
-<programlisting>
-    use Wx;
+<para>
+  Subclassing a wxPerl window is as easy as with any other Perl class:
+</para>
 
-    # this is our own Frame class    
-    package MyFrame;
+<!-- replace second #1 -->
+<programlisting>
+package MyFrame;
     
-    use strict;
-    use base 'Wx::Frame';
+use base 'Wx::Frame';
 </programlisting>
+<!-- end -->
 
-<para>
-  Before we can use the event macros, we most import them,
-  this is done with the 'use' statement. Some event macros (in particular for
-  menu and control events) require the 'id' of the menu (or control), so we
-  also define 2 ids.
-</para>
+then of course you will want to create a specialized constructor for
+your new subclass. The following snippet is exactly what you would
+expect to work:
 
+<!-- replace second #2 -->
 <programlisting>
-    use Wx::Event qw(EVT_MENU EVT_CLOSE);
-
-    my( $ID_ABOUT, $ID_EXIT ) = ( 1, 2 );
+sub new {
+    my $ref = shift;
+    my $self = $ref->SUPER::new( undef,           # parent window
+                                 -1,              # ID -1 means any
+                                 'wxPerl rules',  # title
+                                 [-1, -1],        # default position
+                                 [150, 100],      # size
+                                 );
 </programlisting>
+<!-- end -->
 
-<para>
-  Now we define the constructor. First we must create the object.
-</para>
+Next you need to create the controls to be put inside the frame. To do
+so you can finally put to use the "parent" argument to
+<methodname>new</methodname> that you left empty until now.
 
+<!-- replace second #3 -->
 <programlisting>
-    # Parameters: title, position, size
-    sub new {
-      my( $class ) = shift;
-      # now we are calling the base class constructor
-      my( $this ) = $class->SUPER::new( undef, -1, $_[0], $_[1], $_[2] );
-</programlisting>
-
-<para>
-  If this were a real program, we would store some useful
-  data inside the object.
-</para>
-
-<programlisting>
-      # now that we have an object we can store some data inside of it
-      $this->{mydata} = 'This is some data';
-      $this->{myotherdata} = 123;
-</programlisting>
-
-<para>
-  Now we create two menus, put them on a menubar, and associate
-  the menubar to our frame (you may consult the wxWidgets manual for a more
-  detailed description). 
-</para>
-
-<programlisting>
-<![CDATA[
-      # create 2 menus
-      my( $mfile ) = Wx::Menu->new();
-      my( $mhelp ) = Wx::Menu->new();
-
-      # add entries to menus
-      $mhelp->Append( $ID_ABOUT, "&About...\tCtrl-A", "Show about dialog" );
-      $mfile->Append( $ID_EXIT, "E&xit\tAlt-X", "Quit this program" );
-    
-      # create a menu bar
-      my( $mbar ) = Wx::MenuBar->new();
-    
-      # append the menus to the menu bar
-      $mbar->Append( $mfile, "&File" );
-      $mbar->Append( $mhelp, "&Help" );
-    
-      # and assign the menubar to the frame
-      $this->SetMenuBar( $mbar );
-
-      # create a status bar with two fields
-      $this->CreateStatusBar( 2 );
-      # and show a friendly message
-      $this->SetStatusText( "Welcome to wxPerl!", 1 );
-]]>
-</programlisting>
-
-<para>
-  Now comes the important part: event handling. There is an important
-  difference between wxWidgets and wxPerl: in wxWidgets the event
-  macros are enclosed between
-  <literal>BEGIN_EVENT_TABLE()..... END_EVENT_TABLE()</literal>
-  statements, while in wxPerl they usually appear in the constructor;
-  in addition wxPerl event macros take an
-  <emphasis>additional</emphasis> first parameter: the object that
-  must handle the event.
-</para>
-
-<para>
-  In the code below, we declare that menu events coming from the
-  item(s) with an id equal to <varname>$ID_ABOUT</varname> will be
-  handled by our frame (<varname>$this</varname>) using the
-  <methodname>OnAbout</methodname> method, amd that the close event is
-  handled by our frame using the OnClose method.
-</para>
-  
-<programlisting>
-<![CDATA[
-      # declare that events coming from menu items with the given
-      # id will be handled by the frame ($this) using the listed methods
-
-      # in wxWidgets you will have used EVT_MENU( id, method )
-      # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
-      EVT_MENU( $this, $ID_EXIT, \&OnQuit );
-      EVT_MENU( $this, $ID_ABOUT, \&OnAbout );
-      EVT_CLOSE( $this, \&OnClose );
-
-      return $this;
-    }
-]]>
-</programlisting>
-
-<para>
-  Now let's see event handlers: these are methods taking an event
-  objet as parameter. The exact type of the object depends upon the
-  event handled by the method: <methodname>OnAbout</methodname> and
-  <methodname>OnQuit</methodname> (handling menu events) will receive
-  <classname>Wx::CommandEvent</classname> object, while
-  <methodname>OnClose</methodname> will receive a
-  <classname>Wx::CloseEvent</classname> object.
-</para>
-
-<programlisting>
-    # these are some constants used by Wx::MessageBox
-    use Wx qw(wxOK wxICON_INFORMATION wxVERSION_STRING);
-    
-    # called when the user selects the 'Exit' menu item
-    sub OnQuit {
-      my( $this, $event ) = @_;
-    
-      Wx::MessageBox( 'OnQuit: Exiting', 'Message', wxOK, $this );
-
-      # closes the frame
-      $this->Close( 1 );
-    }
-    
-    # called when the user selects the 'About' menu item
-    sub OnAbout {
-      my( $this, $event ) = @_;
-    
-      # display a simple about box
-      Wx::MessageBox( "This is the about dialog of minimal sample.\n" .
-    		  "Welcome to wxPerl " . $Wx::VERSION . "\n" .
-    		  wxVERSION_STRING,
-    		  "About minimal", wxOK | wxICON_INFORMATION,
-    		  $this );
-    }
-    
-    sub OnClose {
-      my( $this, $event ) = @_;
-
-      Wx::MessageBox( 'OnClose: Closing', 'OnClose', wxOK, $this );
-
-      $event->Skip();
-    }   
-</programlisting>
-
-<para>
-  This part is almost identical to the previous example.
-</para>
-
-<programlisting>
-    package MyApp;
-    
-    use strict;
-    use vars qw(@ISA);
-    
-    @ISA=qw(Wx::App);
-    
-    use Wx qw(wxDefaultPosition);
-
-    sub OnInit {
-      my( $this ) = shift;
-    
-      my( $frame ) = MyFrame->new( "Minimal wxPerl app",
-                                   wxDefaultPosition,
-    			           [450, 350]
+    # controls should not be placed directly inside
+    # a frame, use a Wx::Panel instead
+    my $panel = Wx::Panel->new( $self,            # parent window
+                                -1,               # ID
+                                );
+    # create a button
+    my $button = Wx::Button->new( $panel,         # parent window
+                                  -1,             # ID
+                                  'Click me!',    # label
+                                  [30, 20],       # position
+                                  [-1, -1],       # default size
                                   );
-    
-      $this->SetTopWindow( $frame );
-
-      $frame->Show( 1 );
-    }
-    
-    package main;
-    
-    # create an instance of the Wx::App-derived class
-    my( $app ) = MyApp->new();
-    # start processing events
-    $app->MainLoop();
 </programlisting>
+<!-- end -->
+
+The rest of this example is exactly like the preceding one except
+that inside <methodname>OnInit</methodname> a
+<classname>MyFrame</classname> instance is created instead of a
+<classname>Wx::Frame</classname> one.
+
+<!-- replace second #4 -->
+<programlisting>
+package MyApp;
+    
+use base 'Wx::App';
+    
+sub OnInit {
+    my $frame = MyFrame->new;
+
+  $frame->Show( 1 );
+}
+    
+package main;
+    
+my $app = MyApp->new;
+$app->MainLoop;
+</programlisting>
+<!-- end -->
 
 <para>
   <ulink url="second.pl.txt">Here</ulink> you can see the program at a glance
@@ -392,36 +276,16 @@ we'll create our own frame class (derived from Wx::Frame, of course).
 
 <chapter>
   <?dbhtml filename="tutorial4.html"?>
-  <title>Splitting a program</title>
-
-<abstract>
-  When you have a long program, you usually want to split it across several
-  files. Now we'll see how to arrange our previous program in a more
-  modular way.
-</abstract>
+  <title>Events</title>
 
 <section>
-  <title>Modules and files</title>
+  <title>Introduction</title>
 
 <para>
-  When you put in a program
-</para>
-
-<programlisting>
-    use Foo;
-</programlisting>  
-
-<para>
-  this tells to Perl: &quot;search for a file named 'Foo.pm', read it, and 
-  evalutate his contents as Perl code&quot; thh file itself is not forced
-  in any way to export a 'Foo' namespace/class: it may export a 'Bar', or
-  'Bar::Foo' namespace, or no namespace at all; however this isn't a generally
-  a good practice (though it may be useful in some cases).
-</para>
-
-<para>
-  For more detailed informations you may consult the perlmod page in your
-  perl distribution.
+  In this example we will add simple event handling. In wxPerl this
+  is done through the use of event connectors. This is just a
+  bunch of functions (one for each event type) that define object
+  methods to be called in response to certain events.
 </para>
 
 </section>
@@ -430,179 +294,108 @@ we'll create our own frame class (derived from Wx::Frame, of course).
   <title>Program</title>
 
 <para>
-  Following the above statement, we will create three files:
-  <filename>main.pl</filename> (the main program),
-  <filename>MyApp.pm</filename> and <filename>MyFrame.pm</filename>.
+  The first thing to do in order to use events is importing the event
+  connectors. All these functions are exported by the
+  <classname>Wx::Event</classname> module.
 </para>
 
-<para>
-  In Perl a module <emphasis role="bold">MUST</emphasis> return a true
-  value upon successful inclusion, so the last statement of all Perl
-  modules is
-</para>
-
+<!-- replace third #1 -->
 <programlisting>
-    1;
+package MyFrame;
+
+use base 'Wx::Frame';
+# import the event registration function
+use Wx::Event qw(EVT_BUTTON);
 </programlisting>
+<!-- end -->
 
 <para>
-  <filename>main.pl</filename> is our main program file. In general
-  you will not need more than 10 lines, since all initialization stuff
-  is in the application class.
+  The second step for using events is connecting an object method
+  with an event; this way when some window fires an event the
+  method will be called.
 </para>
 
+<!-- replace third #2 -->
 <programlisting>
-    # main.pl
+    my $button = Wx::Button->new( $panel,         # parent window
+                                  -1,             # ID
+                                  'Click me!',    # label
+                                  [30, 20],       # position
+                                  [-1, -1],       # default size
+                                  );
 
-    use strict;    
-    use Wx;
-    use MyApp;
-    use MyFrame;
+    # register the OnClick method as an handler for the
+    # 'button clicked' event. The first argument is a Wx::EvtHandler
+    # that receives the event
+    EVT_BUTTON( $self, $button, \&amp;OnClick );
 
-    # create an instance of the Wx::App-derived class
-    my( $app ) = MyApp->new();
-    # start processing events
-    $app->MainLoop();
+    return $self;
+}
 </programlisting>
+<!-- end -->
 
 <para>
-  <filename>MyFrame.pm</filename> is our first module. You'll notice
-  it is almost equal to our previous example (the only difference is
-  the final statement).
+  The <function>EVT_BUTTON</function> call above means that,
+  when a "button clicked" event is fired by
+  <varname>$button</varname>, the method
+  <methodname>$self->OnClick</methodname> is called.
 </para>
 
-<programlisting>
-<![CDATA[
-    package MyFrame;
-        
-    use strict;
-    use vars qw(@ISA);
-        
-    @ISA=qw(Wx::Frame);
-    
-    use Wx::Event qw(EVT_MENU EVT_CLOSE);
-    
-    my( $ID_ABOUT, $ID_EXIT ) = ( 1, 2 );
-    
-    # Parameters: title, position, size
-    sub new {
-      my( $class ) = shift;
-      # now we are calling the base class constructor
-      my( $this ) = $class->SUPER::new( undef, -1, $_[0], $_[1], $_[2] );
-    
-      # now that you have an object you can store some data inside of it
-      $this->{mydata} = 'This is some data';
-      $this->{myotherdata} = 123;
-    
-      # create 2 menus
-      my( $mfile ) = Wx::Menu->new();
-      my( $mhelp ) = Wx::Menu->new();
-    
-      # add entries to menus
-      $mhelp->Append( $ID_ABOUT, "&About...\tCtrl-A", "Show about dialog" );
-      $mfile->Append( $ID_EXIT, "E&xit\tAlt-X", "Quit this program" );
-        
-      # create a menu bar
-      my( $mbar ) = Wx::MenuBar->new();
-        
-      # append the menus to the menu bar
-      $mbar->Append( $mfile, "&File" );
-      $mbar->Append( $mhelp, "&Help" );
-        
-      # and assign the menubar to the frame
-      $this->SetMenuBar( $mbar );
-    
-      # create a status bar with two fields
-      $this->CreateStatusBar( 2 );
-      # and show a friendly message
-      $this->SetStatusText( "Welcome to wxPerl!", 1 );
-    
-      # declare that events coming from menu items with the given
-      # id will be handled by the frame ($this) using the listed methods
-    
-      # in wxWidgets you will have used EVT_MENU( id, method )
-      # with _two_ parameters, and EVT_CLOSE( method ), with _one_ parameter
-      EVT_MENU( $this, $ID_EXIT, \&OnQuit );
-      EVT_MENU( $this, $ID_ABOUT, \&OnAbout );
-      EVT_CLOSE( $this, \&OnClose );
-    
-      return $this;
-    }
-    
-    # these are some constants used by Wx::MessageBox
-    use Wx qw(wxOK wxICON_INFORMATION wxVERSION_STRING);
-    
-    # called when the user selects the 'Exit' menu item
-    sub OnQuit {
-      my( $this, $event ) = @_;
-    
-      Wx::MessageBox( 'OnQuit: Exiting', 'Message', wxOK, $this );
-    
-      # closes the frame
-      $this->Close( 1 );
-    }
-    
-    # called when the user selects the 'About' menu item
-    sub OnAbout {
-      my( $this, $event ) = @_;
-    
-      # display a simple about box
-      Wx::MessageBox( "This is the about dialog of minimal sample.\n" .
-                      "Welcome to wxPerl " . $Wx::VERSION . "\n" .
-                      wxVERSION_STRING,
-                      "About minimal", wxOK | wxICON_INFORMATION,
-                      $this );
-    }
-    
-    sub OnClose {
-      my( $this, $event ) = @_;
-    
-      Wx::MessageBox( 'OnClose: Closing', 'OnClose', wxOK, $this );
-    
-      $event->Skip();
-    }
-
-    1;
-]]>
-</programlisting>
-
 <para>
-  <filename>MyApp.pm</filename> defines the application class.
+  All event handlers always have two arguments: the first is the
+  receiver for the event (the first parameter for the event
+  connector), the second is an event object specific for the
+  received event type. For button clicks (and various other
+  events) it is a <classname>Wx::CommandEvent</classname>.
 </para>
 
+<!-- replace third #3 -->
 <programlisting>
-    package MyApp;
-        
-    use strict;
-    use vars qw(@ISA);
-        
-    @ISA=qw(Wx::App);
-        
-    use Wx qw(wxDefaultPosition);
-    
-    sub OnInit {
-      my( $this ) = shift;
-        
-      my( $frame ) = MyFrame->new( "Minimal wxPerl app",
-                                   wxDefaultPosition,
-                                   [450, 350]
-                                 );
-        
-      $this->SetTopWindow( $frame );
-    
-      $frame->Show( 1 );
-    }
+sub OnClick {
+    my( $self, $event ) = @_;
 
-    1;
+    $self->SetTitle( 'Clicked' );
+}
 </programlisting>
+<!-- end -->
+        
+<para>
+  <ulink url="third.pl.txt">Here</ulink> you can see the program at a glance
+  (it is suffixed .pl.txt so your browser will not try to execute it, 
+   but from Perl's point of view this makes no difference).
+</para>
+        
+</section>
+    
+<section>
+  <title>About event connectors</title>
 
 <para>
-  Here you can see <ulink url="third/main.pl.txt">main.pl</ulink>,
-  <ulink url="third/MyApp.pm.txt">MyApp.pm</ulink>, 
-  <ulink url="third/MyFrame.pm.txt">MyFrame.pm</ulink>. They're
-  suffixed .txt so your browser will not try to execute them (under
-  Win32). If you want to run the sample, you <emphasis
-  role="bold">MUST</emphasis> rename the files to .pl and .pm .
+  All event connectors always take a <classname>Wx::EvtHandler</classname>
+  as their first argument; most of the time this is just a
+  <classname>Wx::Window</classname> subclass. This event is the
+  object that will be passed as the first parameter to the event
+  handler. Some events (like mouse motion events) can only be caught
+  by the window generating them. Most kind of events however
+  (like button click events) travel
+  up the window hierarchy and can be caught by any ancestor of the
+  control generating them. This means that wxPerl needs a way to
+  distinguish which control generated a specific event. The answer
+  lies in the second argument in the call to
+  <function>EVT_BUTTON</function>, which is the button itself. 
+</para>
+
+<para>
+  Every <classname>Wx::Window</classname> has an ID (the second
+  argument to the constructor, always -1 in the examples so far)
+  which identifies it inside the program. wxWidgets uses window
+  IDs to distinguish the originators of events. This means that
+  the program above could have passed a specific ID to
+  <methodname>Wx::Button::new</methodname> and as the
+  second argument to <function>EVT_BUTTON</function>. However
+  keeping track of used IDs tends to be awkward and most of the time
+  it is much simpler
+  to let wxPerl sort things out (as in the example).
 </para>
 
 </section>

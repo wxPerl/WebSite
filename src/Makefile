@@ -23,7 +23,7 @@ crlf2lf:
 ###############################################################################
 
 $(OUTDIR)/tutorial/tutorial.html: tutorial/tutorial.xml doc.xsl \
-    wxperl.xsl
+    wxperl.xsl $(OUTDIR)/tutorial/*.pl.txt
 	$(XSLT) --output $(OUTDIR)/tutorial/ doc.xsl \
             tutorial/tutorial.xml
 
