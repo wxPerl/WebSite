@@ -42,10 +42,10 @@
         <div class="module-description">
         <xsl:copy-of select="description/child::node()" />
         <br />
-        Author: <xsl:value-of select="author/name" />
+        <b>Author: </b> <xsl:value-of select="author/name" />
         <xsl:if test="download">
           <br />
-          Download:
+          <b>Download: </b>
           <xsl:for-each select="download/item">
             <xsl:element name="a">
               <xsl:attribute name="href"><xsl:value-of select="url" /></xsl:attribute>

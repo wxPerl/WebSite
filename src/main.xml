@@ -4,6 +4,22 @@
 
 <news>
   <item>
+    <date>Jun 01, 2004</date>
+    <content>
+New wxPerl modules on CPAN!
+Simon Flack has released version of
+<a href="http://search.cpan.org/dist/Wx-Perl-Throbber/"
+   target="_blank">Wx::Perl::Throbber</a>, a control displaying
+an animated throbber/spinner like the one found in most browsers.
+Jouke visser has released the core controls used in
+<a href="http://www.pvoice.org" target="_blank">pVoice</a> as
+<a href="http://search.cpan.org/dist/AAC-Pvoice/" target="_blank">
+AAC::Pvoice</a>,a suite of controls suitable for building applications
+for disabled people.
+    </content>
+  </item>
+
+  <item>
     <date>Apr 25, 2004</date>
     <content>
 <b>wxPerl 0.19 is out!</b>: go to the 

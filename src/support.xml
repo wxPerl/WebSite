@@ -50,6 +50,18 @@ resources) code.
     <anchor>modules</anchor>
 
     <module>
+      <name>AAC::Pvoice</name>
+      <distname>AAC-Pvoice</distname>
+      <author>
+        <name>Jouke Visser</name>
+      </author>
+      <description>
+AAC::Pvoice is a set of modules to create software for people who
+can't use a normal mouse and/or keyboard.
+      </description>
+    </module>
+
+    <module>
       <name>Wx::Perl::TreeChecker</name>
       <distname>Wx-Perl-TreeChecker</distname>
       <author>
@@ -57,6 +69,19 @@ resources) code.
       </author>
       <description>
 a <tt>Wx::TreeCtrl</tt> whose items can be checked using checkboxes.
+      </description>
+    </module>
+
+    <module>
+      <name>Wx::Perl::Throbber</name>
+      <distname>Wx-Perl-Throbber</distname>
+      <author>
+        <name>Simon Flack</name>
+      </author>
+      <description>
+A throbber displays an animated image that can be started, stopped,
+reversed, etc. Useful for showing an ongoing process (like most web
+browsers use) or simply for adding eye-candy to an application.
       </description>
     </module>
 
