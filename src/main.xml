@@ -26,6 +26,14 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Aug 29, 2004</date>
+    <content>
+This really is old news, but SuSE 9.1 Professional i386 (released in May)
+includes a prepackaged version of wxPerl 0.18.
+    </content>
+  </item>
+
+  <item>
     <date>Jun 20, 2004</date>
     <content>
 Jeff Buchbinder created a wxPerl Debian package that should work with the
