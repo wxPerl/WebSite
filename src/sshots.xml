@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <!DOCTYPE screenshots SYSTEM "wxperl.dtd">
 
-<screenshots>
+<screenshots xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
   <page>
     <description>
 This is the "minimal" sample from the wxPerl distribution (you can
-find it in <tt>samples/minimal/minimal.pl</tt>). It shows just a window with a
-status bar and a menu bar.
+find it in <xhtml:tt>samples/minimal/minimal.pl</xhtml:tt>). It shows just
+a window with a status bar and a menu bar.
     </description>
 
     <image>
@@ -33,7 +33,7 @@ status bar and a menu bar.
   <page>
     <description>
 This is the "controls" sample from the wxPerl distribution (you can
-find it in <tt>samples/controls/controls.pl</tt>). It shows many of
+find it in <xhtml:tt>samples/controls/controls.pl</xhtml:tt>). It shows many of
 the controls available in wxPerl.
     </description>
 
@@ -56,8 +56,8 @@ the controls available in wxPerl.
   <page>
     <description>
 This is the "dialogs" sample from the wxPerl distribution (you can
-find it as <tt>samples/dialogs/dialogs.pl</tt>). It shows many of the common
-dialogs available in wxPerl.
+find it as <xhtml:tt>samples/dialogs/dialogs.pl</xhtml:tt>). It shows many
+of the common dialogs available in wxPerl.
     </description>
 
     <image>

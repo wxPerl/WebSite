@@ -2,62 +2,59 @@
 
 <xsl:stylesheet
   version="1.0"
+  xmlns="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="wxperl.xsl" />
 
-<xsl:template match="support">
+<xsl:template name="fxm">
   <xsl:call-template name="page-head-links">
     <xsl:with-param name="items" select="/support/item" />
   </xsl:call-template>
 </xsl:template>
 
 <xsl:template match="/support/item">
-<h1><xsl:call-template name="item-anchor" /></h1>
+<xsl:apply-templates select="title" />
 
 <xsl:choose>
   <!-- preformatted text -->
   <xsl:when test="content">
-    <xsl:copy-of select="content/child::node()" />
+    <xsl:apply-templates select="content" />
   </xsl:when>
   <!-- list of modules -->
   <xsl:otherwise>
+    <dl>
     <xsl:for-each select="module">
       <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
                                        'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
-      <div class="module">
+      <dt>
         <b>
         <xsl:choose>
           <xsl:when test="distname">
-            <xsl:element name="a">
-              <xsl:attribute name="href">http://search.cpan.org/dist/<xsl:value-of select="distname" />/</xsl:attribute>
-              <xsl:attribute name="target">_blank</xsl:attribute>
+            <a xsl:use-attribute-sets="a-target"
+               href="http://search.cpan.org/dist/{distname}">
               <tt><xsl:value-of select="name" /></tt>
-            </xsl:element>
+            </a>
           </xsl:when>
           <xsl:otherwise>
             <tt><xsl:value-of select="name" /></tt>
           </xsl:otherwise>
-        </xsl:choose></b>:
-        <div class="module-description">
-        <xsl:copy-of select="description/child::node()" />
+        </xsl:choose></b>:</dt>
+        <dd>
+        <xsl:apply-templates select="description" />
         <br />
         <b>Author: </b> <xsl:value-of select="author/name" />
         <xsl:if test="download">
           <br />
           <b>Download: </b>
           <xsl:for-each select="download/item">
-            <xsl:element name="a">
-              <xsl:attribute name="href"><xsl:value-of select="url" /></xsl:attribute>
-              <xsl:attribute name="target">_blank</xsl:attribute>
-              <xsl:value-of select="label" />
-            </xsl:element>
+            <a href="{url}"><xsl:value-of select="label" /></a>
             <xsl:if test="position()!=last()">, </xsl:if>
           </xsl:for-each>
         </xsl:if>
-        </div>
-      </div>
+        </dd>
     </xsl:for-each>
+    </dl>
   </xsl:otherwise>
 </xsl:choose>
 </xsl:template>

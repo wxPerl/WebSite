@@ -2,56 +2,60 @@
 
 <xsl:stylesheet
   version="1.0"
+  exclude-result-prefixes="xhtml"
+  xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="wxperl.xsl" />
+<xsl:variable name="skip-navigation">1</xsl:variable>
+<xsl:variable name="body-style">margin: 10mm 5mm 0 10mm</xsl:variable>
 
-<xsl:template name="fw-bw">
 <!-- navigation bar -->
-<div>
-  <xsl:if test="$page &gt; 1">
-    <div class="LHS">
-      <xsl:element name="a"><xsl:attribute name="href">sshot<xsl:number value="$page - 1" format="01"/>.html</xsl:attribute>Previous</xsl:element>
-    </div>
-  </xsl:if>
+<xsl:template name="fw-bw">
+  <xhtml:div>
+    <!-- previous -->
+    <xsl:if test="$page &gt; 1">
+      <xhtml:div class="LHS">
+        <xsl:element name="a"><xsl:attribute name="href">sshot<xsl:number value="$page - 1" format="01"/>.html</xsl:attribute>Previous</xsl:element>
+      </xhtml:div>
+    </xsl:if>
 
-  <xsl:if test="$page &lt; count(../page)">
-    <div class="RHS">
-      <xsl:element name="a"><xsl:attribute name="href">sshot<xsl:number value="$page + 1" format="01"/>.html</xsl:attribute>Next</xsl:element>
-    </div>
-  </xsl:if>  
-</div>
+    <!-- next -->
+    <xsl:if test="$page &lt; count(../page)">
+      <xhtml:div class="RHS">
+        <xsl:element name="a"><xsl:attribute name="href">sshot<xsl:number value="$page + 1" format="01"/>.html</xsl:attribute>Next</xsl:element>
+      </xhtml:div>
+    </xsl:if>  
+  </xhtml:div>
 </xsl:template>
 
+<!-- skip pages different from the current one -->
+<xsl:template match="/screenshots/page[position() != $page]" />
+
+<!-- current page -->
 <xsl:template match="/screenshots/page[position() = $page]">
+  <!-- top navigation -->
+  <xsl:call-template name="fw-bw" />
+  <xhtml:br /><xhtml:br />
 
-<xsl:call-template name="fw-bw" />
-<br /><br />
+  <!-- images -->
+  <xhtml:div>
+    <xsl:apply-templates select="description" />
+    <xsl:apply-templates select="image" />
+  </xhtml:div>
 
-<!-- images -->
-<div class="screenshots">
-  <xsl:copy-of select="description/child::node()" />
-  <xsl:apply-templates select="image" />
-</div>
-
-<br /><br />
-<xsl:call-template name="fw-bw" />
-
+  <!-- bottom navigation -->
+  <xsl:call-template name="fw-bw" />
+  <xhtml:br />
 </xsl:template>
 
-<xsl:template match="/screenshots/page[position() = $page]/image">
-<div>
-  <xsl:value-of select="text" /><br />
+<!-- single image -->
+<xsl:template match="image">
+  <xhtml:div style="padding: 20pt; text-align: center;">
+    <xsl:value-of select="text" /><xhtml:br />
 
-  <xsl:element name="img">
-    <xsl:attribute name="alt">
-      <xsl:value-of select="text" />
-    </xsl:attribute>
-    <xsl:attribute name="src">
-      <xsl:value-of select="file" />
-    </xsl:attribute>
-  </xsl:element>
-</div>
+    <xhtml:img alt="{text}" src="{file}" />
+  </xhtml:div>
 </xsl:template>
 
 </xsl:stylesheet>
