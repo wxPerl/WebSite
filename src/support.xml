@@ -112,16 +112,6 @@ graphics. To use it you will need the OpenGL module.
 <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/OpenGL-win32-5.8.0.zip">OpenGL for ActivePerl 8xx</xhtml:a>.
       </description>
       <download>
-<!--
-        <item>
-          <label>Perl 5.6.1</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-5.6.1.zip</url>
-        </item>
-        <item>
-          <label>Perl 5.6.1/Unicode</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-u-5.6.1.zip</url>
-        </item>
--->
         <item>
           <label>Perl 5.8.x</label>
           <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.19-wxmsw2.4.2--5.8.3.zip</url>
@@ -147,28 +137,28 @@ interfaces for Acrobat Reader, Internet Explorer, Flash and Windows Media
 Player.
       </description>
       <download>
-<!--
-        <item>
-          <label>Perl 5.6.1</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-5.6.1.zip</url>
-        </item>
-        <item>
-          <label>Perl 5.6.1/Unicode</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-u-5.6.1.zip</url>
-        </item>
--->
         <item>
           <label>Perl 5.8.x</label>
           <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-wxperl0.19-wxmsw2.4.2--5.8.3.zip</url>
         </item>
-<!--
-        <item>
-          <label>Perl 5.8.x/Unicode</label>
-          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-wxperl0.19-wxmsw2.4.2-u-5.8.3.zip</url>
-        </item>
--->
       </download>
     </module>
   </item>
-</support>
 
+  <item>
+    <title>Miscellanea</title>
+    <anchor>misc</anchor>
+    <content>
+<xhtml:dl>
+  <xhtml:dt><xhtml:a href="http://www.web42.com/software/perlwrapper" target="_blank">PerlWrapper</xhtml:a></xhtml:dt>
+  <xhtml:dd>PerlWrapper is an Xcode project that lets you wrap
+your Perl application together with its modules, resource files
+and third-party libraries inside a Mac OS X application bundle (.app).
+</xhtml:dd>
+
+  <xhtml:dt></xhtml:dt>
+  <xhtml:dd></xhtml:dd>
+</xhtml:dl>
+    </content>
+  </item>
+</support>

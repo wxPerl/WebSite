@@ -26,6 +26,25 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Jun 20, 2004</date>
+    <content>
+Jeff Buchbinder created a wxPerl Debian package that should work with the
+"testing" distribution. It is available via APT:
+&lt;<xhtml:tt>deb http://apt.freemedsoftware.com/debian woody fsf</xhtml:tt>&gt;.
+<xhtml:br />
+
+Christian Renz created
+<xhtml:a href="http://www.web42.com/software/perlwrapper"
+         target="_blank">PerlWrapper</xhtml:a>
+ an Xcode project that enabled budling Perl (and wxPerl)
+applications inside a Mac OS X bundle 
+<xhtml:br />
+
+Thank very much to both!
+    </content>
+  </item>
+
+  <item>
     <date>Jun 19, 2004</date>
     <content>
 The wxPerl site has a much nicer look now, based upon
