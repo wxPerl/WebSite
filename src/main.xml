@@ -26,6 +26,15 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Mar 20, 2005</date>
+    <content>
+An <xhtml:a href='http://www.barbon.org/wxperl/Wx-0.22.ebuild.tar.gz'>experimental
+ebuild file for Gentoo</xhtml:a> is available. I tested it with wxWidgets 2.4.2
+on a stock Gentoo installation.
+    </content>
+  </item>
+
+  <item>
     <date>Mar 14, 2005</date>
     <content>
 <xhtml:a target="_blank" href="http://search.cpan.org/dist/POE">POE</xhtml:a>
