@@ -1,14 +1,22 @@
-BODY { 
+/*
+ * default values
+ */
+
+BODY {
   background-color: white;
+  font-size: medium;
   color: black;
+
+  /* this is necessary for the header and navigation
+     DIVs to extend to page border */
   margin:  0pt;
   padding: 0pt;
   border:  0pt;
 }
 
-BODY * {
-  font-size: medium;
-}
+/*
+ * Common formatting for all pages
+ */
 
 BODY H1 {
   font-size: large;
@@ -18,10 +26,12 @@ BODY H2 {
   font-size: medium;
 }
 
-DIV.body {
-  margin: 15pt;
+DIV.header { 
+  background-color: #167ab2;
+  padding: 5pt;
 }
 
+/* violet navigation bar, just below the header */
 DIV.navigation {
   background-color: #b0b0f0;
   padding: 5pt;
@@ -31,6 +41,12 @@ DIV.navigation A {
   padding: 5pt;
 }
 
+/* some space arounf body */
+DIV.body {
+  padding: 12pt;
+}
+
+/* SourceForge logo and "Valid HTML" image */
 DIV.bottom-images {
   padding: 5pt;
 }
@@ -39,26 +55,7 @@ DIV.bottom-images A {
   padding: 5pt;
 }
 
-DIV.header { 
-  background-color: #167ab2;
-  padding-top: 10pt;
-  padding-bottom: 5pt;
-  padding-left: 5pt;
-}
-
-.what-is-wxperl {
-  padding: 5pt;
-  margin-top: 5pt;
-  border: 1pt dotted black;
-  background-color: #a0e0ff;
-}
-
-.wxperl-news {
-  padding: 5pt;
-  margin-top: 5pt;
-  border: 1pt dotted black;
-}
-
+/* some pages have a row of links at the top */
 DIV.page-head-links {
   text-align: center;
 }
@@ -67,11 +64,36 @@ DIV.page-head-links A {
   padding: 5pt;
 }
 
+/*
+ * Home and News page
+ */
+
+DIV.what-is-wxperl {
+  padding: 5pt;
+  border: 1pt dotted black;
+  background-color: #a0e0ff;
+}
+
+DIV.wxperl-news {
+  padding: 5pt;
+  /* spacing between news items */
+  margin-top: 5pt;
+  border: 1pt dotted black;
+}
+
+/*
+ * Screenshots page
+ */
+
+/* each image + description */
 DIV.screenshots DIV {
   padding: 20pt;
   text-align: center;
 }
 
+/*
+ * User's page
+ */
 DIV.application-list {
   padding-left: 20pt;
 }
@@ -80,4 +102,17 @@ DIV.organisation {
   padding-top: 10pt;
   paddig-bottom: 10pt;
   font-size: medium;
+}
+
+/*
+ * for DocBook-generated HTML:
+ * restore margin for all DIVs
+ * make <programlisting> stand out visually
+ */
+DIV.navheader, DIV.navfooter, DIV.chapter, DIV.book {
+  margin: 15pt;
+}
+
+PRE.programlisting {
+  background-color: #e0e0e0;
 }

@@ -9,8 +9,7 @@ use Wx;
 package MyApp;
 
 # this tells Perl that your class (MyApp in this case) is derived from Wx::App
-use vars qw(@ISA);
-@ISA = qw(Wx::App);
+use base 'Wx::App';
 
 # this method is called automatically when an application object is first
 # constructed, all application-level initialization is done here
@@ -22,9 +21,6 @@ sub OnInit {
   my( $frame ) = Wx::Frame->new( undef, -1, 'wxPerl rules',
                                  [100, 100], [200, 150]
                                );
-
-  # tell wxWindows to terminate when the main frame is closed
-  $this->SetTopWindow( $frame );
 
   # show the frame
   $frame->Show( 1 );
