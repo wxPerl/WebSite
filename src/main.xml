@@ -26,6 +26,28 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Dec 20, 2004</date>
+    <content>
+<xhtml:b>wxPerl 0.21 is out!</xhtml:b>: go to the 
+<xhtml:a href="download.html">Download page</xhtml:a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32 and
+Mac OS X.
+  <xhtml:pre>
+	- Fixed installation of 'wxPerl' command on Mac OS X.
+	- Fixed running in the embedded case (still requires the
+	  application to call ExitMainLoop at the right places).
+	- Wrapped wxNavigationKeyEvent.
+	- Using die() in an event handler should not crash anymore
+	  (it might leak).
+	- Added Wx::PlWindow, to be used for custom controls.
+	- New (Windows-only) --mslu flag for Makefile.PL.
+	- Wx::NotebookSizer is now no longer needed and
+	  deprecated.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Aug 29, 2004</date>
     <content>
 This really is old news, but SuSE 9.1 Professional i386 (released in May)
@@ -435,16 +457,16 @@ Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
 PPM binary packages are available for
 <xhtml:ul>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.19-wxmsw2.4.2-win32-5.6.1.zip">ActivePerl 6xx</xhtml:a>
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.21-wxmsw2.4.2-win32-5.6.1.zip">ActivePerl 6xx</xhtml:a>
   </xhtml:li>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.19-wxmsw2.4.2-win32-5.8.3.zip">ActivePerl 8xx</xhtml:a>
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.21-wxmsw2.4.2-win32-5.8.3.zip">ActivePerl 8xx</xhtml:a>
   </xhtml:li>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.19-wxmsw2.4.2-win32-u-5.6.1.zip">ActivePerl 6xx with Unicode</xhtml:a> (for NT/2000/XP)
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.21-wxmsw2.4.2-win32-u-5.6.1.zip">ActivePerl 6xx with Unicode</xhtml:a> (for NT/2000/XP)
   </xhtml:li>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.19-wxmsw2.4.2-win32-u-5.8.3.zip">ActivePerl 8xx with Unicode</xhtml:a> (for NT/2000/XP)
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.21-wxmsw2.4.2-win32-u-5.8.3.zip">ActivePerl 8xx with Unicode</xhtml:a> (for NT/2000/XP)
   </xhtml:li>
 </xhtml:ul>
 
@@ -455,16 +477,16 @@ Please read the included <xhtml:b>README.txt</xhtml:b> for installation instruct
 The corresponding developement packages for
 <xhtml:ul>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.19-wxmsw2.4.2-win32-5.6.1.zip">ActivePerl 6xx</xhtml:a>
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.21-wxmsw2.4.2-win32-5.6.1.zip">ActivePerl 6xx</xhtml:a>
   </xhtml:li>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.19-wxmsw2.4.2-win32-5.8.3.zip">ActivePerl 8xx</xhtml:a>
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.21-wxmsw2.4.2-win32-5.8.3.zip">ActivePerl 8xx</xhtml:a>
   </xhtml:li>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.19-wxmsw2.4.2-win32-u-5.6.1.zip">ActivePerl 6xx with Unicode</xhtml:a>
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.21-wxmsw2.4.2-win32-u-5.6.1.zip">ActivePerl 6xx with Unicode</xhtml:a>
   </xhtml:li>
   <xhtml:li>
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.19-wxmsw2.4.2-win32-u-5.8.3.zip">ActivePerl 8xx with Unicode</xhtml:a>
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.21-wxmsw2.4.2-win32-u-5.8.3.zip">ActivePerl 8xx with Unicode</xhtml:a>
   </xhtml:li>
 </xhtml:ul>
 
@@ -476,7 +498,7 @@ should only be downloaded by people interested in
 <xhtml:h3>Red Hat Linux</xhtml:h3>
 <xhtml:div>
 Binary RPMs for
-<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.19-1_wxgtk2.4.2.i386.rpm">wxWidgets 2.4.2, Red Hat Linux 8.0</xhtml:a> are available.
+<xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.21-1_wxgtk2.4.2.i386.rpm">wxWidgets 2.4.2, Red Hat Linux 8.0</xhtml:a> are available.
 </xhtml:div>
 
 <!--
@@ -491,7 +513,7 @@ A binary package is available
 <xhtml:div>
 A DMG image for
 <xhtml:a target="_blank"
-href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.19.dmg">Mac
+href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.21.dmg">Mac
 OS X 10.3 (Panther)</xhtml:a> is available.  Please note that unlike all
 other binaries it is compiled against wxWidgets 2.5.1.
 </xhtml:div>
@@ -502,7 +524,7 @@ other binaries it is compiled against wxWidgets 2.5.1.
     <title>Documentation</title>
     <content>
 <xhtml:p>
-Download the <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.19-samples.zip">examples</xhtml:a> from the
+Download the <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.21-samples.zip">examples</xhtml:a> from the
 source distribution.
 </xhtml:p>
 
@@ -522,8 +544,8 @@ Documentation fo wxPerl is available as TeX, HTML, and MS HTML Help
     <content>
 Source code for wxPerl is available in various formats:
 <xhtml:ul>
-  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.19.tar.gz">Standard CPAN package (available on CPAN as well)</xhtml:a></xhtml:li>
-  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.19-1.src.rpm">RPM source package</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.21.tar.gz">Standard CPAN package (available on CPAN as well)</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.21-1.src.rpm">RPM source package</xhtml:a></xhtml:li>
 <!--  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl_0.11-1.deb.src.tar.gz">Debian source bundled in a single .tar.gz file</a></li> -->
 </xhtml:ul>
     </content>

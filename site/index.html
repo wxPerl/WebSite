@@ -53,7 +53,24 @@ read about wxPerl <a href="users.html">users</a>.
   
 
 
-<dl><dt>Aug 29, 2004</dt><dd>
+<dl><dt>Dec 20, 2004</dt><dd>
+<b>wxPerl 0.21 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32 and
+Mac OS X.
+  <pre>
+	- Fixed installation of 'wxPerl' command on Mac OS X.
+	- Fixed running in the embedded case (still requires the
+	  application to call ExitMainLoop at the right places).
+	- Wrapped wxNavigationKeyEvent.
+	- Using die() in an event handler should not crash anymore
+	  (it might leak).
+	- Added Wx::PlWindow, to be used for custom controls.
+	- New (Windows-only) --mslu flag for Makefile.PL.
+	- Wx::NotebookSizer is now no longer needed and
+	  deprecated.
+  </pre>
+    </dd><dt>Aug 29, 2004</dt><dd>
 This really is old news, but SuSE 9.1 Professional i386 (released in May)
 includes a prepackaged version of wxPerl 0.18.
     </dd><dt>Jun 20, 2004</dt><dd>
@@ -73,12 +90,6 @@ Thank very much to both!
 The wxPerl site has a much nicer look now, based upon
 <a href="http://www.oswd.org/design/1112/bluehaze/index.html">Blue Haze</a> by
 <a href="http://www.oswd.org/email.phtml?user=haran" title="Author">haran</a>
-    </dd><dt>Jun 12, 2004</dt><dd>
-The <a href="tutorial/tutorial.html">wxPerl tutorial</a>
-has (finally!) been rewritten. It contains roughly the same
-contents as it did before, but (I hope) better organized and with
-simpler and clearer examples. I plan to write other chapters relatively
-soon but, obviously, corrections and contributions are most welcome!
     </dd></dl><a href="news.html">older news...</a>
 
 
