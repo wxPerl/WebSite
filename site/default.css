@@ -7,6 +7,47 @@ BODY * {
   font-size: 10pt
 }
 
+BODY H1 {
+  font-size: 14pt;
+}
+
+BODY H2 {
+  font-size: 12pt;
+}
+
 BODY.navigation-bar * {
   font-size: 8pt
+}
+
+.navigation-bar H3 {
+  font-size: 10pt;
+  font-weight: bold;
+  margin: 3pt;
+}
+
+.what-is-wxperl {
+  background: aqua;
+  padding: 5pt;
+  border: 1pt dotted black;
+}
+
+.wxperl-news {
+  background: #ffff80;
+  padding: 5pt;
+  margin-top: 5pt;
+  border: 1pt dotted black;
+}
+
+.download-source-releases {
+  border: 1pt dotted black;
+  padding: 5pt;
+  margin: 5pt;
+  background-color: #f0a0ff;
+}
+
+.download-binary-releases {
+  border: 1pt dotted black;
+  padding: 5pt;
+  margin: 5pt;
+  background-color: #00f0ff;
 }
