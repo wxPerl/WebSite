@@ -49,6 +49,7 @@
           <xsl:for-each select="download/item">
             <xsl:element name="a">
               <xsl:attribute name="href"><xsl:value-of select="url" /></xsl:attribute>
+              <xsl:attribute name="target">_blank</xsl:attribute>
               <xsl:value-of select="label" />
             </xsl:element>
             <xsl:if test="position()!=last()">, </xsl:if>
