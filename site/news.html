@@ -31,6 +31,18 @@
 
 
 <h1><a name="news" id="news"></a>News</h1><dl>
+  <dt>Jan 23, 2005</dt><dd>
+A
+<a href="http://www.barbon.org/wxperl/libwx-perl_0.22-1.deb.src.tar.gz">
+source file for Debian Sarge</a> is available. To build it:
+      <pre>
+	tar xzf libwx-perl_0.22-1.deb.src.tar.gz
+	dpkg-source -x libwx-perl_0.22-1.dsc
+	cd libwx-perl-0.22
+	dpkg-buildpackage -rfakeroot
+      </pre>
+    </dd>
+
   <dt>Jan 22, 2005</dt><dd>
 An <a href="http://www.barbon.org/wxperl/p5-Wx.tar.gz">experimental
 ports file for FreeBSD 5.3</a> is available. I tested it with wxWidgets 2.4.2

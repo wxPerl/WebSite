@@ -26,6 +26,21 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Jan 23, 2005</date>
+    <content>
+A
+<xhtml:a href='http://www.barbon.org/wxperl/libwx-perl_0.22-1.deb.src.tar.gz'>
+source file for Debian Sarge</xhtml:a> is available. To build it:
+      <xhtml:pre>
+	tar xzf libwx-perl_0.22-1.deb.src.tar.gz
+	dpkg-source -x libwx-perl_0.22-1.dsc
+	cd libwx-perl-0.22
+	dpkg-buildpackage -rfakeroot
+      </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Jan 22, 2005</date>
     <content>
 An <xhtml:a href='http://www.barbon.org/wxperl/p5-Wx.tar.gz'>experimental

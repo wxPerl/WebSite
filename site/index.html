@@ -53,7 +53,17 @@ read about wxPerl <a href="users.html">users</a>.
   
 
 
-<dl><dt>Jan 22, 2005</dt><dd>
+<dl><dt>Jan 23, 2005</dt><dd>
+A
+<a href="http://www.barbon.org/wxperl/libwx-perl_0.22-1.deb.src.tar.gz">
+source file for Debian Sarge</a> is available. To build it:
+      <pre>
+	tar xzf libwx-perl_0.22-1.deb.src.tar.gz
+	dpkg-source -x libwx-perl_0.22-1.dsc
+	cd libwx-perl-0.22
+	dpkg-buildpackage -rfakeroot
+      </pre>
+    </dd><dt>Jan 22, 2005</dt><dd>
 An <a href="http://www.barbon.org/wxperl/p5-Wx.tar.gz">experimental
 ports file for FreeBSD 5.3</a> is available. I tested it with wxWidgets 2.4.2
 on a stock FreeBSD 5.3 installation. It will likely work under FreeBSD 4.10
@@ -84,9 +94,6 @@ Mac OS X.
 	- Wx::NotebookSizer is now no longer needed and
 	  deprecated.
   </pre>
-    </dd><dt>Aug 29, 2004</dt><dd>
-This really is old news, but SuSE 9.1 Professional i386 (released in May)
-includes a prepackaged version of wxPerl 0.18.
     </dd></dl><a href="news.html">older news...</a>
 
 
