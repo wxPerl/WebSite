@@ -1,0 +1,46 @@
+<!-- ********************************************************************** -->
+<!-- organisation list                                                      -->
+<!-- ********************************************************************** -->
+
+<!ELEMENT organisations (organisation*)>
+<!ELEMENT organisation (name, site?, country?, contact?, wxperl,
+          applications)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT site (#PCDATA)>
+<!ELEMENT country (#PCDATA)>
+<!ELEMENT contact (name, email)>
+<!ELEMENT email (#PCDATA)>
+
+<!ELEMENT applications (application+)>
+<!ELEMENT application (name, site, license-type, platforms, wxperl-version,
+          domain, short-description, long-description?)>
+
+<!ELEMENT wxperl-version (#PCDATA)>
+<!ELEMENT domain (#PCDATA)>
+<!ELEMENT short-description (#PCDATA)>
+<!ELEMENT long-description (#PCDATA)>
+
+<!ELEMENT wxperl (rating, comments?)>
+<!ELEMENT rating (#PCDATA)>
+<!ELEMENT comments (#PCDATA)>
+
+<!-- application license types -->
+<!ELEMENT license-type (commercial | open-source)>
+<!ELEMENT commercial EMPTY>
+<!ELEMENT open-source EMPTY>
+
+<!-- application platforms -->
+<!ELEMENT platforms (windows | linux)>
+<!ELEMENT windows EMPTY>
+<!ELEMENT linux EMPTY>
+
+<!-- ********************************************************************** -->
+<!-- Screenshots                                                            -->
+<!-- ********************************************************************** -->
+
+<!ELEMENT screenshots (page)+>
+<!ELEMENT page (description, image+)>
+<!ELEMENT description (#PCDATA)>
+<!ELEMENT image (text, file)>
+<!ELEMENT text (#PCDATA)>
+<!ELEMENT file (#PCDATA)>

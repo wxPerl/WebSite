@@ -1,0 +1,540 @@
+<?xml version="1.0"?>
+
+<data>
+
+<news>
+  <item>
+    <date>Nov 23, 2003</date>
+    <content>
+<b>wxPerl 0.18 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32.
+  <pre>
+	- Corrected handling of UTF-8 encoded strings in ANSI builds.
+	- Added wxGridTableMessage.
+	- Fixed build problems with GTK 2 and/or Unicode on
+	  Unix hosts.
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>Sep 13, 2003</date>
+    <content>
+<tt><a href="support.html#modules">Wx::GLCanvas</a></tt> binary
+packages (ActivePerl 5.6.1 and 5.8.0, RedHat 8.0) are available for download.
+    </content>
+  </item>
+
+  <item>
+    <date>Sep 11, 2003</date>
+    <content>
+wxPerl 0.17 has been released, <a href="download.html">download</a> it.
+This version only contains bugfixes.
+    </content>
+  </item>
+
+  <item>
+    <date>Aug 29, 2003</date>
+    <content>
+<a href="http://wxglade.sourceforge.net/" target="_blank">wxGlade</a>
+0.3 has been released.
+wxGlade is a GUI designer written in Python with the popular GUI toolkit
+wxPython, that helps you create wxWindows/wxPython/wxPerl user interfaces.
+    </content>
+  </item>
+
+  <item>
+    <date>Aug 27, 2003</date>
+    <content>
+<tt><a href="support.html#modules">Wx::ActiveX</a></tt> binary
+packages (ActivePerl 5.6.1 and 5.8.0) are available for download.
+    </content>
+  </item>
+
+  <item>
+    <date>Aug 25, 2003</date>
+    <content>
+<b>wxPerl 0.16 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32.
+  <pre>
+	- new DEPRECATIONS section in README.txt, please read it
+	- Added Wx::PlGridCellEditor and Wx::PlGridCellRenderer
+	  for custom Wx::Grid cell editing/displaying.
+	- Added Wx::PlGridTable for custom Wx::Grid storage.
+	- Fixed Wx::SocketServer::Accept.
+	- Added Wx::PlXmlResourceHandler, for inserting custom
+	  controls in XRC resources.
+	- wxWindows 2.5 compatibility.
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>Jul 14, 2003</date>
+    <content>
+Simon Flack has released a new version of
+<a href="http://search.cpan.org/dist/Wx-Perl-TreeChecker/"
+   target="_blank">Wx::Perl::TreeChecker</a>, a
+Wx::TreeCtrl whose items can be checked using checkboxes.
+    </content>
+  </item>
+
+  <item>
+    <date>Jul 1, 2003</date>
+    <content>
+Binaries for Wx::ActiveX 0.04 are available for download:
+<a href="http://www.simonflack.com/pub/Wx-ActiveX-0.04-Perl5.6.1-wx241.zip
+">wxPerl 0.15, Perl 5.6.1</a>,
+wxActiveX, wrapped for wxPerl by Graciliano M. P. allows using ActiveX controls
+such as Internet Explorer and Flash from wxWindows/wxPerl programs. It only
+works under Windows. The binaries are kindly provided by Simon Flack.
+    </content>
+  </item>
+
+  <item>
+    <date>Jun 24, 2003</date>
+    <content>
+wxPerl support has been added to the
+<a href="http://wxglade.sourceforge.net" target="_blank">wxGlade</a>
+GUI designer, and will hopefully be available in the next wxGlade release.
+wxPerl support was written by
+<a target="_blank" href="http://crazyinsomniac.perlmonk.org/">D.H.</a>:
+thank you!
+    </content>
+  </item>
+
+  <item>
+    <date>May 26, 2003</date>
+    <content>
+A <a href="users.html">list of organisations using wxPerl</a> has been
+added to the site.
+    </content>
+  </item>
+
+  <item>
+    <date>May 21, 2003</date>
+    <content>
+<b>wxPerl 0.15 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32.
+  <pre>
+	- new DEPRECATIONS section in README.txt, please read it
+	- Removed support for wxWindows 2.2.x and 2.3.x.
+	- Removed support for Perl 5.004.
+	- Started documentation for the extension api
+	  (see Wx/Api.pod).
+	- Added wxFrame/wxDialog::SetShape.
+  </pre>
+
+This is mainly a bugfix release.
+    </content>
+  </item>
+
+  <item>
+    <date>May 19, 2003</date>
+    <content>
+<a href="sshot01.html">Screenshots</a> page added.
+    </content>
+  </item>
+
+  <item>
+    <date>Apr 29, 2003</date>
+    <content>
+<b>wxPerl 0.14 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32.
+  <pre>
+	- new DEPRECATIONS section in README.txt, please read it
+	- Added Wx::DateTime (not the full interface).
+	- Restored compatibility with perl 5.005.
+	- Internal changes: objects returned by various constructors
+	  will not have an additional _WXTHIS key anymore.
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>Mar 13, 2003</date>
+    <content>
+<b>wxPerl 0.13 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32.
+  <pre>
+	- new DEPRECATIONS section in README.txt, please read it
+	- New build system, allows building wxPerl extension written using
+	  XS outside of the wxPerl tree.
+	- Added Wx::Wave
+	- Added Wx::MemoryFSHandler
+	- Added Wx::Perl::Carp (thanks to podmaster).
+	- Mac OS X support (requires wxWindows 2.4.0 or newer).
+	- Added Wx::Socket* (thanks to Graciliano M. P.)
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>Dec 2, 2002</date>
+    <content>
+<b>wxPerl 0.12 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386 and ActivePerl/Win32.
+  <pre>
+	- new DEPRECATIONS section in README.txt, please read it
+	- it is now possibile to get the native handle of a Wx::Window
+	- implemented wxWizard and related classes
+	- Document/View framework (thanks to Simon Flack)
+	- Mostly completed wxStyledTextCtrl interface
+          (thanks to Graciliano M. P. and Simon Flack)
+	- implemented wxFontEnumerator and wxFontMapper
+	- implemented wxLogChain and wxLogPassThrough (2.3)
+	- Wx::PlLog, Wx::PlLogPassThrough, for custom logging
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>Oct 10, 2002</date>
+    <content>
+wxPerl has got a new logo; thanks to
+<a target="_blank" href="http://crazyinsomniac.perlmonk.org/">D.H.</a>
+who created and donated it!
+    </content>
+  </item>
+
+  <item>
+    <date>Sep 7, 2002</date>
+    <content>
+Marcus Friedlaender and Jouke Visser set up two new sources of information
+about wxPerl, the <a href="http://scripts.wordit.com/cgi-bin/wxperl/logbook.pl?file=1">wxPerl CookBook</a> and the
+<a href="http://wxperl.pvoice.org/cgi-wxperl/view.pl/FrontPage">
+  wxPerl Wiki</a>.
+    </content>
+  </item>
+
+  <item>
+    <date>Aug 6, 2002</date>
+    <content>
+<b>wxPerl 0.11 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
+  <pre>
+	- wxStyledTextControl, based on Scintilla
+	  (thanks to Marcus Friedlaender)
+	- Wx::Perl::SplashFast, for faster splash screens
+	  (thanks to Graciliano M. P.)
+	- Wx::PlFileSystemHandler, for custom file system handlers
+	- compatibility with Perl 5.7.3 and later
+	- updated build instructions, using suggestions from
+	  Graciliano M. P. and Marcus Friedlaender
+	- allow compilation of a single big Wx.so/dll; this allows building
+	  against a static wxWindows library
+	- some testing with threads
+	  for Perl 5.7.3 (works with some caveats)
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>May 8, 2002</date>
+    <content>
+Graciliano M. P. produced a good tutorial about compiling wxperl on Win32, look at
+<a href="http://wxperl.virtuasites.com.br/">Compiling wxPerl on Win32</a>.
+Some "alternative" wxperl documentation is located
+<a href="http://wxperl.virtuasites.com.br/docs/index.hpl">here</a>.
+    </content>
+  </item>
+
+  <item>
+    <date>Mar 3, 2002</date>
+    <content>
+wxPerl 0.10 fixes a bug in wxToolbar introduced in 0.09
+    </content>
+  </item>
+
+  <item>
+    <date>Mar 1, 2002</date>
+    <content>
+<b>wxPerl 0.09 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
+  <pre>
+	- wxTaskBarIcon (MS Windows only)
+	- wxGrid, wxGridCellAttr
+	- wxGridCellRenderer, wxGridCellEditor
+	- wxProcess and wxExecute
+	- wxConfig
+  </pre>
+    </content>
+  </item>
+
+  <item>
+    <date>Dec 1, 2001</date>
+    <content>
+<b>wxPerl 0.08 is out!</b>: go to the 
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
+  <pre>
+	- wxToggleButton (wxWindows 2.3)
+	- wxSingleInstanceChecker (wxWindows 2.3)
+	- wxListView, virtual wxListCtrl (wxWindows 2.3)
+	- build system reorganization, hope this one is the
+	  last one...
+	- XRC (Xml ResourCes) wrapper (wxWindows 2.3)
+	- wxClipboard &amp; wxDataObject
+	- Drag-and-Drop support
+	- MDI architecture
+	- wxBestHelpController (wxWindows 2.3)
+	- startup tips (wxShowTip, etc)
+	- wxFindReplaceDialog (wxWindows 2.3)
+	- wxPerl demo (like the wxPython one)
+	- wxSplashScreen
+  </pre>
+  Please note that the features marked as "wxWindows 2.3"
+  are only available when wxPerl is compiled against
+  the 2.3 <b>developement</b> branch of wxWindows; binaries
+  compiled against wxWindows 2.3.2 will be available as
+  soon as wxWindows 2.3.2 is released)
+    </content>
+  </item>
+
+  <item>
+    <date>Jul 20, 2001</date>
+    <content>
+<b>wxPerl 0.07 is out!</b>: go to the
+<a href="download.html">Download page</a> for source and binaries.
+Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
+  <pre>
+	- wxFileSystem &amp; related classes wrappers
+	- wxHtmlEasyPrinting, wxPageSetupDialog
+	- Unicode support for Perl 5.6
+	- Printing Framework
+  </pre>
+    </content>
+  </item>
+</news>
+
+<download>
+  <item>
+    <title>Binaries</title>
+    <content>
+<h2>ActivePerl/Win32</h2>
+<div>
+PPM binary packages are available for
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.18-wxmsw2.4.2-win32-5.6.1.zip">ActivePerl 6xx</a>,
+
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.18-wxmsw2.4.2-win32-5.8.0.zip">ActivePerl 8xx</a>,
+
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.18-wxmsw2.4.2-win32-u-5.6.1.zip">ActivePerl 6xx with Unicode</a> (for NT/2000/XP)
+
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.18-wxmsw2.4.2-win32-u-5.8.0.zip">ActivePerl 8xx with Unicode</a> (for NT/2000/XP).
+<br />
+
+Please read the included <b>README.txt</b> for installation instructions.
+<br />
+
+The corresponding developement packages for
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.18-wxmsw2.4.2-win32-5.6.1.zip">ActivePerl 6xx</a>,
+
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.18-wxmsw2.4.2-win32-5.8.0.zip">ActivePerl 8xx</a>,
+
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.18-wxmsw2.4.2-win32-u-5.6.1.zip">ActivePerl 6xx with Unicode</a>,
+
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-dev-0.18-wxmsw2.4.2-win32-u-5.8.0.zip">ActivePerl 8xx with Unicode</a>
+
+should only be downloaded by people interested in <b>developing/compiling</b>
+(and not just using) wxPerl extensions using XS, such as Wx::ActiveX. 
+</div>
+
+<h2>Red Hat Linux</h2>
+<div>
+Binary RPMs for
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.18-1_wxgtk2.4.2.i386.rpm">wxWindows 2.4.2, Red Hat Linux 8.0</a> are available.
+</div>
+
+<!--
+<h2>Debian GNU/Linux 3.0 &quot;woody&quot;</h2>
+<div>
+A binary package is available
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl-wxgtk2.2_0.11-1_i386.deb">here</a>.
+</div>
+-->
+    </content>
+  </item>
+
+  <item>
+    <title>Documentation</title>
+    <content>
+<p><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.17-samples.zip">Download examples</a></p>
+Documentation fo wxPerl is available as TeX, HTML, and MS HTML Help
+<ul>
+  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.17-wx-2.4.0-docs-chm.chm">Microsoft HTML Help (CHM) format</a></li>
+  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.17-wx-2.4.0-docs-html.zip">a ZIP file containing HTML documentation</a></li>
+  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.17-wx-2.4.0-docs-tex.zip">the TeX sources used to build the documentation</a></li>  
+</ul>
+    </content>
+  </item>
+
+  <item>
+    <title>Source</title>
+    <content>
+Source code for wxPerl is available in various formats:
+<ul>
+  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/Wx-0.18.tar.gz">Standard CPAN package</a></li>
+  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/perl-Wx-0.18-1.src.rpm">RPM source package</a></li>
+<!--  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl_0.11-1.deb.src.tar.gz">Debian source bundled in a single .tar.gz file</a></li> -->
+</ul>
+    </content>
+  </item>
+
+  <item>
+    <title>CVS snapshots</title>
+    <anchor>snapshots</anchor>
+    <content>
+Daily <a target="_blank" href="snapshot/">CVS snapshots</a> are also available.
+    </content>
+  </item>
+</download>
+
+<about>
+  <item>
+    <title>wxPerl</title>
+    <content>
+    wxPerl is a perl module that allows a Perl program to use the
+    wxWindows GUI toolkit. If you don't know anything about Perl or
+    wxWindows, you may find a short explanation below. If you want to
+    learn more, go to
+    <a href="http://www.wxwindows.org/" target="_blank">
+      wxWindows</a> and
+    <a href="http://www.perl.com/" target="_blank">
+      Perl</a> sites. In short
+    wxPerl allows you to write portable GUI applications in Perl, using
+    the wxWindows object oriented interface.
+
+    Look at the <a href="sshot01.html">screenshots</a>, and read about
+    <a href="users.html">our users</a>.
+    </content>
+  </item>
+
+  <item>
+    <title>wxWindows</title>
+    <content>
+    wxWindows gives you a single, easy-to-use API for writing GUI 
+    applications on multiple platforms. Link with the appropriate library for
+    your platform (Windows/Unix/Mac) and compiler (almost any popular C++ 
+    compiler), and your application will adopt the look and feel appropriate 
+    to that platform. On top of great GUI functionality, wxWindows gives 
+    you: online help, network programming, streams, clipboard and drag 
+    and drop, multithreading, image loading and saving in a variety of 
+    popular formats, database support, HTML viewing and printing, and 
+    much much more.
+    </content>
+  </item>
+
+  <item>
+    <title>Perl</title>
+    <content>
+  <p>
+    What is Perl?<br />
+    Perl is an interpreted high-level programming language developed by 
+    Larry Wall. According to Larry, he included in Perl all the cool 
+    features found in other languages and left out those features that 
+    weren't so cool. 
+  </p>
+
+  <p>
+    Perl has become the premier scripting language of the Web, as most 
+    GI programs are written in Perl. However, Perl is widely used as a rapid 
+    prototyping language and a "glue" language that makes it possible for 
+    different systems to work well together. Perl is popular with system 
+    administrators who use it for an infinite number of automation tasks. 
+  </p>
+
+  <p>
+    Perl's roots are in UNIX but you will find Perl on a wide range of 
+    computing platforms. Because Perl is an interpreted language, Perl 
+    programs are highly portable across systems. 
+  </p>
+
+  <p>
+    Finally, Perl is more than a programming language. 
+    It is a part of the Internet culture. It is a very creative way of 
+    thinking about almost anything. 
+  </p>
+    </content>
+  </item>
+</about>
+
+<documentation>
+  <item>
+    <title>wxWindows/wxPerl documentation</title>
+    <anchor>wxdocs</anchor>
+    <links>
+      <link>
+        <text>online wxWindows documentation</text>
+        <url>http://www.wxwindows.org/manuals/2.4.0/wx.htm</url>
+        <external />
+      </link>
+
+      <link>
+        <text>wxPerl manual</text>
+        <url>manual/manual.html</url>
+        <external />
+      </link>
+    </links>
+  </item>
+
+  <item>
+    <title>Tutorials</title>
+    <links>
+      <link>
+        <text>wxPerl tutorial</text>
+        <url>tutorial/tutorial.html</url>
+      </link>
+
+      <link>
+        <text>Jouke Visser tutorial on Perl.com</text>
+        <url>http://www.perl.com/pub/a/2001/09/12/wxtutorial1.html</url>
+        <external />
+      </link>
+
+      <link>
+        <text>PerlMonks tutorial #1</text>
+        <url>http://www.perlmonks.org/index.pl?node_id=112297&amp;lastnode_id=864</url>
+        <external />
+      </link>
+
+      <link>
+        <text>PerlMonks tutorial #2</text>
+        <url>http://www.perlmonks.org/index.pl?node_id=112816&amp;lastnode_id=864</url>
+        <external />
+      </link>
+
+      <link>
+        <text>PerlMonks tutorial #3</text>
+        <url>http://www.perlmonks.org/index.pl?node_id=122227&amp;lastnode_id=864</url>
+        <external />
+      </link>
+    </links>
+  </item>
+
+  <item>
+    <title>Other</title>
+    <links>
+      <link>
+        <text>wxPerl Wiki</text>
+        <url>http://wxperl.pvoice.org/cgi-wxperl/view.pl/FrontPage</url>
+        <external />
+      </link>
+
+      <link>
+        <text>wxPerl CookBook</text>
+        <url>http://scripts.wordit.com/cgi-bin/wxperl/logbook.pl?file=1</url>
+        <external />
+      </link>
+    </links>
+  </item>
+</documentation>
+
+</data>

@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+
+<support>
+  <item>
+    <title>Mailing lists</title>
+    <anchor>ml</anchor>
+    <content>
+<h2>wxPerl-users</h2>
+
+This list is for wxPerl users, you can visit the
+<a target="_blank" href="http://sourceforge.net/mailarchive/forum.php?forum=wxperl-users">archives</a>, or <a target="_blank" href="http://lists.sourceforge.net/mailman/listinfo/wxperl-users">(un)subscribe</a>.
+    </content>
+  </item>
+
+  <item>
+    <title>Project page</title>
+    <anchor>project</anchor>
+    <content>
+wxPerl is graciusly hosted by <a
+href="htttp://sourceforge.net/" target="_blank">SourceForge</a>, from
+the <a href="http://sourceforge.net/projects/wxperl/"
+target="_blank">project page</a> you can access the bug tracker,
+download previous releases, submit feature requests, etc.
+    </content>
+  </item>
+
+  <item>
+    <title>Software</title>
+    <anchor>software</anchor>
+    <content>
+<p>
+<a href="http://www.roebling.de/" target="_blank">wxDesigner</a>
+is a <b>commercial</b> tool for designing user interfaces
+for wxPerl (and wxWindows and wxPython, too). A trial version is available
+for download.
+</p>
+
+<p>
+<a href="http://wxglade.sourceforge.net/" target="_blank">wxGlade</a>
+is a GUI designer written in Python with the popular GUI toolkit
+wxPython, that helps you create wxWindows/wxPython/wxPerl user interfaces. At
+the moment it can generate Python, Perl, C++ and XRC (wxWindows' XML
+resources) code.
+</p>
+    </content>
+  </item>
+
+  <item>
+    <title>Modules</title>
+    <anchor>modules</anchor>
+
+    <module>
+      <name>Wx::Perl::TreeChecker</name>
+      <distname>Wx-Perl-TreeChecker</distname>
+      <author>
+        <name>Simon Flack</name>
+      </author>
+      <description>
+a <tt>Wx::TreeCtrl</tt> whose items can be checked using checkboxes.
+      </description>
+    </module>
+
+    <module>
+      <name>Wx::Perl::FSHandler::LWP</name>
+      <distname>Wx-Perl-FSHandler-LWP</distname>
+      <author>
+        <name>Mattia Barbon</name>
+        <email>mbarbon@cpan.org</email>
+      </author>
+      <description>
+a <tt>Wx::FileSystemHandler</tt> subclass, replacement for
+<tt>Wx::InternetFShandler</tt>. It allows retrieving documents for
+<tt>Wx::HtmlWindow</tt> (and other classes using
+<tt>Wx::FileSystem</tt>) via <tt>LWP::UserAgent</tt>.
+      </description>
+    </module>
+
+    <module>
+      <name>Wx::GLCanvas</name>
+      <distname>Wx-GLCanvas</distname>
+      <author>
+        <name>Mattia Barbon</name>
+        <email>mbarbon@cpan.org</email>
+      </author>
+      <description>
+a wrapper for wxWindows' <tt>wxGLCanvas</tt>, used to display OpenGL
+graphics. To use it you will need the OpenGL module.
+<a href="http://prdownloads.sourceforge.net/wxperl/OpenGL-win32-5.6.1.zip">OpenGL for ActivePerl 5.6.1</a>,
+<a href="http://prdownloads.sourceforge.net/wxperl/OpenGL-win32-5.8.0.zip">OpenGL for ActivePerl 5.8.0</a>.
+      </description>
+      <download>
+        <item>
+          <label>Perl 5.6.1</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-5.6.1.zip</url>
+        </item>
+        <item>
+          <label>Perl 5.6.1/Unicode</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-u-5.6.1.zip</url>
+        </item>
+        <item>
+          <label>Perl 5.8.0</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-5.8.0.zip</url>
+        </item>
+        <item>
+          <label>Perl 5.8.0/Unicode</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-GLCanvas-0.02-wxperl0.17-wxmsw2.4.1-u-5.8.0.zip</url>
+        </item>
+      </download>
+    </module>
+
+    <module>
+      <name>Wx::ActiveX</name>
+      <distname>Wx-ActiveX</distname>
+      <author>
+        <name>Graciliano Monteiro Passos</name>
+      </author>
+      <description>
+a wrapper for wxActiveX. It allows using ActiveX controls
+such as Internet Explorer and Flash from wxWindows/wxPerl programs. It
+only works under Windows. The current version provides specialised
+interfaces for Acrobat Reader, Internet Explorer, Flash and Windows Media
+Player.
+      </description>
+      <download>
+        <item>
+          <label>Perl 5.6.1</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-5.6.1.zip</url>
+        </item>
+        <item>
+          <label>Perl 5.6.1/Unicode</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-u-5.6.1.zip</url>
+        </item>
+        <item>
+          <label>Perl 5.8.0</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-5.8.0.zip</url>
+        </item>
+        <item>
+          <label>Perl 5.8.0/Unicode</label>
+          <url>http://prdownloads.sourceforge.net/wxperl/Wx-ActiveX-0.05-win32-u-5.8.0.zip</url>
+        </item>
+      </download>
+    </module>
+  </item>
+</support>
+

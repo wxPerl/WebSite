@@ -1,0 +1,237 @@
+<?xml version="1.0" ?>
+<!DOCTYPE organisations SYSTEM "wxperl.dtd">
+
+<!-- data from apps.txt -->
+<organisations>
+  <organisation>
+    <name>Wordit Limited</name>
+    <site>http://www.wordit.com/</site>
+    <country>UK</country>
+    <contact>
+      <name>Marcus Friedlaender</name>
+      <email>info@wordit.com</email>
+    </contact>
+    <wxperl>
+      <rating>5</rating>
+      <comments>
+A most excellent GUI. I've used Perl/Tk and Win32::GUI, and find
+wxPerl superior in feature-set and code structure.
+      </comments>
+    </wxperl>
+
+    <applications>
+      <application>
+        <name>Prima</name>
+        <site>http://www.wordit.com/prima/</site>
+        <license-type><commercial /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>0.12</wxperl-version>
+        <domain>Information managers</domain>
+        <short-description>
+Wordit Prima makes databases as easy as web browsing by combining a
+database with a web browser.
+        </short-description>
+        <long-description>
+Wordit Prima makes databases as easy as web browsing by combining a
+database with a web browser. Instead of the usual tree lists in most
+programs, there's no scrolling through branches, and any entry can
+have as many parent categories as you want. You can create graphs and
+web sites of databases with a single click!  Uses: Outlining
+documents, such as letters, essays, theses Planning and creating web
+sites Brainstorming Addressbooks. Create links between people, and
+store detailed notes, and pictures Storing web browser bookmarks Music
+collections, i.e. launch your MP3 files from prima Picture
+collections. Store your photo collections with descriptions and links
+and for organizing any kind of information.
+        </long-description>
+      </application>
+
+      <application>
+        <name>UploadAway</name>
+        <site>http://www.uploadaway.com/</site>
+        <license-type><commercial /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>0.13</wxperl-version>
+        <domain>FTP/Website Management</domain>
+        <short-description>
+UploadAway is an automated uploading utility. Swiftly update an entire
+web site with one click. Supports multiple sites. Automatic chmod of
+executables, conversion of spaces to underscores, and upper to
+lower-case characters in filenames.
+        </short-description>
+        <long-description>
+Swiftly update an entire web site with one click.  UploadAway is an
+automated file uploading utility for web authors. Supports multiple
+sites. All you have to do is tell UploadAway where your files on your
+computer are, where you want the files to go on your web server, and
+your FTP login details. That's all!  One click, and let UploadAway
+take it away.  No more searching for files in your FTP client, no more
+clicking single files, no more clicking through directories, no more
+searching for the files you just updated.  Web developers will
+appreciate UploadAway's following advanced options: Automatic chmod of
+executables on Unix-like servers, conversion of spaces to underscores,
+conversion of filenames with upper-case characters to all lower-case.
+        </long-description>
+      </application>
+    </applications>
+  </organisation>
+
+  <organisation>
+    <name>pVoice Software</name>
+    <site>http://www.pvoice.org/</site>
+    <country>The Netherlands</country>
+    <contact>
+      <name>Jouke Visser</name>
+      <email>jouke@pvoice.org</email>
+    </contact>
+    <wxperl>
+      <rating>4.5</rating>
+      <comments>It's *the* GUI of choice for Perl!</comments>
+    </wxperl>
+
+    <applications>
+      <application>
+        <name>pVoice</name>
+        <site>http://www.pvoice.org/pvoice.html</site>
+        <license-type><open-source /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>0.12</wxperl-version>
+        <domain>Augmentive and Assistive Communications</domain>
+        <short-description>
+pVoice is an application for severely disabled children who can use 
+it to speak by selecting symbols and/or photos.
+        </short-description>
+      </application>
+
+      <application>
+        <name>pType</name>
+        <site>http://www.pvoice.org/ptype.html</site>
+        <license-type><open-source /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>0.12</wxperl-version>
+        <domain>Augmentive and Assistive Communications</domain>
+        <short-description>
+pType is an application for severely disabled children who can use it 
+to learn how to write by selecting letters and form words (a kind of an 
+on-screen keyboard)
+        </short-description>
+      </application>
+    </applications>
+  </organisation>
+
+  <organisation>
+    <name>Journal and Courier</name>
+    <site>http://www.jconline.com/</site>
+    <country>United States</country>
+    <contact>
+      <name>Joseph Youngquist</name>
+      <email>jyoungquist@journalandcourier.com</email>
+    </contact>
+    <wxperl>
+      <rating>5</rating>
+      <comments>
+I choose to re-write the online production tool to utilize the
+features present in wxPerl.  The main feature used is the Wx::Grid
+control.  This single control was the main drive to make the switch
+from Win32::GUI to wxPerl.  Once into the development with wxPerl, the
+benefits of the tool kit were really understood.  Speed, memory usage,
+look and feel of the controls, the vast choice in controls to use all
+are first rate.  The learning curve for me was about a month, and by
+this, I mean it took me a month to completely tweak the new interface
+for our production tool - very similar to the time it took me to do
+the Win32 version the first time.  I had no prior wxWindows
+experience.
+    The documentation for the Perl aspects of wxWindows needs some
+work (updating) but once you ignore "wxPerl note: This method is not
+implemented in wxPerl" your ok, and the documentation for the
+wxWindows aspects translate directly 99% of the time.
+    All in all, this is the best GUI toolkit for Perl in my opinion
+and this comes from using Win32 and Tk.
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>Online Production Tool</name>
+        <license-type><commercial /></license-type>
+        <platforms>
+          <windows />
+        </platforms>
+        <wxperl-version>0.15</wxperl-version>
+        <domain>Online News Site Production</domain>
+        <short-description>
+A GUI for Newsroom copy editors to publish the online portion of the
+daily news to the paper's website.  The application handles the
+generation of HTML syntax, photo/image resizing and positioning as
+well as the uploading of all HTML source pages and their images.
+        </short-description>
+        <long-description>
+The Online Production Tool was developed from the need to have news
+content updated by our newsroom employees, who have no web programming
+knowledge what so ever.  The technical aptitude for html markup, image
+processing, folder structures and FTP are none existent and thus
+needed to be removed from the users need to have to deal with.  The
+other requirements were to be as extendable as possible, being able to
+add additional online components (new sections, article types, etc.,)
+with the minimal amount of reprogramming as possible - 90% database
+driven.  With the wxPerl version of the production tool, the interface
+allows users to quickly place articles to page fronts and sections,
+change headline text, article types (columns, letters to the editor,
+etc.) as well as change the articles type all together, sports to a
+business article for example.  Also with the wxPerl version of the
+application, networking the client GUI was possible, allowing the work
+load to be distributed to the main editors - who all use Macs but the
+Online department all use PCs.
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+
+<!-- template
+  <organisation>
+    <name></name>
+    <site></site>
+    <country></country>
+    <contact>
+      <name></name>
+      <email></email>
+    </contact>
+    <wxperl>
+      <rating></rating>
+      <comments>
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name></name>
+        <site></site>
+        <license-type><commercial /><open-source /></license-type>
+        <platforms>
+          <windows />
+          <linux />
+        </platforms>
+        <wxperl-version></wxperl-version>
+        <domain></domain>
+        <short-description>
+        </short-description>
+        <long-description>
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+-->
+
+</organisations>

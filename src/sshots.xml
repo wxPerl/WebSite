@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<!DOCTYPE screenshots SYSTEM "wxperl.dtd">
+
+<screenshots>
+  <page>
+    <description>
+This is the "minimal" sample from the wxPerl distribution (you can
+find it in <tt>samples/minimal/minimal.pl</tt>). It shows just a window with a
+status bar and a menu bar.
+    </description>
+
+    <image>
+      <text>Minimal sample (Mac OS X)</text>
+      <file>screenshots/minimal_mac.png</file>
+    </image>
+
+    <image>
+      <text>Minimal sample (Microsoft Windows 2000)</text>
+      <file>screenshots/minimal_w2k.png</file>
+    </image>
+
+    <image>
+      <text>Minimal sample (Solaris, GTK 1.2); courtesy of Valentin Guignon</text>
+      <file>screenshots/minimal_gtk_solaris.png</file>
+    </image>
+
+    <image>
+      <text>Minimal sample (Linux, Motif)</text>
+      <file>screenshots/minimal_motif.png</file>
+    </image>
+  </page>
+
+  <page>
+    <description>
+This is the "controls" sample from the wxPerl distribution (you can
+find it in <tt>samples/controls/controls.pl</tt>). It shows many of
+the controls available in wxPerl.
+    </description>
+
+    <image>
+      <text>Controls sample (Linux, GTK 1.2); Wx::ComboBox page</text>
+      <file>screenshots/controls_gtk.png</file>
+    </image>
+
+    <image>
+      <text>Controls sample (Microsoft Windows 2000); Wx::ListBox page</text>
+      <file>screenshots/controls_w2k.png</file>
+    </image>
+
+    <image>
+      <text>Controls sample (Linux, Motif); Wx::Choice</text>
+      <file>screenshots/controls_motif.png</file>
+    </image>
+  </page>
+
+  <page>
+    <description>
+This is the "dialogs" sample from the wxPerl distribution (you can
+find it as <tt>samples/dialogs/dialogs.pl</tt>). It shows many of the common
+dialogs available in wxPerl.
+    </description>
+
+    <image>
+      <text>Directory selector (Microsoft Windows 2000)</text>
+      <file>screenshots/dialogs_dirdialog_w2k.png</file>
+    </image>
+
+    <image>
+      <text>File selector (Linux, Motif)</text>
+      <file>screenshots/dialogs_filedialog_motif.png</file>
+    </image>
+
+    <image>
+      <text>File selector (Mac OS X)</text>
+      <file>screenshots/dialogs_filedialog_mac.png</file>
+    </image>
+
+    <image>
+      <text>Multiple choice (Microsoft Windows 2000)</text>
+      <file>screenshots/dialogs_multichoice_w2k.png</file>
+    </image>
+
+    <image>
+      <text>Font selector (Linux, GTK 1.2)</text>
+      <file>screenshots/dialogs_fontdialog_gtk.png</file>
+    </image>
+
+    <image>
+      <text>Color selector (Mac OS X)</text>
+      <file>screenshots/dialogs_colordialog_mac.png</file>
+    </image>
+  </page>
+</screenshots>
