@@ -21,8 +21,3 @@ div.navheader, div.navfooter, div.chapter, div.book {
 .methodname, .classname, .function, .varname {
   color: #3322aa;
 }
-
-hr {
-  border-style: solid;
-  border-width: 1px;
-}
