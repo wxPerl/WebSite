@@ -148,6 +148,21 @@ $app->MainLoop;
 <!-- end -->
 
 <para>
+  And finally here is how this looks on screen.
+</para>
+
+<mediaobject>
+  <imageobject>
+    <imagedata align="center" fileref="images/first.win2k.png" format="PNG"/>
+  </imageobject>
+  <caption>
+    <para>
+(Windows 2000)
+    </para>
+  </caption>
+</mediaobject>
+
+<para>
   <ulink url="first.pl.txt">Here</ulink> you can see the program at a glance
   (it is suffixed .pl.txt so your browser will not try to execute it, 
    but from Perl's point of view this makes no difference).
@@ -265,6 +280,22 @@ $app->MainLoop;
 <!-- end -->
 
 <para>
+  And finally here is how this looks on screen (well, not pretty,
+  but I only had TWM installed...).
+</para>
+
+<mediaobject>
+  <imageobject>
+    <imagedata align="center" fileref="images/second.gtk2.png" format="PNG"/>
+  </imageobject>
+  <caption>
+    <para>
+(Linux/GTK 2)
+    </para>
+  </caption>
+</mediaobject>
+
+<para>
   <ulink url="second.pl.txt">Here</ulink> you can see the program at a glance
   (it is suffixed .pl.txt so your browser will not try to execute it, 
    but from Perl's point of view this makes no difference).
@@ -358,7 +389,22 @@ sub OnClick {
 }
 </programlisting>
 <!-- end -->
-        
+
+<para>
+  And finally here is how this looks on screen.
+</para>
+
+<mediaobject>
+  <imageobject>
+    <imagedata align="center" fileref="images/third.mac.png" format="PNG"/>
+  </imageobject>
+  <caption>
+    <para>
+(Mac OS X 10.3)
+    </para>
+  </caption>
+</mediaobject>
+
 <para>
   <ulink url="third.pl.txt">Here</ulink> you can see the program at a glance
   (it is suffixed .pl.txt so your browser will not try to execute it, 

@@ -1,10 +1,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. Events</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="tutorial.html" title="wxPerl tutorial"><link rel="up" href="tutorial.html" title="wxPerl tutorial"><link rel="previous" href="tutorial3.html" title="Chapter 3. More controls"><link rel="next" href="tutorial5.html" title="Chapter 5. To be continued"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. Events</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tutorial3.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="tutorial5.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id4687972"></a>Chapter 4. Events</h2></div></div><div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687981"></a>Introduction</h2></div></div><div></div></div><p>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1"><title>Chapter 4. Events</title><link rel="stylesheet" href="../default.css" type="text/css"><meta name="generator" content="DocBook XSL Stylesheets V1.61.2"><link rel="home" href="tutorial.html" title="wxPerl tutorial"><link rel="up" href="tutorial.html" title="wxPerl tutorial"><link rel="previous" href="tutorial3.html" title="Chapter 3. More controls"><link rel="next" href="tutorial5.html" title="Chapter 5. To be continued"></head><body><div class="header"><img height="70" alt="wxPerl logo" src="../wxperl.gif"></div><div class="navigation"><a href="../index.html">Home</a><a href="../about.html">About</a><a href="../download.html">Download</a><a href="../documentation.html">Documentation</a><a href="../support.html">Support/Resources</a></div><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Chapter 4. Events</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="tutorial3.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> <a accesskey="n" href="tutorial5.html">Next</a></td></tr></table><hr></div><div class="chapter" lang="en"><div class="titlepage"><div><div><h2 class="title"><a name="id4688023"></a>Chapter 4. Events</h2></div></div><div></div></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4688032"></a>Introduction</h2></div></div><div></div></div><p>
   In this example we will add simple event handling. In wxPerl this
   is done through the use of event connectors. This is just a
   bunch of functions (one for each event type) that define object
   methods to be called in response to certain events.
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687995"></a>Program</h2></div></div><div></div></div><p>
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4688047"></a>Program</h2></div></div><div></div></div><p>
   The first thing to do in order to use events is importing the event
   connectors. All these functions are exported by the
   <tt class="classname">Wx::Event</tt> module.
@@ -51,10 +51,14 @@ sub OnClick {
     $self-&gt;SetTitle( 'Clicked' );
 }
 </pre><p>
+  And finally here is how this looks on screen.
+</p><div class="mediaobject" align="center"><img src="images/third.mac.png" align="middle"><div class="caption"><p>
+(Mac OS X 10.3)
+    </p></div></div><p>
   <a href="third.pl.txt" target="_top">Here</a> you can see the program at a glance
   (it is suffixed .pl.txt so your browser will not try to execute it, 
    but from Perl's point of view this makes no difference).
-</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4688116"></a>About event connectors</h2></div></div><div></div></div><p>
+</p></div><div class="section" lang="en"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a name="id4687056"></a>About event connectors</h2></div></div><div></div></div><p>
   All event connectors always take a <tt class="classname">Wx::EvtHandler</tt>
   as their first argument; most of the time this is just a
   <tt class="classname">Wx::Window</tt> subclass. This event is the
