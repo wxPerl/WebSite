@@ -72,6 +72,19 @@ a <xhtml:tt>Wx::TreeCtrl</xhtml:tt> whose items can be checked using checkboxes.
     </module>
 
     <module>
+      <name>POE::Loop::Wx</name>
+      <distname>POE-Loop-Wx</distname>
+      <author>
+        <name>Mike Schroeder, Ed Heil</name>
+      </author>
+      <description>
+A bridge between <xhtml:a target="_blank"
+href="http://search.cpan.org/dist/POE">POE</xhtml:a> and wxPerl. POE::Loop::Wx
+allows writing wxPerl GUIs for POE applications.
+      </description>
+    </module>
+
+    <module>
       <name>Wx::Perl::Throbber</name>
       <distname>Wx-Perl-Throbber</distname>
       <author>

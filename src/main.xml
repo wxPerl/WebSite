@@ -26,6 +26,17 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Mar 14, 2005</date>
+    <content>
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/POE">POE</xhtml:a>
+and wxPerl integration: Mike Schroeder has released
+<xhtml:a target="_blank"
+href="http://search.cpan.org/dist/POE-Loop-Wx">POE::Loop::Wx</xhtml:a> on
+CPAN. This module provides a POE event loop for wxPerl.
+    </content>
+  </item>
+
+  <item>
     <date>Jan 23, 2005</date>
     <content>
 A
