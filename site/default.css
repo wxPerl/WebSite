@@ -3,6 +3,10 @@ BODY {
   color: black;
 }
 
-BODY.navigation-bar {
+BODY * {
+  font-size: 10pt
+}
+
+BODY.navigation-bar * {
   font-size: 8pt
 }
