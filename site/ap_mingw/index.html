@@ -9,8 +9,32 @@
 <body>
 <h1>ActivePerl + MinGW</h1>
 
-<p><a href="ap_mingw.zip">Download</a></p>
-<p><a href="mailto:mbarbon@dsi.unive.it">Contacy the author</a></p>
+<p>
+  This page documents a procedure to build Perl modules for ActivePerl
+  using MinGW ( gcc for Win32 ).
+</p>
+
+<h4>Last update: Jan 18 2001</h4>
+
+<a href="ap_mingw.zip">Download (size 6k)</a>
+<p>
+  This zip contains the full documentation and two small Perl scripts
+  to automate the process.
+</p>
+
+<a href="procedure.txt">Read the procedure</a>
+
+<p><a href="mailto:mbarbon@dsi.unive.it">Contact the author</a></p>
+
+<h2>Requirements</h2>
+<p>
+  <ul>
+    <li>MinGW GCC 2.95.2-1</li>
+    <li>ActivePerl ( tested builds 616, 620; might work with
+        earlier 6xx builds)</li>
+    <li>dmake</li>
+  </ul>
+</p>
 
 <h2>Tested modules</h2>
 
@@ -24,39 +48,45 @@
   <tr>
     <td>DBD::CSV</td>
     <td>0.1022</td>
-    <td>Win2000</td>
+    <td>Win2k</td>
   </tr>
 
   <tr>
     <td>DBD::ODBC</td>
     <td>0.28</td>
-    <td>Win2000</td>
+    <td>Win2k</td>
   </tr>
 
   <tr>
     <td>DBI</td>
     <td>1.14</td>
-    <td>Win2000</td>
+    <td>Win2k</td>
   </tr>
 
   <tr>
     <td>SQL::Statement</td>
     <td>0.1016</td>
-    <td>Win2000</td>
+    <td>Win2k</td>
   </tr>
 
   <tr>
     <td>Text::CSV_XS</td>
     <td>0.20</td>
-    <td>Win2000</td>
+    <td>Win2k</td>
   </tr>
 
   <tr>
     <td>Wx (wxPerl)</td>
     <td>0.04</td>
-    <td>Win2000</td>
+    <td>Win2k</td>
   </tr>
 </table>
+
+<p>
+  If you succeed in building these modules under other OS 
+  ( expecially 95/98/ME ), or other modules not listed there, please
+  contact me so I can update the list.
+</p>
 
 </body>
 
