@@ -16,83 +16,104 @@
   (and some other interesting non-GUI classes). Here is a list
   of classes that are actually implemented, some with a (nearly) full interface,
   while some are less complete, or have some rough edges in the interface.
-  The classes marked with (*) are currently untested.
+  The classes marked with (*) are currently untested, classes marked with
+  (+) are available only with wxWindows 2.3 ( developement version ).
 </p>
 
 <ul>
+  <li>wxAcceleratorEntry</li>
+  <li>wxAcceleratorTable</li>
   <li>wxActivateEvent</li>
   <li>wxApp</li>
-  <li>wxBitmap</li>
+  <li>wxBMPhandler *</li>
+  <li>wxBitmap *</li>
   <li>wxBitmapButton</li>
   <li>wxBoxSizer</li>
   <li>wxBrush *</li>
   <li>wxButton</li>
+  <li>wxCaret</li>
   <li>wxCheckBox</li>
-  <li>wxCheckListBox</li>
+  <li>wxCheckListBox *</li>
   <li>wxChoice</li>
   <li>wxClassInfo</li>
   <li>wxClientDC</li>
   <li>wxCloseEvent</li>
   <li>wxColour</li>
-  <li>wxColourDialog *</li>
+  <li>wxColourDialog</li>
   <li>wxComboBox</li>
   <li>wxCommandEvent *</li>
   <li>wxControl</li>
   <li>wxCursor</li>
   <li>wxDC</li>
   <li>wxDialog</li>
-  <li>wxDirDialog *</li>
+  <li>wxDirDialog</li>
   <li>wxEraseEvent</li>
   <li>wxEvent</li>
   <li>wxEvtHandler</li>
-  <li>wxFileDialog *</li>
-  <li>wxFlexGridSizer</li>
+  <li>wxFileDialog</li>
+  <li>wxFlexGridSizer *</li>
   <li>wxFocusEvent</li>
   <li>wxFont</li>
   <li>wxFrame</li>
+  <li>wxGIFHandler *</li>
   <li>wxGauge</li>
   <li>wxGDIObject</li>
+  <li>wxGridSizer</li>
+  <li>wxHelpEvent *+</li>
   <li>wxIdleEvent</li>
   <li>wxIcon</li>
   <li>wxImage *</li>
-  <li>wxImageHandler</li>
+  <li>wxImageHandler *</li>
   <li>wxImageList</li>
   <li>wxIndividualLayoutConstraints</li>
   <li>wxInitDialogEvent</li>
+  <li>wxJPEGHandler *</li>
   <li>wxJoystickEvent</li>
   <li>wxKeyEvent</li>
   <li>wxLayoutConstraints</li>
   <li>wxListBox</li>
+  <li>wxListCtrl</li>
+  <li>wxListEvent</li>
+  <li>wxListItem</li>
   <li>wxLocale</li>
   <li>wxLog</li>
+  <li>wxLogTextCtrl</li>
   <li>wxMask</li>
   <li>wxMemoryDC</li>
   <li>wxMenu</li>
   <li>wxMenuBar</li>
-  <li>wxMenuItem</li>
   <li>wxMenuEvent</li>
-  <li>wxMessageDialog *</li>
+  <li>wxMenuItem</li>
+  <li>wxMessageDialog</li>
   <li>wxMiniFrame *</li>
   <li>wxMouseEvent</li>
   <li>wxMoveEvent</li>
-  <li>wxNotebookSizer</li>
+  <li>wxMultiChoiceDialog +</li>
   <li>wxNotebook</li>
+  <li>wxNotebookSizer</li>
   <li>wxNotebookEvent</li>
   <li>wxNotifyEvent</li>
+  <li>wxPCXHandler *</li>
+  <li>wxPNGHandler *</li>
+  <li>wxPNMHandler *</li>
   <li>wxPaintDC</li>
   <li>wxPaintEvent</li>
+  <li>wxPalette *</li>
   <li>wxPanel</li>
   <li>wxPen</li>
   <li>wxPoint</li>
+  <li>wxProgressDialog</li>
   <li>wxRadioBox</li>
   <li>wxRadioButton</li>
   <li>wxRect</li>
   <li>wxRegion *</li>
+  <li>wxSashEvent</li>
+  <li>wxSashWindow *</li>
   <li>wxScreenDC *</li>
-  <li>wxScrollBar</li>
+  <li>wxScrollBar *</li>
   <li>wxScrollEvent</li>
-  <li>wxScrolledWindow *</li>
-  <li>wxSingleChoiceDialog *</li>
+  <li>wxScrolledWindow</li>
+  <li>wxSingleChoiceDialog</li>
   <li>wxSize</li>
   <li>wxSizeEvent</li>
   <li>wxSizer</li>
@@ -101,17 +122,19 @@
   <li>wxSpinCtrl</li>
   <li>wxSpinEvent</li>
   <li>wxSplitterEvent</li>
-  <li>wxSplitterWindow *</li>
+  <li>wxSplitterWindow</li>
   <li>wxStaticBitmap</li>
   <li>wxStaticBox</li>
   <li>wxStaticBoxSizer</li>
   <li>wxStaticLine</li>
   <li>wxStaticText</li>
   <li>wxStatusBar</li>
+  <li>wxSysColourChangedEvent *</li>
+  <li>wxTIFFHandler *</li>
   <li>wxTextCtrl</li>
-  <li>wxTextEntryDialog *</li>
+  <li>wxTextEntryDialog</li>
   <li>wxToolBar</li>
-  <li>wxToolTIp</li>
+  <li>wxToolTip</li>
   <li>wxUpdateUIEvent</li>
   <li>wxValidator</li>
   <li>wxWindow</li>
