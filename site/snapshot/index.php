@@ -10,7 +10,7 @@ The files you can download from this directory are CVS snapshots.
 They are built automatically every night from the developement sources,
 so they are not even guaranteed to compile ( let alone work reliably ).
 They are there only to allow people to access latest developement
-sources vithout using CVS.
+sources without using CVS.
 </p>
 
 <table>
