@@ -66,3 +66,8 @@ DIV.page-head-links {
 DIV.page-head-links A {
   padding: 5pt;
 }
+
+DIV.screenshots DIV {
+  padding: 20pt;
+  text-align: center;
+}
