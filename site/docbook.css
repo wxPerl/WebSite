@@ -1,0 +1,28 @@
+
+@import "bluehaze.css";
+@import "color-scheme.css";
+
+/*
+ * for DocBook-generated HTML:
+ * restore margin for all DIVs
+ * make <programlisting> stand out visually
+ */
+div.navheader, div.navfooter, div.chapter, div.book {
+  margin: 15pt;
+}
+
+.programlisting {
+  background-color: #e0e0e0;
+  margin-left: 15mm;
+  margin-right: 15mm;
+  padding: 5mm;
+}
+
+.methodname, .classname, .function, .varname {
+  color: #3322aa;
+}
+
+hr {
+  border-style: solid;
+  border-width: 1px;
+}
