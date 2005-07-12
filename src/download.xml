@@ -1,0 +1,162 @@
+<?xml version="1.0"?>
+
+<data xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
+
+<versions>
+  <wxperl>0.25</wxperl>
+  <win32>
+    <perl>5.8.6</perl>
+    <wxwidgets>2.6.1</wxwidgets>
+  </win32>
+  <linux>
+    <wxwidgets>2.6.1</wxwidgets>
+  </linux>
+  <mac>
+    <wxwidgets>2.6.1</wxwidgets>
+  </mac>
+</versions>
+
+<download>
+  <item>
+    <title>Binaries</title>
+    <content>
+<xhtml:h3>ActivePerl/Win32</xhtml:h3>
+<xhtml:div>
+PPM binary packages are available for
+<xhtml:ul>
+  <xhtml:li>
+    <win32-ppm unicode="0" dev="0">ActivePerl 8xx</win32-ppm>
+  </xhtml:li>
+  <xhtml:li>
+    <win32-ppm unicode="1" dev="0">ActivePerl 8xx with Unicode</win32-ppm>
+ (for NT/2000/XP)
+  </xhtml:li>
+</xhtml:ul>
+
+Please read the included <xhtml:b>README.txt</xhtml:b> for installation instructions.
+
+<xhtml:br />
+
+The corresponding developement packages for
+<xhtml:ul>
+  <xhtml:li>
+    <win32-ppm unicode="0" dev="1">ActivePerl 8xx</win32-ppm>
+  </xhtml:li>
+  <xhtml:li>
+    <win32-ppm unicode="1" dev="1">ActivePerl 8xx with Unicode</win32-ppm>
+  </xhtml:li>
+</xhtml:ul>
+
+should only be downloaded by people interested in
+<xhtml:b>developing/compiling</xhtml:b>
+(and not just using) wxPerl extensions using XS, such as Wx::ActiveX. 
+</xhtml:div>
+
+<xhtml:h3>Red Hat Linux</xhtml:h3>
+<xhtml:div>
+  <xhtml:ul>
+    <xhtml:li>
+      <linux-rpm src="0">wxWidgets 2.6.1, Red Hat Linux 8.0, GTK 2</linux-rpm>
+    </xhtml:li>
+  </xhtml:ul>
+
+The
+<xhtml:a target="_blank" href="http://www.barbon.org/wxperl/0.23/wxWidgets/">unofficial wxWidgets RPMs</xhtml:a> are required by the wxPerl RPMs.
+</xhtml:div>
+
+<!--
+<h3>Debian GNU/Linux 3.0 &quot;woody&quot;</h3>
+<div>
+A binary package is available
+<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl-wxgtk2.2_0.11-1_i386.deb">here</a>.
+</div>
+-->
+
+<xhtml:h3>Mac OS X 10.3 (Panther) and 10.4 (Tiger)</xhtml:h3>
+<xhtml:div>
+DMG images are available for
+  <xhtml:ul>
+    <xhtml:li>
+      <mac-dmg osx="10.3">Mac OS X 10.3 (Panther) Unicode</mac-dmg>
+    </xhtml:li>
+    <xhtml:li>
+      <mac-dmg osx="10.4">Mac OS X 10.4 (Tiger) Unicode</mac-dmg>
+    </xhtml:li>
+  </xhtml:ul>
+</xhtml:div>
+    </content>
+  </item>
+
+  <item>
+    <title>Documentation</title>
+    <content>
+<xhtml:p>
+Download the <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-samples.zip">examples</xhtml:a> from the
+source distribution.
+</xhtml:p>
+
+<xhtml:p>
+Documentation fo wxPerl is available as TeX, HTML, and MS HTML Help
+<xhtml:ul>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-wx-2.6.1-docs-chm.chm">Microsoft HTML Help (CHM) format</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-wx-2.6.1-docs-html.zip">ZIP file containing HTML documentation</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-wx-2.6.1-docs-tex.zip">TeX sources used to build the documentation</xhtml:a></xhtml:li>  
+</xhtml:ul>
+</xhtml:p>
+    </content>
+  </item>
+
+  <item>
+    <title>Source</title>
+    <content>
+Source code for wxPerl is available in various formats:
+<xhtml:ul>
+  <xhtml:li>
+    <src-cpan>Standard CPAN package (also available on CPAN)</src-cpan>
+  </xhtml:li>
+  <xhtml:li>
+    <linux-rpm src="1">RPM source package</linux-rpm>
+  </xhtml:li>
+<!--
+  <xhtml:li><xhtml:a target="_blank" href='http://www.barbon.org/wxperl/libwx-perl_0.22-1.deb.src.tar.gz'>Debian Sarge (testing)</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href='http://www.barbon.org/wxperl/p5-Wx.tar.gz'>FreeBSD 5.3 Ports package</xhtml:a></xhtml:li>
+-->
+<!--  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl_0.11-1.deb.src.tar.gz">Debian source bundled in a single .tar.gz file</a></li> -->
+</xhtml:ul>
+    </content>
+  </item>
+
+  <item>
+    <title>CVS</title>
+    <anchor>snapshots</anchor>
+    <content>
+<xhtml:p>
+The bleeding-edge sources are available through CVS.
+</xhtml:p>
+
+<xhtml:h3>Anonymous CVS access</xhtml:h3>
+
+<xhtml:pre>
+cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/wxperl login
+password:&lt;press enter&gt;
+cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/wxperl co wxPerl
+</xhtml:pre>
+
+<xhtml:h3>Browse CVS sources</xhtml:h3>
+
+SourceForge offers a 
+<xhtml:a href="http://cvs.sourceforge.net/viewcvs.py/wxperl/"
+         target="_blank">CVS browser</xhtml:a> interface that can
+be used to look at CVS sources, compare the differences between revisions
+and get the most up to date revision of a single file.
+
+<xhtml:h3>Anonymous CVS snapshots</xhtml:h3>
+
+Daily <xhtml:a target="_blank" href="snapshot/">CVS snapshots</xhtml:a>
+are also available in <xhtml:tt>.tar.gz</xhtml:tt>,
+<xhtml:tt>.tar.bz2</xhtml:tt> and <xhtml:tt>.zip</xhtml:tt> format.
+    </content>
+  </item>
+</download>
+
+</data>

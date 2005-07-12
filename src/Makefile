@@ -53,8 +53,8 @@ $(OUTDIR)/manual/manual.html: manual/manual.xml doc.xsl \
 $(OUTDIR)/index.html: main.xml home.xsl wxperl.xsl
 	$(XSLT) -o $@ home.xsl main.xml
 
-$(OUTDIR)/download.html: main.xml download.xsl wxperl.xsl
-	$(XSLT) -o $@ download.xsl main.xml
+$(OUTDIR)/download.html: download.xml download.xsl wxperl.xsl
+	$(XSLT) -o $@ download.xsl download.xml
 
 $(OUTDIR)/about.html: main.xml about.xsl wxperl.xsl
 	$(XSLT) -o $@ about.xsl main.xml
