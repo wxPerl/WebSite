@@ -26,6 +26,22 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Jul 12, 2005</date>
+    <content>
+<xhtml:b>wxPerl 0.25 is out!</xhtml:b>: this release fixes some minor
+problems with the wxPerl 0.24 release. Binaries compiled against wxWidgets
+2.6.1 are available from the
+<xhtml:a href="download.html">Download page</xhtml:a>.
+  <xhtml:pre>
+	- Added back Wx::NotebookSizer (removed by accident).
+	- Fixed off-by-one error in Wx::Log::SetTimestamp.
+	- Fixed crash with eval + use in event handler.
+	- Fixed test suite for wxWidgets 2.4.x.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Jul 7, 2005</date>
     <content>
 <xhtml:b>wxPerl 0.24 is out!</xhtml:b>: this release fixes some minor
