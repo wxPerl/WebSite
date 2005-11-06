@@ -26,6 +26,17 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Nov 6, 2005</date>
+    <content>
+wxPerl 0.26 candidate is available; please test it and report any problems
+you find.<xhtml:br />
+<xhtml:a href="http://www.barbon.org/wxperl/0.26/" target="_blank">wxPerl</xhtml:a>,
+<xhtml:a href="http://www.barbon.org/wxperl/0.26/wxWidgets/" target="_blank">wxWidgets 2.6.2 RPMs</xhtml:a>,
+<xhtml:a href="http://cvs.sourceforge.net/viewcvs.py/wxperl/wxPerl/Changes?view=markup" target="_blank">Changes</xhtml:a>.
+    </content>
+  </item>
+
+  <item>
     <date>Jul 12, 2005</date>
     <content>
 <xhtml:b>wxPerl 0.25 is out!</xhtml:b>: this release fixes some minor
