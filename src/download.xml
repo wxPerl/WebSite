@@ -3,16 +3,16 @@
 <data xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
 
 <versions>
-  <wxperl>0.25</wxperl>
+  <wxperl>0.26</wxperl>
   <win32>
     <perl>5.8.6</perl>
-    <wxwidgets>2.6.1</wxwidgets>
+    <wxwidgets>2.6.2</wxwidgets>
   </win32>
   <linux>
-    <wxwidgets>2.6.1</wxwidgets>
+    <wxwidgets>2.6.2</wxwidgets>
   </linux>
   <mac>
-    <wxwidgets>2.6.1</wxwidgets>
+    <wxwidgets>2.6.2</wxwidgets>
   </mac>
 </versions>
 
@@ -56,12 +56,12 @@ should only be downloaded by people interested in
 <xhtml:div>
   <xhtml:ul>
     <xhtml:li>
-      <linux-rpm src="0">wxWidgets 2.6.1, Red Hat Linux 8.0, GTK 2</linux-rpm>
+      <linux-rpm src="0">wxWidgets 2.6.2, Red Hat Linux 8.0, GTK 2</linux-rpm>
     </xhtml:li>
   </xhtml:ul>
 
 The
-<xhtml:a target="_blank" href="http://www.barbon.org/wxperl/0.23/wxWidgets/">unofficial wxWidgets RPMs</xhtml:a> are required by the wxPerl RPMs.
+<xhtml:a target="_blank" href="http://www.barbon.org/wxperl/0.26/wxWidgets/">unofficial wxWidgets RPMs</xhtml:a> are required by the wxPerl RPMs.
 </xhtml:div>
 
 <!--
@@ -91,7 +91,7 @@ DMG images are available for
     <title>Documentation</title>
     <content>
 <xhtml:p>
-Download the <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-samples.zip">examples</xhtml:a> from the
+Download the <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.26-samples.zip">examples</xhtml:a> from the
 source distribution.
 </xhtml:p>
 

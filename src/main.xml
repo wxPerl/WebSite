@@ -26,6 +26,27 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Now 22, 2005</date>
+    <content>
+<xhtml:b>wxPerl 0.26 is out!</xhtml:b> Binaries compiled against wxWidgets
+2.6.1 are available from the
+<xhtml:a href="download.html">Download page</xhtml:a>.
+  <xhtml:pre>
+	- Fixed various Wx::GridBagSizer problems.
+	- Fixed Original Object Return for Wx::PlGridCellEditor and
+	  Wx::PlGridCellRenderer.
+	- Removed the requirement of deriving from Wx::App.
+	- Expanded Wx::PlWindow.
+	- Added Wx::Perl::TextValidator (thanks to Johan Vromans).
+	- Changed the interface for Wx::PlDataObjectSimple::GetDataHere.
+	- Added Wx::BufferedDC and Wx::BufferedPaintDC.
+	- Added wxStdButtonSizer.
+	- Build out of the box on FreeBSD.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Nov 6, 2005</date>
     <content>
 wxPerl 0.26 candidate is available; please test it and report any problems
