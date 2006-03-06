@@ -278,11 +278,11 @@ Videobox Player from anywhere in the house.
 
   <organisation>
     <name>Centri Fri&#251;l Lenghe 2000</name>
-    <!-- site>http://www.cfl2000.org</site -->
+    <site>http://www.cfl2000.net</site>
     <country>Italy</country>
     <contact>
       <name>Luca Peresson</name>
-      <!-- email>info@clf2000.org</email -->
+      <email>info@clf2000.net</email>
     </contact>
     <wxperl>
       <rating></rating>
@@ -296,7 +296,7 @@ Videobox Player from anywhere in the house.
         <name>Grant Dizionari Bileng&#226;l Talian-Furlan</name>
         <license-type><open-source /></license-type>
         <platforms><windows /><mac /><linux /></platforms>
-        <wxperl-version>0.22</wxperl-version>
+        <wxperl-version>0.22-0.26</wxperl-version>
         <domain>Linguistics</domain>
         <short-description>
 Dictionary for the Friulian (Furlan) language. The application permits
@@ -305,6 +305,57 @@ translation. Another functionality allows looking up the declination
 of nouns and adjectives and the conjugation of verbs.
         </short-description>
         <long-description>
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+
+  <organisation>
+    <name>Giannis Economou</name>
+    <country>Greece</country>
+    <contact>
+      <name>Giannis Economou</name>
+    </contact>
+    <wxperl>
+      <rating>4</rating>
+      <comments>
+Nice and powerful framework
+and nice work. I would like more updated documentation (more Perl specific),
+and more examples to study. Any dificulties I've had were due to
+documentation. Keep up the good work. I believe wxPerl is the best GUI
+toolkit for Perl, today.
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>The Pure Perl RayCaster</name>
+        <site>http://www.antithesis.gr/pprc/</site>
+        <license-type><open-source /></license-type>
+        <platforms><windows /><linux /><mac /></platforms>
+        <wxperl-version>0.26</wxperl-version>
+        <domain>3D Computer Graphics</domain>
+        <short-description>
+The Pure Perl RayCaster is a
+small simple Ray casting application written completely in Perl without
+using OpenGL or any other 3D API library.It is well suited for educational
+purposes, in order to study, understand, tweak and try well known
+fundamental 3D Computer Graphics techniques.
+        </short-description>
+        <long-description>
+The Pure Perl RayCaster is a small
+simple Ray casting application written completely in Perl without using
+OpenGL or any other 3D API library.
+Pure Perl RayCaster can load a 3D object from a file (in RAW format),
+display the object in wireframe perspective view, allow to orbit and zoom
+your camera and produce a user defined size ray casting image of the current
+view in a predefined color theme with or without smooth shading.
+Pure Perl RayCaster is not a professional production tool for 3D image
+generation. It is well suited for educational purposes, in order to study,
+understand, tweak and try well known fundamental 3D Computer Graphics
+techniques.
         </long-description>
       </application>
 
@@ -332,7 +383,7 @@ of nouns and adjectives and the conjugation of verbs.
         <name></name>
         <site></site>
         <license-type><commercial /><open-source /><freeware /></license-type>
-        <platforms><windows /><linux /></platforms>
+        <platforms><windows /><linux /><mac /></platforms>
         <wxperl-version></wxperl-version>
         <domain></domain>
         <short-description>
