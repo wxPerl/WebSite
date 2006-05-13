@@ -362,6 +362,41 @@ techniques.
     </applications>
   </organisation>
 
+  <organisation>
+    <name>Squirrel Consultancy</name>
+    <site>http://www.squirrel.nl/</site>
+    <country>The Netherlands</country>
+    <contact>
+      <name>Johan Vromans</name>
+      <email>info@squirrel.nl</email>
+    </contact>
+    <wxperl>
+      <rating>5</rating>
+      <comments>
+Good! Reliably, good support.
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>EekBoek</name>
+        <site>http://www.squirrel.nl/eekboek</site>
+        <license-type><open-source /></license-type>
+        <platforms><windows /><linux /></platforms>
+        <wxperl-version>0.27</wxperl-version>
+        <domain>Finance</domain>
+        <short-description>
+Accounting software for small and medium-size businesses, developed for the
+european style of bookkeeping. EekBoek has a programmable API, and both a
+versatile command-line interface (CLI) and a graphical user-interface (GUI,
+under development).
+        </short-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
