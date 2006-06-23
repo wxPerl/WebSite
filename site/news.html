@@ -31,6 +31,42 @@
 
 
 <h1><a name="news" id="news"></a>News</h1><dl>
+  <dt></dt><dd>
+<b>wxPerl 0.50 is out!</b> this is a source-only release.
+The major highlight from the previous stable release is the ability
+to be installed directly from CPAN using <tt>Alien::wxWidgets</tt>.
+  <pre>
+0.50  Fri Jun 23 11:51:17 CEST 2006
+	- Fixed pod tests to work with older Test::Pod releases.
+
+0.49_07  Sun Jun 18 18:06:05 CEST 2006
+	- Compilation fixes for wxWidgets 2.5.3.
+	- More additions for wxWidgets 2.7.x.
+
+0.49_06  Sun May 21 22:34:21 CEST 2006
+	- Compatibility with wxWidgets CVS HEAD.
+	- Added various missing functions for wxWidgets 2.6.x
+	  and 2.7.x.
+
+0.49_05  Mon May  1 18:27:14 CEST 2006
+	- When Alien::wxWidgets is missing try to retrigger
+	  rebuilding of the Makefile using a dummy dependency.
+
+0.49_04  Sat Apr 22 23:36:15 CEST 2006
+	- Fixed reference counting/ownership for Wx::PlDataObject.
+
+0.49_03  Thu Apr 20 22:40:37 CEST 2006
+	- Handle Alien::wxWidgets prerequisite correctly.
+
+0.49_02  Sun Apr 16 20:45:39 CEST 2006
+	- Added missing files to MANIFEST.
+
+0.49_01  Sun Apr 16 17:01:25 CEST 2006
+	- Added Wx::MediaCtrl.
+	- Refactored build system, now based upon Alien::wxWidgets.
+  </pre>
+    </dd>
+
   <dt>May 5, 2006</dt><dd>
 <a href="http://wxperl.sourceforge.net/download.html#snapshots">
 Daily CVS snapshots</a> are available again! The archives are built
