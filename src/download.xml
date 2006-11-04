@@ -145,7 +145,7 @@ cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/wxperl co wxPerl
 <xhtml:h3>Browse CVS sources</xhtml:h3>
 
 SourceForge offers a 
-<xhtml:a href="http://cvs.sourceforge.net/viewcvs.py/wxperl/"
+<xhtml:a href="http://wxperl.cvs.sourceforge.net/wxperl/"
          target="_blank">CVS browser</xhtml:a> interface that can
 be used to look at CVS sources, compare the differences between revisions
 and get the most up to date revision of a single file.
