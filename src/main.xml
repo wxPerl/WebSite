@@ -26,6 +26,15 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Nov 4, 2006</date>
+    <content>
+Since today, the domain
+<xhtml:a href="http://wxperl.eu/">http://wxperl.eu/</xhtml:a> is
+a shorter address for the wxPerl home page.
+    </content>
+  </item>
+
+  <item>
     <date>Jun 23, 2006</date>
     <content>
 <xhtml:b>wxPerl 0.50 is out!</xhtml:b> this is a source-only release.
