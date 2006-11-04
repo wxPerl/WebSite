@@ -103,6 +103,7 @@ browsers use) or simply for adding eye-candy to an application.
       <author>
         <name>Mattia Barbon</name>
         <email>mbarbon@cpan.org</email>
+        <site>http://barbon.org/</site>
       </author>
       <description>
 a <xhtml:tt>Wx::FileSystemHandler</xhtml:tt> subclass, replacement for
@@ -118,6 +119,7 @@ a <xhtml:tt>Wx::FileSystemHandler</xhtml:tt> subclass, replacement for
       <author>
         <name>Mattia Barbon</name>
         <email>mbarbon@cpan.org</email>
+        <site>http://barbon.org/</site>
       </author>
       <description>
 a wrapper for wxWidgets' <xhtml:tt>wxGLCanvas</xhtml:tt>, used to display OpenGL

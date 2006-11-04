@@ -43,7 +43,23 @@
         <dd>
         <xsl:apply-templates select="description" />
         <br />
-        <b>Author: </b> <xsl:value-of select="author/name" />
+        <b>Author: </b><xsl:choose>
+          <xsl:when test="author/site">
+            <a>
+              <xsl:attribute name="href"><xsl:value-of select="author/site" /></xsl:attribute>
+              <xsl:value-of select="author/name" />
+            </a>
+          </xsl:when>
+          <xsl:when test="author/email">
+            <a>
+              <xsl:attribute name="href">mailto:<xsl:value-of select="author/email" /></xsl:attribute>
+              <xsl:value-of select="author/name" />
+            </a>
+          </xsl:when>
+          <xsl:otherwise>
+            <xsl:value-of select="author/name" />
+          </xsl:otherwise>
+        </xsl:choose>
         <xsl:if test="download">
           <br />
           <b>Download: </b>
