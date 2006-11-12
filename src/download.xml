@@ -137,9 +137,9 @@ The bleeding-edge sources are available through CVS.
 <xhtml:h3>Anonymous CVS access</xhtml:h3>
 
 <xhtml:pre>
-cvs -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/wxperl login
+cvs -d:pserver:anonymous@wxperl.cvs.sourceforge.net:/cvsroot/wxperl login
 password:&lt;press enter&gt;
-cvs -z3 -d:pserver:anonymous@cvs.sourceforge.net:/cvsroot/wxperl co wxPerl
+cvs -z3 -d:pserver:anonymous@wxperl.cvs.sourceforge.net:/cvsroot/wxperl co wxPerl
 </xhtml:pre>
 
 <xhtml:h3>Browse CVS sources</xhtml:h3>
