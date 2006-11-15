@@ -26,6 +26,85 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Nov 15, 2006</date>
+    <content>
+<xhtml:b>wxPerl 0.63 is out!</xhtml:b> this is a source-only release.
+  <xhtml:pre>
+0.63  Wed Nov 15 21:40:28 CET 2006
+	- Fix failing tests under Mac.
+
+0.62  Mon Nov 13 23:16:41 CET 2006
+	- Fix Windows compilation.
+	- Fix Mac OS X build.
+
+0.61  Sun Nov 12 18:33:41 CET 2006
+	- Added Advanced User Interface (AUI) (2.7).
+	- Wrapped more wxRichTextCtrl support classes (2.7).
+  </xhtml:pre>
+    </content>
+  </item>
+  <item>
+    <date>Nov 11, 2006</date>
+    <content>
+<xhtml:b>wxPerl 0.60 is out!</xhtml:b> this is a source-only release.
+Since versions 0.51-0.59 were never announced, the whole change log
+is below.
+  <xhtml:pre>
+0.60  Sat Nov 11 16:48:57 CET 2006
+	- Added wxRichTextCtrl and some related classes.
+	- Removed support for wxWidgets 2.4. Supports 2.5.3 and above.
+	- Added wxSimpleHtmlListBox, wxColourPickerCtrl, wxFontPickerCtrl,
+	  wxFilePickerCtrl, wxDirPickerCtrl, wxAboutDialog (2.7).
+	- Resolved memory leak with classes derived from Wx::PlEvent and
+	  Wx::PlCommandEvent.
+
+0.59  Fri Oct 20 22:05:45 CEST 2006
+	- Fix packaging error in 0.58.
+
+0.58  Thu Oct 19 21:54:04 CEST 2006
+	- Added wxVScrolledWindow, wxVListBox, wxHtmlListBox.
+	- Support wxWidgets RTL API (2.7).
+	- Fix various bugs in wxStreams &lt;=&gt; Perl filehandles
+	  interoperability.
+
+0.57  Sun Aug 27 17:25:18 CEST 2006
+	- Added wxHtmlDCRenderer (thanks to Mark Dootson).
+	- Made the XS++ and overload preprocessors installable,
+	  to be used by extensions.
+	- Removed the demo and some samples, replaced by
+	  Wx::Demo (a separate CPAN distribution).
+
+0.56  Fri Aug 11 22:29:33 CEST 2006
+	- Many thread-safety fixes.
+	- wxMotif compatibility.
+	- Build again under Windows.
+
+0.55  Sun Aug  6 19:48:31 CEST 2006
+	- Mac OS X 10.4 with latest Xcode compilation fixes.
+	- Added wxTreebook, wxChoicebook, wxHyperlinkCtrl,
+	  wxPowerEvent. (2.7)
+	- Added Wx::SimpleApp.
+	- Make the example in the SYNOPSIS actually show a window.
+
+0.54  Sun Jul 16 14:26:52 CEST 2006
+        - Compatibility with GCC 4.0 and 4.1.
+	- Minor compatibility fixes for various wxWidgets releases.
+
+0.53  Sun Jul  9 12:42:59 CEST 2006
+        - wxWidgets 2.4 and wxMac compilation fixes.
+
+0.52  Fri Jul  7 22:29:57 CEST 2006
+	- Compilation fixes when wxMediaCtrl is disabled in wxWidgets.
+
+0.51  Wed Jul  5 20:41:48 CEST 2006
+	- Added Wx::Sound.
+	- Compilation fixes for MSVC8 (thanks to John Ralls).
+	- Bumped Alien::wxWidgets requirement to 0.15.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Nov 4, 2006</date>
     <content>
 Since today, the domain
