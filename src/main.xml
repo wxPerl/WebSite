@@ -26,6 +26,24 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Nov 26, 2006</date>
+    <content>
+<xhtml:b>wxPerl 0.64 is out!</xhtml:b> this is a source-only release
+and can be downloaded from
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+  <xhtml:pre>
+0.64  Sun Nov 26 18:32:03 CET 2006
+	- Removed support for wxWidgets 2.7.0 and 2.7.1.
+        - Added Wx::GridCellAutoWrapStringRenderer,
+	  Wx::GridCellAutoWrapStringEditor, Wx::GridCellEnumRenderer,
+	  Wx::GridCellEnumEditor, Wx::GridCellDateTimeRenderer
+	  (thanks to Mark Dootson).
+	- Added wxRichTextFormattingDialog.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <date>Nov 15, 2006</date>
     <content>
 <xhtml:b>wxPerl 0.63 is out!</xhtml:b> this is a source-only release
@@ -45,6 +63,7 @@ and can be downloaded from
   </xhtml:pre>
     </content>
   </item>
+
   <item>
     <date>Nov 11, 2006</date>
     <content>
