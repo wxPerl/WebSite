@@ -329,6 +329,35 @@ under development).
     </applications>
   </organisation>
 
+  <organisation>
+    <name>Mark Dootson</name>
+    <site>http://www.cava.co.uk</site>
+    <country>UK</country>
+    <contact>
+      <name>Mark Dootson</name>
+      <email>mark.dootson@cava.co.uk</email>
+    </contact>
+    <wxperl>
+      <rating>5</rating>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>Cava Packager</name>
+        <site>http://www.cava.co.uk/products/packager</site>
+        <license-type><commercial /></license-type>
+        <platforms><windows /></platforms>
+        <wxperl-version>0.67</wxperl-version>
+        <domain>Perl Application Programming</domain>
+        <short-description>
+GUI driven alternative application packager for Perl.
+        </short-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
