@@ -855,14 +855,14 @@ Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
     <anchor>wxdocs</anchor>
     <links>
       <link>
-        <text>online wxWidgets documentation (2.4.2)</text>
-        <url>http://www.wxwidgets.org/manuals/2.4.2/wx.htm</url>
+        <text>online wxWidgets documentation (2.6.3)</text>
+        <url>http://www.wxwidgets.org/manuals/2.6.3/wx_contents.html</url>
         <external />
       </link>
 
       <link>
-        <text>online wxWidgets documentation (2.6.1)</text>
-        <url>http://www.wxwidgets.org/manuals/2.6.1/wx_contents.html</url>
+        <text>online wxWidgets documentation (2.8.2)</text>
+        <url>http://www.wxwidgets.org/manuals/2.8.2/wx_contents.html</url>
         <external />
       </link>
 
