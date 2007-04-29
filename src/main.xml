@@ -27,6 +27,16 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Apr 29, 2007</date>
+    <content>
+<xhtml:b>The wxPerl repository now uses Subversion</xhtml:b>.  Instructions
+for subversion access can be found on the
+<xhtml:a href="download.html#snapshots">Download page</xhtml:a> and on
+the <xhtml:a href="https://sourceforge.net/svn/?group_id=15655" target="_blank">Sourceforge project page</xhtml:a>.
+    </content>
+  </item>
+
+  <item>
     <date>Apr 28, 2007</date>
     <content>
 <xhtml:b>wxPerl 0.74 is out!</xhtml:b> this is a source-only release
