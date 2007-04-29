@@ -128,32 +128,30 @@ Source code for wxPerl is available in various formats:
   </item>
 
   <item>
-    <title>CVS</title>
+    <title>Subversion</title>
     <anchor>snapshots</anchor>
     <content>
 <xhtml:p>
-The bleeding-edge sources are available through CVS.
+The bleeding-edge sources are available through Subversion.
 </xhtml:p>
 
-<xhtml:h3>Anonymous CVS access</xhtml:h3>
+<xhtml:h3>Anonymous Subversion access</xhtml:h3>
 
 <xhtml:pre>
-cvs -d:pserver:anonymous@wxperl.cvs.sourceforge.net:/cvsroot/wxperl login
-password:&lt;press enter&gt;
-cvs -z3 -d:pserver:anonymous@wxperl.cvs.sourceforge.net:/cvsroot/wxperl co wxPerl
+svn co https://wxperl.svn.sourceforge.net/svnroot/wxperl/wxPerl/trunk wxPerl
 </xhtml:pre>
 
-<xhtml:h3>Browse CVS sources</xhtml:h3>
+<xhtml:h3>Browse Subversion sources</xhtml:h3>
 
 SourceForge offers a 
-<xhtml:a href="http://wxperl.cvs.sourceforge.net/wxperl/"
-         target="_blank">CVS browser</xhtml:a> interface that can
-be used to look at CVS sources, compare the differences between revisions
-and get the most up to date revision of a single file.
+<xhtml:a href="http://wxperl.svn.sourceforge.net/viewvc/wxperl/"
+         target="_blank">Subversion browser</xhtml:a> interface that can
+be used to look at Subversion sources, compare the differences between
+revisions and get the most up to date revision of a single file.
 
-<xhtml:h3>Anonymous CVS snapshots</xhtml:h3>
+<xhtml:h3>Anonymous Subversion snapshots</xhtml:h3>
 
-Daily <xhtml:a target="_blank" href="snapshot/">CVS snapshots</xhtml:a>
+Daily <xhtml:a target="_blank" href="snapshot/">Subversion snapshots</xhtml:a>
 are also available in <xhtml:tt>.tar.gz</xhtml:tt>,
 <xhtml:tt>.tar.bz2</xhtml:tt> and <xhtml:tt>.zip</xhtml:tt> format.
     </content>
