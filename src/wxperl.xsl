@@ -165,7 +165,6 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="haran" />
     <meta name="generator" content="GNU Emacs" />
-    <meta name="verify-v1" content="CRz07VntJ8eZSJqh23hAn8nWT+CO52JciLJuZW2KRO8=" />
     <link rel="stylesheet" type="text/css" href="bluehaze.css" title="Blue Haze stylesheet" />
     <link rel="stylesheet" type="text/css" href="color-scheme.css" title="Blue Haze stylesheet" />
     <link rel="shortcut icon" href="favicon.ico" type="text/css" />
