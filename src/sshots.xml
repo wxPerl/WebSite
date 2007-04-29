@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <!DOCTYPE screenshots SYSTEM "wxperl.dtd">
 
-<screenshots xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
+<screenshots xmlns:xhtml="http://www.w3.org/1999/xhtml"
+             xmlns:d="http://wxperl.sourceforge.net/site">
   <page>
     <description>
 This is the "minimal" sample from the wxPerl distribution (you can

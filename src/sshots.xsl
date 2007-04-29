@@ -3,7 +3,8 @@
 <xsl:stylesheet
   version="1.0"
   exclude-result-prefixes="xhtml"
-  xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="wxperl.xsl" />
@@ -12,50 +13,54 @@
 
 <!-- navigation bar -->
 <xsl:template name="fw-bw">
-  <xhtml:div>
+  <div>
     <!-- previous -->
     <xsl:if test="$page &gt; 1">
-      <xhtml:div class="LHS">
+      <div class="LHS">
         <xsl:element name="a"><xsl:attribute name="href">sshot<xsl:number value="$page - 1" format="01"/>.html</xsl:attribute>Previous</xsl:element>
-      </xhtml:div>
+      </div>
     </xsl:if>
 
     <!-- next -->
     <xsl:if test="$page &lt; count(../page)">
-      <xhtml:div class="RHS">
+      <div class="RHS">
         <xsl:element name="a"><xsl:attribute name="href">sshot<xsl:number value="$page + 1" format="01"/>.html</xsl:attribute>Next</xsl:element>
-      </xhtml:div>
+      </div>
     </xsl:if>  
-  </xhtml:div>
+  </div>
 </xsl:template>
 
-<!-- skip pages different from the current one -->
-<xsl:template match="/screenshots/page[position() != $page]" />
-
 <!-- current page -->
-<xsl:template match="/screenshots/page[position() = $page]">
+<xsl:template name="current-sshot-page">
   <!-- top navigation -->
   <xsl:call-template name="fw-bw" />
-  <xhtml:br /><xhtml:br />
+  <br /><br />
 
   <!-- images -->
-  <xhtml:div>
+  <div>
     <xsl:apply-templates select="description" />
     <xsl:apply-templates select="image" />
-  </xhtml:div>
+  </div>
 
   <!-- bottom navigation -->
   <xsl:call-template name="fw-bw" />
-  <xhtml:br />
+  <br />
+</xsl:template>
+
+<!-- process current page, skip others -->
+<xsl:template match="/screenshots">
+  <xsl:for-each select="page[position() = $page]">
+    <xsl:call-template name="current-sshot-page" />
+  </xsl:for-each>
 </xsl:template>
 
 <!-- single image -->
 <xsl:template match="image">
-  <xhtml:div style="padding: 20pt; text-align: center;">
-    <xsl:value-of select="text" /><xhtml:br />
+  <div style="padding: 20pt; text-align: center;">
+    <xsl:value-of select="text" /><br />
 
-    <xhtml:img alt="{text}" src="{file}" />
-  </xhtml:div>
+    <img alt="{text}" src="{file}" />
+  </div>
 </xsl:template>
 
 </xsl:stylesheet>

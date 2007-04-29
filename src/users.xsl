@@ -3,14 +3,15 @@
 <xsl:stylesheet
   version="1.0"
   exclude-result-prefixes="xhtml"
-  xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:import href="wxperl.xsl" />
 
 <xsl:template name="fxm">
-  <xhtml:a href="#applications">&#8250; Applications</xhtml:a>
-  <xhtml:a href="#form">&#8250; Form</xhtml:a>
+  <a href="#applications">&#8250; Applications</a>
+  <a href="#form">&#8250; Form</a>
 </xsl:template>
 
 <xsl:template match="windows">Windows<xsl:if test="not(position()=last())">, </xsl:if></xsl:template>
@@ -22,7 +23,7 @@
 <xsl:template name="name-with-link">
   <xsl:choose>
     <xsl:when test="site">
-      <xsl:element name="xhtml:a" xsl:use-attribute-sets="a-target">
+      <xsl:element name="a" xsl:use-attribute-sets="a-target">
         <xsl:attribute name="href">
           <xsl:value-of select="site" />
         </xsl:attribute>
@@ -52,42 +53,42 @@
 </xsl:template>
 
 <xsl:template match="application">
-  <xhtml:b><xsl:call-template name="name-with-link" /></xhtml:b>
+  <b><xsl:call-template name="name-with-link" /></b>
   <xsl:apply-templates select="platforms" />
-  <xsl:copy-of select="short-description/child::node()" /><xhtml:br />
+  <xsl:copy-of select="short-description/child::node()" /><br />
 </xsl:template>
 
 <xsl:template match="organisation">
-  <xhtml:dt>
+  <dt>
   <xsl:call-template name="name-with-link" />
-  <xsl:if test="country">, <xsl:value-of select="country" /></xsl:if></xhtml:dt>
-  <xhtml:dd>
+  <xsl:if test="country">, <xsl:value-of select="country" /></xsl:if></dt>
+  <dd>
   <xsl:apply-templates select="applications/application">
     <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
                                      'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
   </xsl:apply-templates>
   <xsl:apply-templates select="contact"/>
-  </xhtml:dd>
+  </dd>
 </xsl:template>
 
 <xsl:template match="organisations">
-To be added to this page, simply paste the <xhtml:a href="#form">form</xhtml:a>
+To be added to this page, simply paste the <a href="#form">form</a>
 below in your mail client, and send it to
-<xhtml:a href="mailto:mbarbon@cpan.org">Mattia Barbon</xhtml:a>.
+<a href="mailto:mbarbon@cpan.org">Mattia Barbon</a>.
 
-<xhtml:hr />
+<hr />
 
-  <xhtml:a name="applications" />
-  <xhtml:dl>
+  <a name="applications" />
+  <dl>
   <xsl:apply-templates>
     <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
                                      'ABCDEFGHIJKLMNOPQRSTUVWXYZ')" />
   </xsl:apply-templates>
-  </xhtml:dl>
-<xhtml:hr />
-<xhtml:h4><xhtml:a name="form">wxPerl application description</xhtml:a></xhtml:h4>
+  </dl>
+<hr />
+<h4><a name="form">wxPerl application description</a></h4>
 
-<xhtml:pre>
+<pre>
 Organisation Name:
 Organisation Web Site:
 Country:
@@ -104,7 +105,7 @@ Platform(s):
 Approximate number of application users (optional):
 Rating of wxPerl (1-5, 1 = poor, 5 = excellent):
 Comments on your wxPerl experiences (optional):
-</xhtml:pre>
+</pre>
 </xsl:template>
 
 </xsl:stylesheet>

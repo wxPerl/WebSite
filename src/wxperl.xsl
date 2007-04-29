@@ -4,7 +4,7 @@
   version="1.0"
   exclude-result-prefixes="xhtml"
   xmlns="http://www.w3.org/1999/xhtml"
-  xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
   xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
 <xsl:namespace-alias stylesheet-prefix="xhtml" result-prefix="#default" />
@@ -24,7 +24,7 @@
       >window.open(this.href); return false;</xsl:attribute>
 </xsl:attribute-set>
 
-<!-- pass-through xhtml:*, stripping namespage prefix -->
+<!-- pass-through xhtml:*, stripping namespace prefix -->
 <xsl:template match="xhtml:*">
   <xsl:element name="{local-name(.)}">
     <xsl:copy-of select="@*" />
@@ -162,7 +162,7 @@
 <xsl:template match="/">
 <html xml:lang="en">
   <head>
-    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="haran" />
     <meta name="generator" content="GNU Emacs" />
     <meta name="verify-v1" content="CRz07VntJ8eZSJqh23hAn8nWT+CO52JciLJuZW2KRO8=" />

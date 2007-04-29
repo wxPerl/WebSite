@@ -2,7 +2,7 @@
 <!DOCTYPE organisations SYSTEM "wxperl.dtd">
 
 <!-- data from apps.txt -->
-<organisations>
+<organisations xmlns:d="http://wxperl.sourceforge.net/site">
   <organisation>
     <name>Wordit Limited</name>
     <site>http://www.wordit.com/</site>

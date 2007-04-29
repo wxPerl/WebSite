@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<data xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
+<data xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:d="http://wxperl.sourceforge.net/site">
 
 <home>
   <item>
@@ -25,6 +26,46 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 </home>
 
 <news>
+  <item>
+    <date>Apr 28, 2007</date>
+    <content>
+<xhtml:b>wxPerl 0.74 is out!</xhtml:b> this is a source-only release
+and can be downloaded from
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+  <xhtml:pre>
+0.74  Sun Apr 29 00:53:23 CEST 2007
+	- Minor compilation and runtime fixes.
+
+0.73  Tue Apr 17 22:49:32 CEST 2007
+	- wxWidgets 2.9.x compatibility.
+
+0.72  Sun Apr  1 00:33:54 CEST 2007
+	- Compilation fixes for GCC 3.4.
+	- Compilation fixes for wxMotif/wxWidgets 2.6.3.
+
+0.71  Thu Mar 29 21:53:11 CEST 2007
+	- Fix all remaining known thread issues.
+
+0.70  Thu Mar 22 00:08:20 CET 2007
+	- wxWidgets 2.9.x compatibility.
+	- Improved creation of wxDocument/wxView subclasses
+	  in Wx::DocTemplate.
+
+0.69  Fri Mar 16 20:54:50 CET 2007
+	- Fix crash caused by Wx::PlThreadEvent.
+	- Some documentation of using wxPerl with threads.
+
+0.68  Sat Mar 10 21:45:26 CET 2007
+	- Added wxSystemOptions (thanks to Mark Dootson).
+	- Fix a thread-related crash.
+
+0.67  Sat Dec 16 19:36:37 CET 2006
+	- Try to handle gracefully the case when Alien::wxWidgets is missing,
+	  restoring the 0.49_05 behaviour.
+  </xhtml:pre>
+    </content>
+  </item>
+
   <item>
     <date>Dec 15, 2006</date>
     <content>

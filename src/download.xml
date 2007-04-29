@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<data xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
+<data xmlns:xhtml="http://www.w3.org/1999/xhtml"
+      xmlns:d="http://wxperl.sourceforge.net/site">
 
 <versions>
   <wxperl>0.26</wxperl>

@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 
-<support xmlns:xhtml="http://www.w3.org/1999/xhtmlAlias">
+<support xmlns:xhtml="http://www.w3.org/1999/xhtml"
+         xmlns:d="http://wxperl.sourceforge.net/site">
   <item>
     <title>Mailing lists</title>
     <anchor>ml</anchor>
