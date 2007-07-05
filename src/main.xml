@@ -27,6 +27,15 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <date>Jul 05, 2007</date>
+    <content>
+Thans to the perl.org administrators, the <xhtml:a
+href="support.html#ml">wxPerl users mailing list</xhtml:a> is now
+hosted at perl.org.
+    </content>
+  </item>
+
+  <item>
     <date>Apr 29, 2007</date>
     <content>
 <xhtml:b>The wxPerl repository now uses Subversion</xhtml:b>.  Instructions
