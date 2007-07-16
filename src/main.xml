@@ -913,6 +913,28 @@ Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
   <item>
     <title>wxWidgets / wxPerl documentation</title>
     <anchor>wxdocs</anchor>
+    <content>
+There is no wxPerl API document per se.  The wxPerl API is
+described in terms of C++ in the following:<xhtml:br />
+<xhtml:a target="_blank"
+         href="http://www.wxwidgets.org/manuals/2.6.3/wx_contents.html">
+         online wxWidgets documentation (2.6.3)</xhtml:a><xhtml:br />
+<xhtml:a target="_blank"
+         href="http://www.wxwidgets.org/manuals/2.8.4/wx_contents.html">
+         online wxWidgets documentation (2.8.4)</xhtml:a><xhtml:br />
+<xhtml:br />
+For the most part the wxPerl API closely mirrors the C++ API.  When
+the C++ and Perl API differ, a wxPerl-specific note in the manual
+explains how the function calls translate to Perl.<xhtml:br />
+<xhtml:br />
+The very short 
+<xhtml:a target="_blank"
+         href="http://wxperl.sourceforge.net/manual/manual.html">
+         wxPerl manual</xhtml:a>
+explains in a little more detail the general strategy used in creating
+the wxPerl wrappers.
+    </content>
+<!--
     <links>
       <link>
         <text>online wxWidgets documentation (2.6.3)</text>
@@ -931,6 +953,7 @@ Binary releases are available for RedHat/i386, Debian/i386 and ActivePerl/Win32.
         <url>manual/manual.html</url>
       </link>
     </links>
+-->
   </item>
 
   <item>
