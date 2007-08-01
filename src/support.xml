@@ -25,6 +25,16 @@ Many thanks to the perl.org administrators for hosting the list.
   </item>
 
   <item>
+    <title>IRC</title>
+    <anchor>irc</anchor>
+    <content>
+You can also join the #wxperl IRC channel on irc.perl.org to gather advices from other wxPerl users.
+If you need help to connect to this IRC network, see the help page at
+<xhtml:a target="_blank" href="http://www.irc.perl.org/">www.irc.perl.org</xhtml:a>.
+    </content>
+  </item>
+
+  <item>
     <title>Project page</title>
     <anchor>project</anchor>
     <content>
