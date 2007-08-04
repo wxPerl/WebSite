@@ -358,6 +358,36 @@ GUI driven alternative application packager for Perl.
     </applications>
   </organisation>
 
+  <organisation>
+    <name>Tomohiro Hosaka</name>
+    <site>http://bokut.in/mt/</site>
+    <country>Japan</country>
+    <contact>
+      <name>bokutin</name>
+      <email>bokutin@bokut.in</email>
+    </contact>
+    <wxperl>
+      <rating>5</rating>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>RSBase Importer</name>
+        <site>http://bokut.in/rsbase_importer/</site>
+        <license-type><commercial /></license-type>
+        <platforms><windows /></platforms>
+        <wxperl-version></wxperl-version>
+        <domain>Clinical laboratory test data, RS232 serial communications</domain>
+        <short-description>
+Data converter. Import from inspection result data from each analyzer then  
+export to master databasse. (RS_Base)
+        </short-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
