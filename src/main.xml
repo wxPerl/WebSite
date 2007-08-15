@@ -27,16 +27,18 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <title>Mail list migrated</title>
     <date rfc822="Thu, 5 Jul 2007 21:06:50 +0200">Jul 05, 2007</date>
     <id>2007-07-mailing-list</id>
     <content>
-Thans to the perl.org administrators, the <xhtml:a
+Thanks to the perl.org administrators, the <xhtml:a
 href="support.html#ml">wxPerl users mailing list</xhtml:a> is now
 hosted at perl.org.
     </content>
   </item>
 
   <item>
+    <title>Subversion</title>
     <date rfc822="Sun, 29 Apr 2007 13:08:01 +0200">Apr 29, 2007</date>
     <id>2007-04-migration-to-subversion</id>
     <description>The wxPerl repository has been migrated to Subversion</description>
@@ -49,6 +51,7 @@ the <xhtml:a href="https://sourceforge.net/svn/?group_id=15655" target="_blank">
   </item>
 
   <item>
+    <title>Releases!</title>
     <date rfc822="Sat, 28 Apr 2007 17:12:11 +0200">Apr 28, 2007</date>
     <id>2007-04-wxperl-release-0-74</id>
     <description>wxPerl 0.74 has been released to CPAN!</description>
@@ -91,6 +94,7 @@ and can be downloaded from
   </item>
 
   <item>
+    <title>Releases!</title>
     <date rfc822="Fri, 15 Dec 2006 16:02:32+0100">Dec 15, 2006</date>
     <id>2006-12-wxperl-release-0-66</id>
     <description>wxPerl 0.66 has been released to CPAN!</description>
