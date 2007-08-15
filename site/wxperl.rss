@@ -9,6 +9,16 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>Releases!</title>
+      <description>
+wxPerl 0.76 has been released to CPAN, including four new wxWidgets controls.
+Alien::wxWidgets 0.32 released at the same time adds support for wxWidgets
+2.8.4 and for bulding Mac OS X Universal binaries.
+    </description>
+      <pubDate>Thu, 16 Aug 2007 00:28:20 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2007-08-wxperl-release-0-76</guid>
+    </item>
+    <item>
       <title>Mail list migrated</title>
       <description>
 Thanks to the perl.org administrators, the wxPerl users mailing list is now

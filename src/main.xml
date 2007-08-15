@@ -27,6 +27,39 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
+    <title>Releases!</title>
+    <date rfc822="Thu, 16 Aug 2007 00:28:20 +0200">Aug 16, 2007</date>
+    <id>2007-08-wxperl-release-0-76</id>
+    <description>
+wxPerl 0.76 has been released to CPAN, including four new wxWidgets controls.
+Alien::wxWidgets 0.32 released at the same time adds support for wxWidgets
+2.8.4 and for bulding Mac OS X Universal binaries.
+    </description>
+    <content>
+<xhtml:b>wxPerl 0.76 is out!</xhtml:b> this is a source-only release
+and can be downloaded from
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+  <xhtml:pre>
+0.76  Thu Aug 16 00:21:00 CEST 2007 (wxPerl)
+	- Added wxEditableListBox (2.9).
+	- Added wxSearchCtrl (2.8).
+	- Added wxComboCtrl and wxOwnerDrawnComboBox (2.7).
+	- Added EVT_HTML_XXX event handlers.
+  </xhtml:pre>
+<xhtml:b>Alien::wxWidgets 0.32</xhtml:b> released at the same time adds
+support for wxWidgets 2.8.4 and for building Mac OS X Universal binaries.
+  <xhtml:pre>
+0.32  Thu Aug 16 00:11:40 CEST 2007 (Alien::wxWidgets)
+	- Patch and build wxWidgets 2.8.4.
+	- Correctly handle flags for wxWidgets Universal Mac builds.
+	- Allow building a monolithic wxWidgets.
+	- Allow building Mac Universal binaries for wxWidgets.
+	- Updated bundled Archive::Extract to the latest version.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <title>Mail list migrated</title>
     <date rfc822="Thu, 5 Jul 2007 21:06:50 +0200">Jul 05, 2007</date>
     <id>2007-07-mailing-list</id>

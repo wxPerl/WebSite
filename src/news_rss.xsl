@@ -62,7 +62,7 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
 
-    <xsl:apply-templates select="/data/news/item[position() &lt; 5]"/>
+    <xsl:apply-templates select="/data/news/item[position() &lt; 6]"/>
   </channel>
 </rss>
 </xsl:template>
