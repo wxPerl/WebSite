@@ -27,7 +27,8 @@ read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.
 
 <news>
   <item>
-    <date>Jul 05, 2007</date>
+    <date rfc822="Thu, 5 Jul 2007 21:06:50 +0200">Jul 05, 2007</date>
+    <id>2007-07-mailing-list</id>
     <content>
 Thans to the perl.org administrators, the <xhtml:a
 href="support.html#ml">wxPerl users mailing list</xhtml:a> is now
@@ -36,7 +37,9 @@ hosted at perl.org.
   </item>
 
   <item>
-    <date>Apr 29, 2007</date>
+    <date rfc822="Sun, 29 Apr 2007 13:08:01 +0200">Apr 29, 2007</date>
+    <id>2007-04-migration-to-subversion</id>
+    <description>The wxPerl repository has been migrated to Subversion</description>
     <content>
 <xhtml:b>The wxPerl repository now uses Subversion</xhtml:b>.  Instructions
 for subversion access can be found on the
@@ -46,7 +49,9 @@ the <xhtml:a href="https://sourceforge.net/svn/?group_id=15655" target="_blank">
   </item>
 
   <item>
-    <date>Apr 28, 2007</date>
+    <date rfc822="Sat, 28 Apr 2007 17:12:11 +0200">Apr 28, 2007</date>
+    <id>2007-04-wxperl-release-0-74</id>
+    <description>wxPerl 0.74 has been released to CPAN!</description>
     <content>
 <xhtml:b>wxPerl 0.74 is out!</xhtml:b> this is a source-only release
 and can be downloaded from
@@ -86,7 +91,9 @@ and can be downloaded from
   </item>
 
   <item>
-    <date>Dec 15, 2006</date>
+    <date rfc822="Fri, 15 Dec 2006 16:02:32+0100">Dec 15, 2006</date>
+    <id>2006-12-wxperl-release-0-66</id>
+    <description>wxPerl 0.66 has been released to CPAN!</description>
     <content>
 <xhtml:b>wxPerl 0.66 is out!</xhtml:b> this is a source-only release
 and can be downloaded from
@@ -103,6 +110,8 @@ and can be downloaded from
 
   <item>
     <date>Nov 26, 2006</date>
+    <id>wxperl-release-0-64</id>
+    <description>wxPerl 0.64 has been released to CPAN!</description>
     <content>
 <xhtml:b>wxPerl 0.64 is out!</xhtml:b> this is a source-only release
 and can be downloaded from

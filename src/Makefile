@@ -4,7 +4,7 @@ OUTDIR=../site
 HTML=$(OUTDIR)/index.html $(OUTDIR)/download.html $(OUTDIR)/about.html \
      $(OUTDIR)/documentation.html $(OUTDIR)/support.html $(OUTDIR)/news.html \
      $(OUTDIR)/sshot01.html $(OUTDIR)/sshot02.html $(OUTDIR)/sshot03.html \
-     $(OUTDIR)/users.html
+     $(OUTDIR)/users.html $(OUTDIR)/wxperl.rss
 XSLT=xsltproc
 XMLCHECKDTD=xmllint --catalogs --loaddtd --valid --noout
 XMLCHECK=xmllint --catalogs --noout
@@ -67,6 +67,9 @@ $(OUTDIR)/support.html: support.xml support.xsl wxperl.xsl
 
 $(OUTDIR)/news.html: main.xml news.xsl wxperl.xsl
 	$(XSLT) -o $@ news.xsl main.xml
+
+$(OUTDIR)/wxperl.rss: main.xml news_rss.xsl
+	$(XSLT) -o $@ news_rss.xsl main.xml
 
 $(OUTDIR)/sshot01.html: sshots.xml sshots.xsl wxperl.xsl
 	$(XSLT) --stringparam page 1 -o $@ sshots.xsl sshots.xml

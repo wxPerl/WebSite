@@ -168,7 +168,8 @@
     <link rel="stylesheet" type="text/css" href="bluehaze.css" title="Blue Haze stylesheet" />
     <link rel="stylesheet" type="text/css" href="color-scheme.css" title="Blue Haze stylesheet" />
     <link rel="shortcut icon" href="favicon.ico" type="text/css" />
-
+    <link href="http://wxperl.eu/wxperl.rss" rel="alternate"
+          type="application/rss+xml" title="wxPerl news" />
     <title>wxPerl</title>
   </head>
 
@@ -204,7 +205,13 @@
 
 <!-- news item -->
 <xsl:template match="news/item">
-  <dt><xsl:value-of select="date" /></dt> 
+  <dt>
+    <xsl:if test="id">
+      <a>
+        <xsl:attribute name="name"><xsl:copy-of select="id" /></xsl:attribute>
+      </a>
+    </xsl:if>
+  <xsl:value-of select="date" /></dt> 
   <dd><xsl:apply-templates select="content" /></dd>
 </xsl:template>
 
