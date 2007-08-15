@@ -1,5 +1,39 @@
-<?xml version="1.0"?>
-<rss version="2.0"><channel><title>wxPerl News</title><link>http://wxperl.eu/</link><description>The wxPerl GUI toolkit.</description><language>en-us</language><generator>xsltproc</generator><managingEditor>mbarbon@cpan.org</managingEditor><webMaster>mbarbon@cpan.org</webMaster><item><description>
-Thans to the perl.org administrators, the wxPerl users mailing list is now
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+  <channel>
+    <title>wxPerl News</title>
+    <link>http://wxperl.eu/</link>
+    <description>The wxPerl GUI toolkit.</description>
+    <language>en-us</language>
+    <generator>xsltproc</generator>
+    <managingEditor>mbarbon@cpan.org</managingEditor>
+    <webMaster>mbarbon@cpan.org</webMaster>
+    <item>
+      <title>Mail list migrated</title>
+      <description>
+Thanks to the perl.org administrators, the wxPerl users mailing list is now
 hosted at perl.org.
-    </description><pubDate>Thu, 5 Jul 2007 21:06:50 +0200</pubDate><guid>http://wxperl.eu/news.html#2007-07-mailing-list</guid></item><item><description>The wxPerl repository has been migrated to Subversion</description><pubDate>Sun, 29 Apr 2007 13:08:01 +0200</pubDate><guid>http://wxperl.eu/news.html#2007-04-migration-to-subversion</guid></item><item><description>wxPerl 0.74 has been released to CPAN!</description><pubDate>Sat, 28 Apr 2007 17:12:11 +0200</pubDate><guid>http://wxperl.eu/news.html#2007-04-wxperl-release-0-74</guid></item><item><description>wxPerl 0.66 has been released to CPAN!</description><pubDate>Fri, 15 Dec 2006 16:02:32+0100</pubDate><guid>http://wxperl.eu/news.html#2006-12-wxperl-release-0-66</guid></item></channel></rss>
+    </description>
+      <pubDate>Thu, 5 Jul 2007 21:06:50 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2007-07-mailing-list</guid>
+    </item>
+    <item>
+      <title>Subversion</title>
+      <description>The wxPerl repository has been migrated to Subversion</description>
+      <pubDate>Sun, 29 Apr 2007 13:08:01 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2007-04-migration-to-subversion</guid>
+    </item>
+    <item>
+      <title>Releases!</title>
+      <description>wxPerl 0.74 has been released to CPAN!</description>
+      <pubDate>Sat, 28 Apr 2007 17:12:11 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2007-04-wxperl-release-0-74</guid>
+    </item>
+    <item>
+      <title>Releases!</title>
+      <description>wxPerl 0.66 has been released to CPAN!</description>
+      <pubDate>Fri, 15 Dec 2006 16:02:32+0100</pubDate>
+      <guid>http://wxperl.eu/news.html#2006-12-wxperl-release-0-66</guid>
+    </item>
+  </channel>
+</rss>
