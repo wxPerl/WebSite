@@ -9,7 +9,7 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
-      <title>Releases!</title>
+      <title>0.76 released!</title>
       <description>
 wxPerl 0.76 has been released to CPAN, including four new wxWidgets controls.
 Alien::wxWidgets 0.32 released at the same time adds support for wxWidgets
@@ -34,13 +34,13 @@ hosted at perl.org.
       <guid>http://wxperl.eu/news.html#2007-04-migration-to-subversion</guid>
     </item>
     <item>
-      <title>Releases!</title>
+      <title>0.74 released!</title>
       <description>wxPerl 0.74 has been released to CPAN!</description>
       <pubDate>Sat, 28 Apr 2007 17:12:11 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#2007-04-wxperl-release-0-74</guid>
     </item>
     <item>
-      <title>Releases!</title>
+      <title>0.66 released!</title>
       <description>wxPerl 0.66 has been released to CPAN!</description>
       <pubDate>Fri, 15 Dec 2006 16:02:32+0100</pubDate>
       <guid>http://wxperl.eu/news.html#2006-12-wxperl-release-0-66</guid>
