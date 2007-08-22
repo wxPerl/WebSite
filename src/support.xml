@@ -197,9 +197,28 @@ your Perl application together with its modules, resource files
 and third-party libraries inside a Mac OS X application bundle (.app).
 </xhtml:dd>
 
+    <links>
+      <link>
+        <text>wxPerl at FreshMeat</text>
+        <url>http://freshmeat.net/projects/wxperl/</url>
+        <external />
+      </link>
+      <link>
+        <text>wxPerl at Ohloh</text>
+        <url>http://www.ohloh.net/projects/7752/</url>
+        <external />
+      </link>
+      <link>
+        <text>wxPerl at GnomeFiles</text>
+        <url>http://www.gnomefiles.org/app.php/wxPerl</url>
+        <external />
+      </link>
+    </links>
+
   <xhtml:dt></xhtml:dt>
   <xhtml:dd></xhtml:dd>
 </xhtml:dl>
     </content>
+
   </item>
 </support>
