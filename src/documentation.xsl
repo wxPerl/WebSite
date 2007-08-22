@@ -23,16 +23,4 @@
   <xsl:apply-templates />
 </xsl:template>
 
-<xsl:template match="links/link">
-  <xsl:choose>
-    <xsl:when test="external">
-      <a xsl:use-attribute-sets="a-target" href="{url}"><xsl:value-of select="text" /></a>
-    </xsl:when>
-    <xsl:otherwise>
-      <a href="{url}"><xsl:value-of select="text" /></a>
-    </xsl:otherwise>
-  </xsl:choose>
-  <br />
-</xsl:template>
-
 </xsl:stylesheet>

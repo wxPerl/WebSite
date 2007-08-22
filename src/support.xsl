@@ -14,15 +14,10 @@
 </xsl:template>
 
 <xsl:template match="/support/item">
-<xsl:apply-templates select="title" />
-
 <xsl:choose>
-  <!-- preformatted text -->
-  <xsl:when test="content">
-    <xsl:apply-templates select="content" />
-  </xsl:when>
   <!-- list of modules -->
-  <xsl:otherwise>
+  <xsl:when test="module">
+    <xsl:apply-templates select="title" />
     <dl>
     <xsl:for-each select="module">
       <xsl:sort select="translate(name,'abcdefghijklmnopqrstuvwxyz',
@@ -71,6 +66,11 @@
         </dd>
     </xsl:for-each>
     </dl>
+  </xsl:when>
+  <!-- preformatted text -->
+  <xsl:otherwise>
+    <xsl:apply-templates />
+    <!--xsl:apply-templates select="" /-->
   </xsl:otherwise>
 </xsl:choose>
 </xsl:template>

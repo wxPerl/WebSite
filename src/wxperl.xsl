@@ -198,6 +198,19 @@
 </html>
 </xsl:template>
 
+<!-- list of links -->
+<xsl:template match="links/link">
+  <xsl:choose>
+    <xsl:when test="external">
+      <a xsl:use-attribute-sets="a-target" href="{url}"><xsl:value-of select="text" /></a>
+    </xsl:when>
+    <xsl:otherwise>
+      <a href="{url}"><xsl:value-of select="text" /></a>
+    </xsl:otherwise>
+  </xsl:choose>
+  <br />
+</xsl:template>
+
 <!-- list item -->
 <xsl:template match="item">
   <xsl:apply-templates />
