@@ -9,6 +9,15 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>0.77 released!</title>
+      <description>
+wxPerl 0.77 has been released to CPAN, including five new wxWidgets controls,
+major improvements to other two controls and other less important additions.
+    </description>
+      <pubDate>Thu, 23 Aug 2007 22:04:48 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2007-08-wxperl-release-0-77</guid>
+    </item>
+    <item>
       <title>0.76 released!</title>
       <description>
 wxPerl 0.76 has been released to CPAN, including four new wxWidgets controls.
@@ -38,12 +47,6 @@ hosted at perl.org.
       <description>wxPerl 0.74 has been released to CPAN!</description>
       <pubDate>Sat, 28 Apr 2007 17:12:11 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#2007-04-wxperl-release-0-74</guid>
-    </item>
-    <item>
-      <title>0.66 released!</title>
-      <description>wxPerl 0.66 has been released to CPAN!</description>
-      <pubDate>Fri, 15 Dec 2006 16:02:32+0100</pubDate>
-      <guid>http://wxperl.eu/news.html#2006-12-wxperl-release-0-66</guid>
     </item>
   </channel>
 </rss>

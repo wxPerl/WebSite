@@ -29,6 +29,34 @@ is also available.
 
 <news>
   <item>
+    <title>0.77 released!</title>
+    <date rfc822="Thu, 23 Aug 2007 22:04:48 +0200">Aug 23, 2007</date>
+    <id>2007-08-wxperl-release-0-77</id>
+    <description>
+wxPerl 0.77 has been released to CPAN, including five new wxWidgets controls,
+major improvements to other two controls and other less important additions.
+    </description>
+    <content>
+<xhtml:b>wxPerl 0.77 is out!</xhtml:b> this is a source-only release
+and can be downloaded from
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+  <xhtml:pre>
+0.77  Thu Aug 23 21:59:25 CEST 2007
+        - Added wxGraphicsContext (2.7) and some related classes
+          (patch by Klaas Hartmann).
+        - Added wxCollapsiblePane (2.7).
+        - Added wxBitmapComboBox (2.7).
+        - Added wxAnimation and wxAnimationCtrl (2.7).
+        - Added wxPropertySheetDialog (2.6).
+        - Added wxPasswordEntryDialog (2.6).
+        - Added wxCommand and wxCommandProcessor.
+        - Added wxHScrolledWindow and wxHVScrolledWindow and
+          made wx[HV]ScrolledWindow subclassable from Perl.
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <title>0.76 released!</title>
     <date rfc822="Thu, 16 Aug 2007 00:28:20 +0200">Aug 16, 2007</date>
     <id>2007-08-wxperl-release-0-76</id>
