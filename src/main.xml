@@ -29,6 +29,41 @@ is also available.
 
 <news>
   <item>
+    <title>0.80 released!</title>
+    <date rfc822="Tue, 06 Nov 2007 23:14:09 +0100">Nov 06, 2007</date>
+    <id>2007-11-wxperl-release-0-80</id>
+    <description>
+wxPerl 0.80 has been released to CPAN.  This release features various new
+wxWidgets classes, plus the usal build fixes.
+    </description>
+    <content>
+<xhtml:b>wxPerl 0.80 is out!</xhtml:b> this is a source-only release
+and can be downloaded from
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+  <xhtml:pre>
+0.80  Tue Nov  6 23:12:53 CET 2007
+        - Build fixes for Windows (both dmake and nmake).
+        - Prototype implementation of wxVariant and wxDataViewCtrl (2.9).
+
+0.79  Thu Oct 18 00:52:35 CEST 2007
+        - Windows compilation fixes (thanks to John Kizlyk for the report).
+        - Try to handle gracefully the absence of Alien::wxWidgets under
+          Mac OS X.
+        - Added Alien::wxWidgets to configure_requires.
+
+0.78  Mon Oct 15 23:54:13 CEST 2007
+        - Added wxRichTextBuffer and wxRichTextFileHandler,
+          wxRichTextHTMLHandler, wxRichTextXMLHandler (2.7).
+        - Added wxSymbolPickerDialog (2.7).
+        - Added wxDisplay, wxGenericDirCtrl.
+        - Added wxFileCtrl (2.9).
+        - Added wxStandardPaths (2.6).
+        - Wrapped the remaining wxGraphics* classes (2.7).
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <title>0.77 released!</title>
     <date rfc822="Thu, 23 Aug 2007 22:04:48 +0200">Aug 23, 2007</date>
     <id>2007-08-wxperl-release-0-77</id>
