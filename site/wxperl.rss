@@ -9,6 +9,16 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>0.81 released!</title>
+      <description>
+wxPerl 0.82 has been released to CPAN.  This release features some new
+wxWidgets classes (but only for wxWidgets HEAD) and the addition of many
+more methods for older releases.
+    </description>
+      <pubDate>Sat, 19 Jan 2008 17:44:18 +0100</pubDate>
+      <guid>http://wxperl.eu/news.html#2008-01-wxperl-release-0-81</guid>
+    </item>
+    <item>
       <title>0.80 released!</title>
       <description>
 wxPerl 0.80 has been released to CPAN.  This release features various new
@@ -44,12 +54,6 @@ hosted at perl.org.
     </description>
       <pubDate>Thu, 5 Jul 2007 21:06:50 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#2007-07-mailing-list</guid>
-    </item>
-    <item>
-      <title>Subversion</title>
-      <description>The wxPerl repository has been migrated to Subversion</description>
-      <pubDate>Sun, 29 Apr 2007 13:08:01 +0200</pubDate>
-      <guid>http://wxperl.eu/news.html#2007-04-migration-to-subversion</guid>
     </item>
   </channel>
 </rss>

@@ -29,6 +29,31 @@ is also available.
 
 <news>
   <item>
+    <title>0.81 released!</title>
+    <date rfc822="Sat, 19 Jan 2008 17:44:18 +0100">Jan 19, 2008</date>
+    <id>2008-01-wxperl-release-0-81</id>
+    <description>
+wxPerl 0.82 has been released to CPAN.  This release features some new
+wxWidgets classes (but only for wxWidgets HEAD) and the addition of many
+more methods for older releases.
+    </description>
+    <content>
+<xhtml:b>wxPerl 0.81 is out!</xhtml:b> this is a source-only release
+and can be downloaded from
+<xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+  <xhtml:pre>
+0.81  Sat Jan 19 17:36:33 CET 2008
+	- Almost completed the interface of wxStyledTextCtrl.
+	- Added wxBitmapToggleButton and wxSVGFileDC (2.9).
+	- Added wxWrapSizer (2.9).
+	- Added wxNotificationMessage (2.9).
+	- Added wxMirrorDC and wxDCClipper.
+	- Partially completed interface to wxDataViewCtrl (2.9).
+  </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <title>0.80 released!</title>
     <date rfc822="Tue, 06 Nov 2007 23:14:09 +0100">Nov 06, 2007</date>
     <id>2007-11-wxperl-release-0-80</id>
