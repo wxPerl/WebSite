@@ -33,7 +33,7 @@ is also available.
     <date rfc822="Sat, 19 Jan 2008 17:44:18 +0100">Jan 19, 2008</date>
     <id>2008-01-wxperl-release-0-81</id>
     <description>
-wxPerl 0.82 has been released to CPAN.  This release features some new
+wxPerl 0.81 has been released to CPAN.  This release features some new
 wxWidgets classes (but only for wxWidgets HEAD) and the addition of many
 more methods for older releases.
     </description>
