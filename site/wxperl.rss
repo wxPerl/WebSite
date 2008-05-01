@@ -9,6 +9,15 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>Documentation updated</title>
+      <description>
+Updated documentation created from wxWidgets 2.8.7 manual is now available
+from the download page.
+    </description>
+      <pubDate>Thu, 01 May 2008 16:48:18 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2008-05-wxperl-documentation-updated</guid>
+    </item>
+    <item>
       <title>0.81 released!</title>
       <description>
 wxPerl 0.81 has been released to CPAN.  This release features some new
@@ -45,15 +54,6 @@ Alien::wxWidgets 0.32 released at the same time adds support for wxWidgets
     </description>
       <pubDate>Thu, 16 Aug 2007 00:28:20 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#2007-08-wxperl-release-0-76</guid>
-    </item>
-    <item>
-      <title>Mail list migrated</title>
-      <description>
-Thanks to the perl.org administrators, the wxPerl users mailing list is now
-hosted at perl.org.
-    </description>
-      <pubDate>Thu, 5 Jul 2007 21:06:50 +0200</pubDate>
-      <guid>http://wxperl.eu/news.html#2007-07-mailing-list</guid>
     </item>
   </channel>
 </rss>

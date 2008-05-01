@@ -99,9 +99,9 @@ source distribution.
 <xhtml:p>
 Documentation fo wxPerl is available as TeX, HTML, and MS HTML Help
 <xhtml:ul>
-  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-wx-2.6.1-docs-chm.chm">Microsoft HTML Help (CHM) format</xhtml:a></xhtml:li>
-  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-wx-2.6.1-docs-html.zip">ZIP file containing HTML documentation</xhtml:a></xhtml:li>
-  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.23-wx-2.6.1-docs-tex.zip">TeX sources used to build the documentation</xhtml:a></xhtml:li>  
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.82-wx-2.8.7-docs-chm.chm">Microsoft HTML Help (CHM) format</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.82-wx-2.8.7-docs-html.zip">ZIP file containing HTML documentation</xhtml:a></xhtml:li>
+  <xhtml:li><xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.82-wx-2.8.7-docs-tex.zip">TeX sources used to build the documentation</xhtml:a></xhtml:li>  
 </xhtml:ul>
 </xhtml:p>
     </content>

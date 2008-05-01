@@ -29,6 +29,20 @@ is also available.
 
 <news>
   <item>
+    <title>Documentation updated</title>
+    <date rfc822="Thu, 01 May 2008 16:48:18 +0200">May 01, 2008</date>
+    <id>2008-05-wxperl-documentation-updated</id>
+    <description>
+Updated documentation created from wxWidgets 2.8.7 manual is now available
+from <xhtml:a href="download.html#Documentation">the download page</xhtml:a>.
+    </description>
+    <content>
+Updated documentation created from wxWidgets 2.8.7 manual is now available
+from <xhtml:a href="download.html#Documentation">the download page</xhtml:a>.
+    </content>
+  </item>
+
+  <item>
     <title>0.81 released!</title>
     <date rfc822="Sat, 19 Jan 2008 17:44:18 +0100">Jan 19, 2008</date>
     <id>2008-01-wxperl-release-0-81</id>
