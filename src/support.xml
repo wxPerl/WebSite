@@ -51,7 +51,7 @@ download previous releases, submit feature requests, etc.
     <anchor>software</anchor>
     <content>
 <xhtml:dl>
-<xhtml:dt><xhtml:a href="http://www.roebling.de/" target="_blank">wxDesigner</xhtml:a></xhtml:dt>
+<xhtml:dt><xhtml:a href="http://www.wxdesigner-software.de/" target="_blank">wxDesigner</xhtml:a></xhtml:dt>
 <xhtml:dd>a <xhtml:b>commercial</xhtml:b> tool for designing user interfaces
 for wxPerl (and wxWidgets and wxPython, too). A trial version is available
 for download.</xhtml:dd>
