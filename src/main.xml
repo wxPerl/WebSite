@@ -30,6 +30,18 @@ is also available.
 <news>
   <item>
     <title>Documentation updated</title>
+    <date rfc822="Thu, 06 Aug 2009 16:48:18 +0200">Aug 06, 2009</date>
+    <id>2009-08-06-wxperl-release-0.92</id>
+    <description>
+    <xhtml:b>wxPerl 0.92 was released to CPAN.</xhtml:b> See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>wxPerl 0.92 was released to CPAN.</xhtml:b> See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </content>
+  </item>
+
+  <item>
+    <title>Documentation updated</title>
     <date rfc822="Thu, 01 May 2008 16:48:18 +0200">May 01, 2008</date>
     <id>2008-05-wxperl-documentation-updated</id>
     <description>

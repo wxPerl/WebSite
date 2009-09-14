@@ -11,6 +11,14 @@
     <item>
       <title>Documentation updated</title>
       <description>
+    wxPerl 0.92 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>Thu, 06 Aug 2009 16:48:18 +0200</pubDate>
+      <guid>http://wxperl.eu/news.html#2009-08-06-wxperl-release-0.92</guid>
+    </item>
+    <item>
+      <title>Documentation updated</title>
+      <description>
 Updated documentation created from wxWidgets 2.8.7 manual is now available
 from the download page.
     </description>
@@ -44,16 +52,6 @@ major improvements to other two controls and other less important additions.
     </description>
       <pubDate>Thu, 23 Aug 2007 22:04:48 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#2007-08-wxperl-release-0-77</guid>
-    </item>
-    <item>
-      <title>0.76 released!</title>
-      <description>
-wxPerl 0.76 has been released to CPAN, including four new wxWidgets controls.
-Alien::wxWidgets 0.32 released at the same time adds support for wxWidgets
-2.8.4 and for bulding Mac OS X Universal binaries.
-    </description>
-      <pubDate>Thu, 16 Aug 2007 00:28:20 +0200</pubDate>
-      <guid>http://wxperl.eu/news.html#2007-08-wxperl-release-0-76</guid>
     </item>
   </channel>
 </rss>
