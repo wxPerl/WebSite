@@ -29,7 +29,19 @@ is also available.
 
 <news>
   <item>
-    <title>Documentation updated</title>
+    <title>Alien::wxWidgets 0.44 released</title>
+    <date rfc822="09 Aug 2009 16:48:18 +0200">Aug 09, 2009</date>
+    <id>2009-08-09-alien-wxwidgets-release-0.44</id>
+    <description>
+    <xhtml:b>Alien::wxWidgets 0.44 was released to CPAN.</xhtml:b> See details on <xhtml:a href="http://search.cpan.org/dist/Alien-wxWidgets">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>Alien::wxWidgets 0.44 was released to CPAN.</xhtml:b> See details on <xhtml:a href="http://search.cpan.org/dist/Alien-wxWidgets">CPAN</xhtml:a>.
+    </content>
+  </item>
+
+  <item>
+    <title>wxPerl 0.92 released</title>
     <date rfc822="Thu, 06 Aug 2009 16:48:18 +0200">Aug 06, 2009</date>
     <id>2009-08-06-wxperl-release-0.92</id>
     <description>
