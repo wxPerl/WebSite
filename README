@@ -1,0 +1,11 @@
+
+
+Updating the website
+
+1) svn co https://wxperl.svn.sourceforge.net/svnroot/wxperl/WebSite/trunk/
+2) Edit the files in src/
+3) run make in the src/ directory   this should update some of the files in site/ as well
+4) svn commit
+5) ssh -t USERNAME,wxperl@shell.sourceforge.net create
+6) On the machine run
+   /home/groups/w/wx/wxperl/bin/wxperl_update_site

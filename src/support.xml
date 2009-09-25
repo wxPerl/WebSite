@@ -29,6 +29,10 @@ Many thanks to the perl.org administrators for hosting the list.
     <anchor>irc</anchor>
     <content>
 You can also join the #wxperl IRC channel on irc.perl.org to gather advices from other wxPerl users.
+If you have an IRC client the following link should open it to 
+<xhtml:a href="irc://irc.perl.org/#wxperl">#wxperl@irc.perl.org</xhtml:a>.
+If you are new to IRC and don't have a client yet, you can use the web based IRC client provided
+by Mibbit: <xhtml:a href="http://widget.mibbit.com/?server=irc.perl.org&amp;channel=%23wxperl">#wxperl channel using Mibbit.</xhtml:a>
 If you need help to connect to this IRC network, see the help page at
 <xhtml:a target="_blank" href="http://www.irc.perl.org/">www.irc.perl.org</xhtml:a>.
     </content>
