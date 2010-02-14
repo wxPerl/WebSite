@@ -9,6 +9,14 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>wxPerl 0.97 released</title>
+      <description>
+    wxPerl 0.97 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>09 February 2010</pubDate>
+      <guid>http://wxperl.eu/news.html#2010-02-09-wxperl-release-0.97</guid>
+    </item>
+    <item>
       <title>wxPerl 0.93 released</title>
       <description>
     wxPerl 0.93 was released to CPAN. See details on CPAN.
@@ -40,16 +48,6 @@ from the download page.
     </description>
       <pubDate>Thu, 01 May 2008 16:48:18 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#2008-05-wxperl-documentation-updated</guid>
-    </item>
-    <item>
-      <title>0.81 released!</title>
-      <description>
-wxPerl 0.81 has been released to CPAN.  This release features some new
-wxWidgets classes (but only for wxWidgets HEAD) and the addition of many
-more methods for older releases.
-    </description>
-      <pubDate>Sat, 19 Jan 2008 17:44:18 +0100</pubDate>
-      <guid>http://wxperl.eu/news.html#2008-01-wxperl-release-0-81</guid>
     </item>
   </channel>
 </rss>

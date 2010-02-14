@@ -30,6 +30,27 @@ is also available.
 <news>
 
   <item>
+    <title>wxPerl 0.97 released</title>
+    <date rfc822="09 February 2010">February 9, 2010</date>
+    <id>2010-02-09-wxperl-release-0.97</id>
+    <description>
+    <xhtml:b>wxPerl 0.97</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>wxPerl 0.97</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+      <xhtml:pre>
+      0.97  Tue Feb  9 22:57:14 CET 2010
+	- Added wxOverlay and wxDCOverlay (2.8) (thanks to Mark Dootson).
+    - Added Wx::Loader - allows PPM distributions and packagers to
+          override wx dll loading (see Wx::Loader pod)
+	- Loading plugins - local override of dl_load_file now uses
+	  Wx::_load_plugin during XSLoader::load
+      </xhtml:pre>
+    </content>
+  </item>
+
+
+  <item>
     <title>wxPerl 0.93 released</title>
     <date rfc822="24 Sep 2009">Sep 24, 2009</date>
     <id>2009-09-24-wxperl-release-0.93</id>
