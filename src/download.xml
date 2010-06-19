@@ -21,69 +21,16 @@
   <item>
     <title>Binaries</title>
     <content>
-<xhtml:h3>ActivePerl/Win32</xhtml:h3>
+<xhtml:h3>ActivePerl</xhtml:h3>
 <xhtml:div>
-PPM binary packages are available for
-<xhtml:ul>
-  <xhtml:li>
-    <win32-ppm unicode="0" dev="0">ActivePerl 8xx</win32-ppm>
-  </xhtml:li>
-  <xhtml:li>
-    <win32-ppm unicode="1" dev="0">ActivePerl 8xx with Unicode</win32-ppm>
- (for NT/2000/XP)
-  </xhtml:li>
-</xhtml:ul>
-
-Please read the included <xhtml:b>README.txt</xhtml:b> for installation instructions.
-
-<xhtml:br />
-
-The corresponding developement packages for
-<xhtml:ul>
-  <xhtml:li>
-    <win32-ppm unicode="0" dev="1">ActivePerl 8xx</win32-ppm>
-  </xhtml:li>
-  <xhtml:li>
-    <win32-ppm unicode="1" dev="1">ActivePerl 8xx with Unicode</win32-ppm>
-  </xhtml:li>
-</xhtml:ul>
-
-should only be downloaded by people interested in
-<xhtml:b>developing/compiling</xhtml:b>
-(and not just using) wxPerl extensions using XS, such as Wx::ActiveX. 
+PPM binary packages built by Mark Dootson can be downloaded from the
+<xhtml:a target="_blank" href="http://www.wxperl.co.uk/">wxPerl Binary Oasis</xhtml:a>
 </xhtml:div>
 
-<xhtml:h3>Red Hat Linux</xhtml:h3>
+<xhtml:h3>Linux</xhtml:h3>
 <xhtml:div>
-  <xhtml:ul>
-    <xhtml:li>
-      <linux-rpm src="0">wxWidgets 2.6.2, Red Hat Linux 8.0, GTK 2</linux-rpm>
-    </xhtml:li>
-  </xhtml:ul>
-
-The
-<xhtml:a target="_blank" href="http://www.barbon.org/wxperl/0.26/wxWidgets/">unofficial wxWidgets RPMs</xhtml:a> are required by the wxPerl RPMs.
-</xhtml:div>
-
-<!--
-<h3>Debian GNU/Linux 3.0 &quot;woody&quot;</h3>
-<div>
-A binary package is available
-<a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl-wxgtk2.2_0.11-1_i386.deb">here</a>.
-</div>
--->
-
-<xhtml:h3>Mac OS X 10.3 (Panther) and 10.4 (Tiger)</xhtml:h3>
-<xhtml:div>
-DMG images are available for
-  <xhtml:ul>
-    <xhtml:li>
-      <mac-dmg osx="10.3">Mac OS X 10.3 (Panther) Unicode</mac-dmg>
-    </xhtml:li>
-    <xhtml:li>
-      <mac-dmg osx="10.4">Mac OS X 10.4 (Tiger) Unicode</mac-dmg>
-    </xhtml:li>
-  </xhtml:ul>
+wxPerl is available as a native package in Debian, Fedora, Gentoo,
+Mandriva, Ubuntu and other major Linux distributions.
 </xhtml:div>
     </content>
   </item>
@@ -92,8 +39,7 @@ DMG images are available for
     <title>Documentation</title>
     <content>
 <xhtml:p>
-Download the <xhtml:a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/wxPerl-0.26-samples.zip">examples</xhtml:a> from the
-source distribution.
+Install the <xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx-Demo">Wx::Demo</xhtml:a> package from CPAN.
 </xhtml:p>
 
 <xhtml:p>
@@ -110,20 +56,7 @@ Documentation fo wxPerl is available as TeX, HTML, and MS HTML Help
   <item>
     <title>Source</title>
     <content>
-Source code for wxPerl is available in various formats:
-<xhtml:ul>
-  <xhtml:li>
-    <src-cpan>Standard CPAN package (also available on CPAN)</src-cpan>
-  </xhtml:li>
-  <xhtml:li>
-    <linux-rpm src="1">RPM source package</linux-rpm>
-  </xhtml:li>
-<!--
-  <xhtml:li><xhtml:a target="_blank" href='http://www.barbon.org/wxperl/libwx-perl_0.22-1.deb.src.tar.gz'>Debian Sarge (testing)</xhtml:a></xhtml:li>
-  <xhtml:li><xhtml:a target="_blank" href='http://www.barbon.org/wxperl/p5-Wx.tar.gz'>FreeBSD 5.3 Ports package</xhtml:a></xhtml:li>
--->
-<!--  <li><a target="_blank" href="http://prdownloads.sourceforge.net/wxperl/libwx-perl_0.11-1.deb.src.tar.gz">Debian source bundled in a single .tar.gz file</a></li> -->
-</xhtml:ul>
+Source code for <xhtml:a target="_blank" href="http://search.cpan.org/dist/Wx">wxPerl</xhtml:a> is available on CPAN.
     </content>
   </item>
 
