@@ -30,6 +30,32 @@ is also available.
 <news>
 
   <item>
+    <title>wxPerl 0.98 released</title>
+    <date rfc822="18 August 2010">August 18, 2010</date>
+    <id>2010-08-18-wxperl-release-0.98</id>
+    <description>
+    <xhtml:b>wxPerl 0.98</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>wxPerl 0.98</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+      <xhtml:pre>
+0.98  Wed Aug 18 20:31:30 CEST 2010
+	- wxWidgets 2.9.1 compatibility.
+	- die() when wxWidgets initialization fails.
+
+0.9702_01  Tue Jul  6 21:38:17 CEST 2010
+	- Can now run using the standard perl interpreter on Mac OS X
+	  (suggested by Kyle McKay).
+	- Added wxSpinCtrlDouble (2.9).
+	- Added wxDataViewListCtrl (2.9).
+	- Added wxDataViewVirtualListModel (2.9).
+	- Added wxInfoBar (2.9).
+	- Added wxHeaderCtrlSimple (2.9).
+      </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
     <title>wxPerl 0.97 released</title>
     <date rfc822="09 February 2010">February 9, 2010</date>
     <id>2010-02-09-wxperl-release-0.97</id>
@@ -39,10 +65,10 @@ is also available.
     <content>
     <xhtml:b>wxPerl 0.97</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
       <xhtml:pre>
-      0.97  Tue Feb  9 22:57:14 CET 2010
+0.97  Tue Feb  9 22:57:14 CET 2010
 	- Added wxOverlay and wxDCOverlay (2.8) (thanks to Mark Dootson).
-    - Added Wx::Loader - allows PPM distributions and packagers to
-          override wx dll loading (see Wx::Loader pod)
+	- Added Wx::Loader - allows PPM distributions and packagers to
+	  override wx dll loading (see Wx::Loader pod)
 	- Loading plugins - local override of dl_load_file now uses
 	  Wx::_load_plugin during XSLoader::load
       </xhtml:pre>
@@ -61,7 +87,7 @@ is also available.
     <xhtml:b>wxPerl 0.93</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
       <xhtml:pre>
 0.93 Gio 24 Set 2009 21:34:10 CEST
-    - Use ExtUtils::XSpp::Cmd instead of the xspp command line script.
+	- Use ExtUtils::XSpp::Cmd instead of the xspp command line script.
       </xhtml:pre>
     </content>
   </item>
