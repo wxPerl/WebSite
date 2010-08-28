@@ -221,7 +221,7 @@
   <dt>
     <xsl:if test="id">
       <a>
-        <xsl:attribute name="name"><xsl:copy-of select="id" /></xsl:attribute>
+        <xsl:attribute name="name">news-<xsl:copy-of select="id" /></xsl:attribute>
       </a>
     </xsl:if>
   <xsl:value-of select="date" /></dt> 
