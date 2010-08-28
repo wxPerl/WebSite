@@ -38,7 +38,7 @@
       </xsl:choose>
     </description>
     <pubDate><xsl:value-of select="date/@rfc822" /></pubDate>
-    <guid>http://wxperl.eu/news.html#<xsl:value-of select="id" /></guid>
+    <guid>http://wxperl.eu/news.html#news-<xsl:value-of select="id" /></guid>
 
   </item>
 </xsl:template>
