@@ -388,6 +388,41 @@ export to master databasse. (RS_Base)
     </applications>
   </organisation>
 
+  <organisation>
+    <name>Kephra Team</name>
+    <site></site>
+    <country></country>
+    <contact>
+      <name>Herbert Breunung</name>
+      <email>lichtkind@cpan.org</email>
+    </contact>
+    <wxperl>
+      <rating></rating>
+      <comments>
+      </comments>
+    </wxperl>
+
+    <applications>
+
+      <application>
+        <name>Kephra</name>
+        <site>http://kephra.sourceforge.net</site>
+        <license-type><open-source /></license-type>
+        <platforms><windows /><linux /><mac /></platforms>
+        <wxperl-version>0.93</wxperl-version>
+        <domain>Software Developement</domain>
+        <short-description>
+fresh Programmers Texteditor along perly Paradigmes
+        </short-description>
+        <long-description>
+Kephra combines the best of different worlds,
+gives a lot of options in settings and usage
+        </long-description>
+      </application>
+
+    </applications>
+  </organisation>
+
 <!-- template
   <organisation>
     <name></name>
