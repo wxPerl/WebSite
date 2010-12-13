@@ -390,15 +390,17 @@ export to master databasse. (RS_Base)
 
   <organisation>
     <name>Kephra Team</name>
-    <site></site>
+    <site>http://kephra.sourceforge.net</site>
     <country></country>
     <contact>
       <name>Herbert Breunung</name>
       <email>lichtkind@cpan.org</email>
     </contact>
     <wxperl>
-      <rating></rating>
+      <rating>4</rating>
       <comments>
+still complex to install, and could use more docs and a gui definition
+DSL (hej thats my job :)), but it gets better and better
       </comments>
     </wxperl>
 
