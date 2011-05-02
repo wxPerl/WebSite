@@ -8,4 +8,4 @@ Updating the website
 4) svn commit
 5) ssh -t USERNAME,wxperl@shell.sourceforge.net create
 6) On the machine run
-   /home/groups/w/wx/wxperl/bin/wxperl_update_site
+   /home/project-web/wxperl/bin/wxperl_update_site
