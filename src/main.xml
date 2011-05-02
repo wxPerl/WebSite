@@ -17,7 +17,7 @@ C++ GUI toolkit.
 
 You can look at some <xhtml:a href="sshot01.html">screenshots</xhtml:a> or
 read about wxPerl <xhtml:a href="users.html">users</xhtml:a>.  A
-<xhtml:a href="http://wxperl.pvoice.org/kwiki/" target="_blank">wxPerl Wiki</xhtml:a>
+<xhtml:a href="http://wiki.wxperl.info" target="_blank">wxPerl Wiki</xhtml:a>
 is also available.
     </content>
   </item>
@@ -1234,7 +1234,7 @@ the wxPerl wrappers.
     <links>
       <link>
         <text>wxPerl Wiki</text>
-        <url>http://wxperl.pvoice.org/kwiki/</url>
+        <url>http://wiki.wxperl.info</url>
         <external />
       </link>
 <!--
