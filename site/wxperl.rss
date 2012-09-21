@@ -9,6 +9,14 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>wxPerl 0.9912 released</title>
+      <description>
+    wxPerl 0.9912 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>21 September 2012</pubDate>
+      <guid>http://wxperl.eu/news.html#news-2012-09-21-wxperl-release-0.9912</guid>
+    </item>
+    <item>
       <title>wxPerl 0.98 released</title>
       <description>
     wxPerl 0.98 was released to CPAN. See details on CPAN.
@@ -39,14 +47,6 @@
     </description>
       <pubDate>09 Aug 2009 16:48:18 +0200</pubDate>
       <guid>http://wxperl.eu/news.html#news-2009-08-09-alien-wxwidgets-release-0.44</guid>
-    </item>
-    <item>
-      <title>wxPerl 0.92 released</title>
-      <description>
-    wxPerl 0.92 was released to CPAN. See details on CPAN.
-    </description>
-      <pubDate>Thu, 06 Aug 2009 16:48:18 +0200</pubDate>
-      <guid>http://wxperl.eu/news.html#news-2009-08-06-wxperl-release-0.92</guid>
     </item>
   </channel>
 </rss>

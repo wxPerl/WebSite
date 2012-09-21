@@ -32,6 +32,85 @@
 
 
 <h1><a name="news" id="news"></a>News</h1><dl>
+  
+  <dt><a name="news-2012-09-21-wxperl-release-0.9912" id="news-2012-09-21-wxperl-release-0.9912"></a>September 21, 2012</dt><dd>
+    <b>wxPerl 0.9912</b> was released to CPAN. See details on <a href="http://search.cpan.org/dist/Wx">CPAN</a>.
+      <pre>
+0.9912 Fri Sep 21 2012
+    - wrapped wxListCtrl::SetItemPtrData.
+    - updated to use sv_magicext / mg_findext so
+      external modules do not stomp on our magic.
+	  (Perl &gt;= 5.14)
+    - updated wxListView so that LC_VIRTUAL style works.
+    - set wxListCtrl full constructor to create evthandler.
+    - updated Wx::Ribbon controls for 2.9.4 interface +
+      tool/button 'Add' and 'Insert' methods now return objects
+      as described in the docs instead of int id's.
+    - added SetClientData to PGProperty and PropertyGridInterface
+    - Wx::ToolBar-&gt;SetClientData now deletes any prior set Wx::Object
+    - wxDataViewListCtrl and wxDataViewListStore - fix ClientData for &gt;= 2.9.4
+    - /usr/local/lib needs removing from LD:DL:FLAGS on all *nix types
+    - nostdinc now removed from any flags on MacOSX build
+    - Fixed handling of asserts and debug level &gt; 0 on wxWidgets &gt;= 2.9.3
+    - Added wxApp::OnAssertFailure
+
+0.9911 Fri Aug 24 2012
+    - wxDataView - updated for 2.9.4
+    - wxTreeEvent::GetKeyEvent() added
+    - wxRichTextCtrl::LineBreak() added
+
+0.9909 Thu May 31 2012
+    - wxHtmlPrintout &amp; wxRichTextPrintout correct typemap and destruction
+    - wxRichTextBuffer - added copy constructor
+    - wxPrintPaperDatabase, wxPrintPaperType added
+
+0.9907 Thur May 10 2012
+    - wrapped wxHtmlPrintout
+    - added missing wxPrintout methods
+    - fixed GetPageInfo for wxRichTextPrintout
+    - fixed broken Makefile.PL with recent EUMM on Mac
+    - some minor additions to RichTextCtrl/RichTextBuffer
+
+0.9906 Tue Mar 27 2012
+    - wrapped wxWebView ( wxWidgets ge 2.9.3 )
+    - wrapped wxTimePickerCtrl ( wxWidgets ge 2.9.3 ) 
+    - wrapped wxRichToolTip ( wxWidgets ge 2.9.3 )
+    - wrapped wxBannerWindow ( wxWidgets ge 2.9.3 )
+    - Allow RichTextPrinting without dialog ( wxWidgets ge 2.9.4 )
+      (thanks to Steve Cookson )
+    - wrapped some missing wxPrintData methods
+
+0.9905 Fri Mar 16 2012
+    - wrapped wxPropertyGrid ( wxWidgets ge 2.9.3 )
+    - wrapped native wxTreeListCtrl ( wxWidgets ge 2.9.3 )
+    - wrapped wxRibbonControl ( wxWidgets ge 2.9.3 )
+    - ShowModal implementation for wxPrintDialog and wxPageSetupDialog
+      ( thanks to Tomohiro Hosaka )
+    - recent EUMM breaks EU_MY_Metafile
+
+0.9904 Tue Feb 28 2012
+    - Implemented TextCtrlIface for RichTextCtrl in &gt;= 2.9.2
+    - Implemented TextCtrlIface for SearchCtrl in &gt;= 2.9.2
+    - several 2.9.2 / 2.9.3 compatibility changes
+    - Some additional RichText events wrapped - ( thanks to Steve Cookson )
+    - wrapped STC specific LineUp and LineDown
+    - wrapped some specific Set/GetLayoutDirection
+    - Fixes for OSX Xcode 4.3 builds
+
+0.9903 Wed Nov 09 08:00:00 BST 2011
+    - Remove force of static binding for mingw libgcc &amp; libstdc++
+0.9902 Thu Oct 13 08:00:00 BST 2011
+    - 2.9.2 will now build with recent mingw compilers (&gt;= gcc 4.5.2)
+    - Fixed MSVC6 build (broken in 0.9702)
+    - wrapped wxLogChain::DetachOldLog
+    - added wxDF_UNICODETEXT
+    - added wxMediaCtrl constants for all events
+
+0.9901 Mon June 06 12:00:00 BST 2011
+    - Bumped ExtUtils::XSpp dependency to 0.1602
+    - added Wx::Frame::SendSizeEvent
+      </pre>
+    </dd>
 
   <dt><a name="news-2010-08-18-wxperl-release-0.98" id="news-2010-08-18-wxperl-release-0.98"></a>August 18, 2010</dt><dd>
     <b>wxPerl 0.98</b> was released to CPAN. See details on <a href="http://search.cpan.org/dist/Wx">CPAN</a>.

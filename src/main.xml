@@ -63,9 +63,9 @@ is also available.
     - wxRichTextCtrl::LineBreak() added
 
 0.9909 Thu May 31 2012
-    - wxHtmlPrintout & wxRichTextPrintout correct typemap and destruction
+    - wxHtmlPrintout &amp; wxRichTextPrintout correct typemap and destruction
     - wxRichTextBuffer - added copy constructor
-    - wxPrintPaperDatabase & wxPrintPaperType added
+    - wxPrintPaperDatabase, wxPrintPaperType added
 
 0.9907 Thur May 10 2012
     - wrapped wxHtmlPrintout
@@ -101,7 +101,7 @@ is also available.
     - Fixes for OSX Xcode 4.3 builds
 
 0.9903 Wed Nov 09 08:00:00 BST 2011
-    - Remove force of static binding for mingw libgcc & libstdc++
+    - Remove force of static binding for mingw libgcc &amp; libstdc++
 0.9902 Thu Oct 13 08:00:00 BST 2011
     - 2.9.2 will now build with recent mingw compilers (>= gcc 4.5.2)
     - Fixed MSVC6 build (broken in 0.9702)
