@@ -347,7 +347,7 @@ under development).
         <name>Cava Packager</name>
         <site>http://www.cava.co.uk/products/packager</site>
         <license-type><commercial /></license-type>
-        <platforms><windows /></platforms>
+        <platforms><windows /><linux /><mac /></platforms>
         <wxperl-version>0.67</wxperl-version>
         <domain>Perl Application Programming</domain>
         <short-description>
