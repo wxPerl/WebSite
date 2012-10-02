@@ -28,7 +28,71 @@ is also available.
 </home>
 
 <news>
-  
+  <item>
+    <title>wxPerl 0.9914 released</title>
+    <date rfc822="02 October 2012">October 02, 2012</date>
+    <id>2012-10-02-wxperl-release-0.9914</id>
+    <description>
+    <xhtml:b>wxPerl 0.9914</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>wxPerl 0.9914</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+      <xhtml:pre>
+0.9914 Tue Oct 02 2012
+  - Wx::StyledTextCtrl additions for 2.9.4
+  - wxLog functions for 2.9.x added
+  - wrapped wxRearrangeCtrl
+  - added start of Wx::PerlTest - to aid documentation and examples
+  - Additions for Wx::XSP::* classes
+  - wrapped wxEventFilter for 2.9.3 +
+  - updated missing Wx::App methods for 2.9.4 +
+  - added wxEvtHandler::ProcessEventLocally for 2.9.1+
+  - added some absent wxWindow methods
+  - updated wxTopLevelWindow
+  - added wxFrame::ProcessCommand 
+
+0.9913 Fri Sep 28 2012
+  - ld build fix for some 64 bit *nix 
+        </xhtml:pre>
+    </content>
+  </item>
+
+  <item>
+    <title>Wx::Demo 0.19 released</title>
+    <date rfc822="02 October 2012">October 02, 2012</date>
+    <id>2012-10-02-wxdemo-release-0.19</id>
+    <description>
+    <xhtml:b>Wx::Demo 0.19</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx-Demo">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>Wx::Demo 0.19</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx-Demo">CPAN</xhtml:a>.
+      <xhtml:pre>
+0.19  Tue Oct 02 2012
+  - Updated for wxRibbonControl changes in Wx 0.9912
+  - Demo for wxRearrangeCtrl and friends added
+        </xhtml:pre>
+    </content>
+  </item>
+
+<item>
+    <title>Alien::wxWidgets 0.62 released</title>
+    <date rfc822="02 October 2012">October 02, 2012</date>
+    <id>2012-10-02-alien-wxwidgets-release-0.62</id>
+    <description>
+    <xhtml:b>Alien::wxWidgets 0.62</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Alien-wxWidgets">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>Alien::wxWidgets 0.62</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Alien-wxWidgets">CPAN</xhtml:a>.
+      <xhtml:pre>
+0.62  Tue Oct 2 2012
+  - Fix patching on MSWin when buildpaths have spaces.
+  - Allow addition of user patch - --wxWidgets-userpatch
+  - Expand README.txt
+  - Another Mac OS X SDK change
+        </xhtml:pre>
+    </content>
+  </item>
+
   <item>
     <title>wxPerl 0.9912 released</title>
     <date rfc822="21 September 2012">September 21, 2012</date>

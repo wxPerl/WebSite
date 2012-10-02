@@ -9,6 +9,30 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>wxPerl 0.9914 released</title>
+      <description>
+    wxPerl 0.9914 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>02 October 2012</pubDate>
+      <guid>http://wxperl.eu/news.html#news-2012-10-02-wxperl-release-0.9914</guid>
+    </item>
+    <item>
+      <title>Wx::Demo 0.19 released</title>
+      <description>
+    Wx::Demo 0.19 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>02 October 2012</pubDate>
+      <guid>http://wxperl.eu/news.html#news-2012-10-02-wxdemo-release-0.19</guid>
+    </item>
+    <item>
+      <title>Alien::wxWidgets 0.62 released</title>
+      <description>
+    Alien::wxWidgets 0.62 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>02 October 2012</pubDate>
+      <guid>http://wxperl.eu/news.html#news-2012-10-02-alien-wxwidgets-release-0.62</guid>
+    </item>
+    <item>
       <title>wxPerl 0.9912 released</title>
       <description>
     wxPerl 0.9912 was released to CPAN. See details on CPAN.
@@ -23,30 +47,6 @@
     </description>
       <pubDate>18 August 2010</pubDate>
       <guid>http://wxperl.eu/news.html#news-2010-08-18-wxperl-release-0.98</guid>
-    </item>
-    <item>
-      <title>wxPerl 0.97 released</title>
-      <description>
-    wxPerl 0.97 was released to CPAN. See details on CPAN.
-    </description>
-      <pubDate>09 February 2010</pubDate>
-      <guid>http://wxperl.eu/news.html#news-2010-02-09-wxperl-release-0.97</guid>
-    </item>
-    <item>
-      <title>wxPerl 0.93 released</title>
-      <description>
-    wxPerl 0.93 was released to CPAN. See details on CPAN.
-    </description>
-      <pubDate>24 Sep 2009</pubDate>
-      <guid>http://wxperl.eu/news.html#news-2009-09-24-wxperl-release-0.93</guid>
-    </item>
-    <item>
-      <title>Alien::wxWidgets 0.44 released</title>
-      <description>
-    Alien::wxWidgets 0.44 was released to CPAN. See details on CPAN.
-    </description>
-      <pubDate>09 Aug 2009 16:48:18 +0200</pubDate>
-      <guid>http://wxperl.eu/news.html#news-2009-08-09-alien-wxwidgets-release-0.44</guid>
     </item>
   </channel>
 </rss>
