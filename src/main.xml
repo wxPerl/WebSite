@@ -29,6 +29,22 @@ is also available.
 
 <news>
   <item>
+    <title>wxPerl 0.9916 released</title>
+    <date rfc822="19 January 2013">January 19, 2013</date>
+    <id>2013-01-19-wxperl-release-0.9916</id>
+    <description>
+    <xhtml:b>wxPerl 0.9916</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>wxPerl 0.9916</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+      <xhtml:pre>
+0.9916 Sat Jan 01 2013
+    - put correct version check around wxLogChain::DetachOldLog
+    - fixed paper type tests in ext/print/09_paper.t
+      </xhtml:pre>
+    </content>
+  </item>
+  <item>
     <title>wxPerl 0.9915 released</title>
     <date rfc822="30 December 2012">December 30, 2012</date>
     <id>2012-12-30-wxperl-release-0.9915</id>
