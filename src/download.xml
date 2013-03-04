@@ -23,8 +23,8 @@
     <content>
 <xhtml:h3>ActivePerl</xhtml:h3>
 <xhtml:div>
-PPM binary packages built by Mark Dootson can be downloaded from the
-<xhtml:a target="_blank" href="http://www.wxperl.co.uk/">wxPerl Binary Oasis</xhtml:a>
+PPM binary packages for Windows, Linux and Mac OS X can be downloaded from the
+<xhtml:a target="_blank" href="http://ppm.wxperl.it/">wxPerl PPM Site</xhtml:a>
 </xhtml:div>
 
 <xhtml:h3>Linux</xhtml:h3>
@@ -72,22 +72,17 @@ The bleeding-edge sources are available through Subversion.
 <xhtml:h3>Anonymous Subversion access</xhtml:h3>
 
 <xhtml:pre>
-svn co https://wxperl.svn.sourceforge.net/svnroot/wxperl/wxPerl/trunk wxPerl
+svn co http://svn.code.sf.net/p/wxperl/code/wxPerl/trunk wxPerl-trunk
 </xhtml:pre>
 
 <xhtml:h3>Browse Subversion sources</xhtml:h3>
 
 SourceForge offers a 
-<xhtml:a href="http://wxperl.svn.sourceforge.net/viewvc/wxperl/"
+<xhtml:a href="http://sourceforge.net/p/wxperl/code/"
          target="_blank">Subversion browser</xhtml:a> interface that can
 be used to look at Subversion sources, compare the differences between
 revisions and get the most up to date revision of a single file.
 
-<xhtml:h3>Anonymous Subversion snapshots</xhtml:h3>
-
-Daily <xhtml:a target="_blank" href="snapshot/">Subversion snapshots</xhtml:a>
-are also available in <xhtml:tt>.tar.gz</xhtml:tt>,
-<xhtml:tt>.tar.bz2</xhtml:tt> and <xhtml:tt>.zip</xhtml:tt> format.
     </content>
   </item>
 </download>
