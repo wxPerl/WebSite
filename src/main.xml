@@ -29,6 +29,22 @@ is also available.
 
 <news>
   <item>
+    <title>wxPerl 0.9917 released</title>
+    <date rfc822="11 February 2013">February 11, 2013</date>
+    <id>2013-02-11-wxperl-release-0.9917</id>
+    <description>
+    <xhtml:b>wxPerl 0.9917</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+    </description>
+    <content>
+    <xhtml:b>wxPerl 0.9917</xhtml:b> was released to CPAN. See details on <xhtml:a href="http://search.cpan.org/dist/Wx">CPAN</xhtml:a>.
+      <xhtml:pre>
+0.9917 Mon Feb 11 2013
+    - Stopped wxWidgets >= 2.9.0 from setting locale to current user locale
+    ( thanks to Tarek Unger )
+      </xhtml:pre>
+    </content>
+  </item>
+  <item>
     <title>wxPerl 0.9916 released</title>
     <date rfc822="19 January 2013">January 19, 2013</date>
     <id>2013-01-19-wxperl-release-0.9916</id>

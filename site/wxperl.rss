@@ -9,6 +9,14 @@
     <managingEditor>mbarbon@cpan.org</managingEditor>
     <webMaster>mbarbon@cpan.org</webMaster>
     <item>
+      <title>wxPerl 0.9917 released</title>
+      <description>
+    wxPerl 0.9917 was released to CPAN. See details on CPAN.
+    </description>
+      <pubDate>11 February 2013</pubDate>
+      <guid>http://wxperl.eu/news.html#news-2013-02-11-wxperl-release-0.9917</guid>
+    </item>
+    <item>
       <title>wxPerl 0.9916 released</title>
       <description>
     wxPerl 0.9916 was released to CPAN. See details on CPAN.
@@ -39,14 +47,6 @@
     </description>
       <pubDate>02 October 2012</pubDate>
       <guid>http://wxperl.eu/news.html#news-2012-10-02-wxdemo-release-0.19</guid>
-    </item>
-    <item>
-      <title>Alien::wxWidgets 0.62 released</title>
-      <description>
-    Alien::wxWidgets 0.62 was released to CPAN. See details on CPAN.
-    </description>
-      <pubDate>02 October 2012</pubDate>
-      <guid>http://wxperl.eu/news.html#news-2012-10-02-alien-wxwidgets-release-0.62</guid>
     </item>
   </channel>
 </rss>
