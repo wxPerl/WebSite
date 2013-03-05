@@ -2,7 +2,7 @@
 
 Updating the website
 
-1) svn co https://wxperl.svn.sourceforge.net/svnroot/wxperl/WebSite/trunk/
+1) svn co https://svn.code.sf.net/p/wxperl/code/WebSite/trunk/
 2) Edit the files in src/
 3) run make in the src/ directory   this should update some of the files in site/ as well
 4) svn commit
