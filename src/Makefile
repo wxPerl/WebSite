@@ -1,7 +1,7 @@
 #!/usr/bin/make
 
 OUTDIR=../site
-HTML=$(OUTDIR)/index.html $(OUTDIR)/download.html $(OUTDIR)/about.html \
+HTML=$(OUTDIR)/home.html $(OUTDIR)/download.html $(OUTDIR)/about.html \
      $(OUTDIR)/documentation.html $(OUTDIR)/support.html $(OUTDIR)/news.html \
      $(OUTDIR)/sshot01.html $(OUTDIR)/sshot02.html $(OUTDIR)/sshot03.html \
      $(OUTDIR)/users.html $(OUTDIR)/wxperl.rss
@@ -50,7 +50,7 @@ $(OUTDIR)/manual/manual.html: manual/manual.xml doc.xsl \
 # Site files
 ###############################################################################
 
-$(OUTDIR)/index.html: main.xml home.xsl wxperl.xsl
+$(OUTDIR)/home.html: main.xml home.xsl wxperl.xsl
 	$(XSLT) -o $@ home.xsl main.xml
 
 $(OUTDIR)/download.html: download.xml download.xsl wxperl.xsl

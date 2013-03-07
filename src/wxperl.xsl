@@ -107,7 +107,7 @@
     </div>
 
     <div class="menuBar">
-      <a href="{$path}/index.html">Home</a>|
+      <a href="{$path}/home.html">Home</a>|
       <a href="{$path}/about.html">About</a>|
       <a href="{$path}/download.html">Download</a>|
       <a href="{$path}/documentation.html">Documentation</a>|
