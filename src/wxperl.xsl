@@ -111,7 +111,7 @@
       <a href="{$path}/about.html">About</a>|
       <a href="{$path}/download.html">Download</a>|
       <a href="{$path}/documentation.html">Documentation</a>|
-      <a href="{$path}/support.html">Support/Resources</a>
+      <a href="{$path}/support.html">Support/Resources</a>|
       <a href="http://www.wxperl.it/">New wxPerl Site</a>
     </div>
   </div>
